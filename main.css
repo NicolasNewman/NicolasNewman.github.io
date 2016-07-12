@@ -1,51 +1,17 @@
-
-
-.buttons {
-	display: -webkit-flex;
-	display: flex;
-	 -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-	width: 126px;
-    height: 158px;
-    background-color: lightgrey;
+* {
+	text-align: center;
+	font: normal 40px black;
 }
 
-.row_one {
-	margin: auto;
-}
-
-.row_two {
-	margin: auto;
-}
-
-.row_three {
-	margin: auto;
-}
-
-.row_four {
-	margin: auto;
-}
-
-.row_five {
-	margin: auto;
-}
-
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: #4CAF50;
-    border: none;
+a {
+	background-color: #f44336;
     color: white;
-    padding: 5px 5px;
+    padding: 14px 25px;
+    text-align: center;
     text-decoration: none;
-    margin: auto;
-    cursor: pointer;
-	width: 25px;
-	height: 25px;
+    display: inline-block;
 }
 
-input[type=text] {
-    border: none;
-	width: 73px;
-	height: 15px;
-	margin: auto;
-	padding: 5px 5px;
+a:hover {
+	text-decoration: underline;
 }

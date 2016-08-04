@@ -5,6 +5,18 @@ var code = "";
 var output = "";
 var bPlace = 0;
 
+function help() {
+	var win = window.open('https://learnxinyminutes.com/docs/brainfuck/', '_blank');
+	if (win) {
+		win.focus();
+	} else {
+		alert('Please allow popups for this website');
+	}
+}
+
+function example() {
+	document.getElementById('input').value = "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.";
+}
 function run() {
 	console.clear();
 	pointer = 0;

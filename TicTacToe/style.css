@@ -3,8 +3,8 @@
 	display: flex;
 	 -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-	width: 185px;
-    height: 220px;
+	width: 215px;
+    height: 275px;
     background-color: lightgrey;
 }
 
@@ -20,6 +20,11 @@
 	margin: auto;
 }
 
+.row_four {
+	margin: auto;
+	
+}
+
 input[type=button], input[type=submit], input[type=reset] {
     background-color: #4CAF50;
     border: none;
@@ -28,10 +33,11 @@ input[type=button], input[type=submit], input[type=reset] {
     text-decoration: none;
     margin: auto;
     cursor: pointer;
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 }
 
-.row_four {
-	margin: auto;
+p {
+	padding-top: 5px;
+	padding-right: 48px;
 }

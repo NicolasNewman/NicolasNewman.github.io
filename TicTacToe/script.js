@@ -305,6 +305,7 @@ function computerCheckWin() {
 }
 
 function btnRestart() {
+	turns = 0;
 	for(var x = 0; x < buttons.length; x++) {
 		document.getElementById(buttons[x]).value=".";
 	}

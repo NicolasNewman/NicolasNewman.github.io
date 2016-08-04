@@ -1,0 +1,37 @@
+.buttons {
+	display: -webkit-flex;
+	display: flex;
+	 -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+	width: 185px;
+    height: 220px;
+    background-color: lightgrey;
+}
+
+.row_one {
+	margin: auto;
+}
+
+.row_two {
+	margin: auto;
+}
+
+.row_three {
+	margin: auto;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    margin: auto;
+    cursor: pointer;
+	width: 50px;
+	height: 50px;
+}
+
+.row_four {
+	margin: auto;
+}

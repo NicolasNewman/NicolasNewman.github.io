@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Title</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<canvas id="myCanvas" width="500", height="500" style="border:1px solid black;"></canvas>
+		<script>
+			var canvas = document.getElementById('myCanvas');
+			var ctx = canvas.getContext('2d');
+			ctx.strokeStyle = "#28d1fa";
+			ctx.lineWidth = 31;
+			
+			function degToRad(degree) {
+				var factor = Math.PI/180;
+				return degree*factor;
+			}
+			
+			function drawTime() {
+			
+				ctx.shadowBlur = 0;
+				ctx.shadowColor = "#28d1fa";
+				
+				var currentTime = new Date();
+				var date = currentTime.toDateString();
+				var time = currentTime.toLocaleTimeString();
+				var millisecond = currentTime.getMilliseconds();
+				var second = currentTime.getSeconds();
+				var newSecond = second + (millisecond/1000);
+				var minute = currentTime.getMinutes();
+				var hour = currentTime.getHours();
+				var x = canvas.width / 2;
+				var y = canvas.height / 2;
+				
+				//Background
+				ctx.fillStyle = "#232324";
+				ctx.fillRect(0,0,canvas.width,canvas.height)
+				
+				//Minute
+				ctx.strokeStyle = "#ff3300";
+				ctx.beginPath();
+				ctx.arc(x, y, 170, degToRad(270), degToRad((minute*6)-90));
+				ctx.stroke();
+				
+				ctx.shadowBlur = 15;
+				ctx.shadowColor = "#28d1fa";
+				
+				//Second
+				ctx.strokeStyle = "#28d1fa";
+				ctx.beginPath();
+				ctx.arc(x, y, 140, degToRad(270), degToRad((newSecond*6)-90));
+				ctx.stroke();
+				
+				//Hours
+				ctx.beginPath();
+				ctx.arc(x, y, 200, degToRad(270), degToRad((hour*15)-90));
+				ctx.stroke();
+					
+				//Date
+				ctx.font = "25px Arial";
+				ctx.fillStyle = "#28d1fa";
+				ctx.fillText(date, 165, 250);
+				
+				//Time
+				ctx.font = "20px Arial";
+				ctx.fillStyle = "#28d1fa";
+				ctx.fillText(time, 195, 280);
+			}
+			
+			setInterval(drawTime, 40)
+		</script>
+	</body>
+</html>

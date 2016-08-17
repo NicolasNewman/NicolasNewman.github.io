@@ -168,6 +168,7 @@ function computerTurn() {
 			noIntelMoves = true;
 		}
 	}
+	console.log("After Fork Check One: " + noIntelMoves)
 	
 	//if there is nothing important to do
 	if(noIntelMoves == false) {

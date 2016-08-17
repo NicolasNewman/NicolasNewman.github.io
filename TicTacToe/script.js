@@ -161,6 +161,14 @@ function computerTurn() {
 	}
 	console.log("After Edge Start: " + noIntelMoves)
 	
+	if(hasBlocked == false) {
+		if(document.getElementById("r1c3").value == "X" && document.getElementById("r3c1").value == "X") {
+			document.getElementById("r1c2").value="O";
+			hasBlocked = true;
+			noIntelMoves = true;
+		}
+	}
+	
 	//if there is nothing important to do
 	if(noIntelMoves == false) {
 		for(var x = 0; x < buttons.length; x++) {

@@ -161,6 +161,7 @@ function computerTurn() {
 	}
 	console.log("After Edge Start: " + noIntelMoves)
 	
+	//Makes sure that you can't go in two corners and win
 	if(hasBlocked == false) {
 		if(document.getElementById("r1c3").value == "X" && document.getElementById("r3c1").value == "X") {
 			document.getElementById("r1c2").value="O";
@@ -169,6 +170,16 @@ function computerTurn() {
 		}
 	}
 	console.log("After Fork Check One: " + noIntelMoves)
+	
+	//If the middle has not been claimed then claim it
+	if(hasBlocked == false) {
+		if(document.getElementById("r2c2").value == ".") {
+			document.getElementById("r2c2").value="O";
+			hasBlocked = true;
+			noIntelMoves = true;
+		}
+	}
+	console.log("After Claim Middle: " + noIntelMoves)
 	
 	//if there is nothing important to do
 	if(noIntelMoves == false) {

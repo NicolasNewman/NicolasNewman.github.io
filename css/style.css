@@ -1,10 +1,14 @@
-.navbar {
-	/*border-bottom: 1px solid #d4d4d4;*/
-}
+/* Navbar */
 
 nav button.btn {
 	margin-right: 0.5rem;
 }
+
+.nav-fab {
+	font-size: 28px;
+}
+
+/* Jumbotron */
 
 .jumbotron-fluid {
 	text-shadow: #444 0 1px 1px;
@@ -47,6 +51,25 @@ nav button.btn {
 	margin-bottom: 4%;
 }
 
+/* About Section */
+
+hr {
+  border: 0;
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 1px solid #fff;
+}
+
 .credit {
 	margin: 4%;
+}
+
+/* What I use Section */
+
+.img-code {
+	width: 200px;
+	margin: 1% auto;
+}
+
+.code-info {
+	margin: 3% auto;
 }

@@ -1,17 +1,76 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Title </title>
-		<link rel="stylesheet" href="main.css">
-	</head>
-	<body>
-		<p>Select the site you would like to go to.</p>
-		<!--<a href="Calculator Bad/index.html">Bad Calculator</a>-->
-		<a href="Calculator/index.html">Calculator</a>
-		<a href="TicTacToe/index.html">Tic Tac Toe</a>
-		<a href="Brainfuck/index.html">Brainf**k Interpreter</a>
-		<a href="CircleClock/index.html">Circle Clock</a>
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<title>Newman Sites</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light py-4">
+	    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="nav-item">
+	        		<button type="button" class="btn btn-outline-dark">Contact</button>
+	        	</li>
+	            <li class="nav-item active">
+	                <a class="nav-link" href="#">About</a>
+	            </li>
+	            <li class="nav-item">
+	                <a class="nav-link" href="#">Projects</a>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="mx-auto order-0">
+	        <a class="navbar-brand mx-auto" href="#"><h3>Nicolas Newman</h3></a>
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+	            <span class="navbar-toggler-icon"></span>
+	        </button>
+	    </div>
+	    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+	        <ul class="navbar-nav ml-auto">
+	            <li class="nav-item"><a class="navbar-brand" href="https://github.com/NicolasNewman"><i class="fab fa-github"></i></a></li>
+				<li class="nav-item"><a class="navbar-brand" href="#"><i class="fab fa-instagram"></i></a></li>
+				<li class="nav-item"><a class="navbar-brand" href="https://steamcommunity.com/id/QuantumPie"><i class="fab fa-steam"></i></a></li>
+	        </ul>
+	    </div>
+	</nav>
+	
+	<div class="bg"></div>
+	<div class="jumbotron jumbotron-fluid">
+		<div class="bg"></div>
+		<div class="container-fluid text-center">
+			<h1 class="display-4">Welcome!</h1>
+			<p class="lead">This site contains various projects I have worked on</p>
+		</div>
+	</div>
+
+	<div class="container text-center">
+		<!-- <h1>About</h1>
+		<hr>
+		<p>Hello! I'm a self taught programmer who is currently a senior in high school. When I'm not programming or learning new things in the fields of math and science, I often spend my time playing video games. I started programming at the end of my 
+		8th grade year with Java. Before I started learning Python, I worked on simple GUI programs using Swing (and latter JFX) as well as programming a robot for my FRC team. Once I learned Python, I resorted to only using Java if I needed a GUI or it was for robotics. Currently, I'm working on learning front-end web development followed by back-end. Hence why I am making this site</p>
+		<hr> -->
+		<div class="row">
+			<div class="col-lg-4 order-2 order-lg-1">
+				<img class="img-fluid" src="img/corgi.jpg">
+				<a class="credit" style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@brianna_santellan?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Brianna Santellan"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Brianna Santellan</span></a>
+			</div>
+			<div class="col-lg-8 order-1 order-lg-1">
+				<h1>About</h1>
+				<hr>
+				<p>Hello! I'm a self taught programmer who is currently a senior in high school. When I'm not programming or learning new things in the fields of math and science, I often spend my time playing video games. I started programming at the end of my 
+				8th grade year with Java. Before I started learning Python, I worked on simple GUI programs using Swing (and latter JFX) as well as programming a robot for my FRC team. Once I learned Python, I resorted to only using Java if I needed a GUI or it was for robotics. Currently, I'm working on learning front-end web development followed by back-end. Hence why I am making this site</p>
+				<hr>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 </html>

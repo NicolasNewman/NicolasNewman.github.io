@@ -1,0 +1,99 @@
+.navbar {
+	background-color: #0590F9;
+	color: #FFF;
+}
+
+.navbar-light .navbar-brand {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 30px;
+}
+
+.navbar-light .navbar-brand:hover {
+	color: rgba(196, 196, 196, .9);
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-light .navbar-nav .active>.nav-link:hover, .navbar-light .navbar-nav .nav-link:hover {
+	color: rgba(196, 196, 196, 0.9);
+}
+
+.carousel {
+
+}
+
+.carousel-caption {
+	top: 50%;
+	transform: translateY(-50%);
+	text-transform: uppercase;
+}
+
+.container {
+	margin: 4% auto;
+}
+
+.img-col {
+	margin: 2% auto;
+}
+
+#price {
+	text-align: center;
+}
+
+.muted {
+	color: #6c757d;
+}
+
+footer {
+	padding: 5%;
+	background: #0590F9;
+	color: #FFF;
+}
+
+.fab {
+	font-size: 35px;
+	padding: 15px;
+	color: #FFF;
+}
+
+.fab:hover {
+	font-size: 35px;
+	padding: 15px;
+	color: #CCC;
+}
+
+.fas-footer {
+	font-size: 100px;
+}
+
+.footer-a {
+	color: white;
+}
+
+.footer-a:hover {
+	color: #CCC;
+}
+
+/*.price-list {
+	list-style: none;
+	padding-left: 0;
+}*/
+
+/*.card {
+	border: 1px solid rgba(0,0,0,.125);
+	min-width: 220px;
+	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+	margin: 1%;
+}
+
+.card-header {
+	padding: .75rem 1.25rem;
+	background-color: rgba(0,0,0,.03);
+	border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.cards {
+	margin-bottom: 4%;
+}*/

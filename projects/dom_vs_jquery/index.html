@@ -119,6 +119,26 @@ $('#btn-one').on('click', function() {
 					</code></pre>
 				</div>				
 			</div>
+			<div id="targeting" class="comparison">
+				<h3>On keypress</h3>
+				<div class="col js">
+					<h4>JavaScript</h4>
+					<pre class="code"><code class="language-javascript">
+var firstInput = document.querySelector("input[type=text]");
+firstInput.addEventListener("keypress", (event) => {
+	console.log(event.key);
+});
+					</code></pre>
+				</div>
+				<div class="col jq">
+					<h4>jQuery</h4>
+					<pre class="code"><code class="language-javascript">
+$('input[type=text]').keypress(function(event) {
+	console.log(event.which);
+});
+					</code></pre>
+				</div>				
+			</div>
 		</div>
 	</section>								
 	<script src="script.js"></script>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM vs jQuery</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/prism.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="lib/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="lib/prism.js"></script>
+</head>
+<body>
+	<header class="even">
+		<h1>JavaScript v. jQuery</h1>
+		<div>
+			<h2>What is the difference?</h2>
+			<p>This page serves as a reference for me as I learn JavaScript. It outlines key differences between DOM and jQuery. DOM is JavaScripts built in link for connecting to HTML and CSS. At release, many people didn't like using the DOM API so jQuery was created in response. It allows for shorter and cleaner code but can slow down websites due to bloated content. Either way, knowing how to confidently use both is important to becoming a seasoned web developer</p>				
+		</div>
+	</header>
+	<section id="DOM" class="odd">
+		<div class="inner">
+			<h2>DOM</h2>
+			<div id="targeting" class="comparison">
+				<h3>Targeting</h3>
+				<div class="col js">
+					<h4>JavaScript</h4>
+					<pre class="code"><code class="language-javascript">
+// Old method
+document.getElementById("my-id");
+document.getElementsByTagName("my-name");
+document.getElementsByClassName("my-class");
+
+// New method
+document.querySelector("div.class");
+document.querySelectorAll("div.class");
+					</code></pre>
+				</div>
+				<div class="col jq">
+					<h4>jQuery</h4>
+					<pre class="code"><code class="language-javascript">
+$('div.class');
+					</code></pre>
+				</div>				
+			</div>
+			<div class="comparison">
+				<h3>Modifying CSS</h3>
+				<div class="col js">
+					<h4>JavaScript</h4>
+					<pre class="code"><code class="language-javascript">
+var p = document.querySelectorAll("p");
+for(var i = 0; i < p.length; i++) {
+	p[i].style.color = "blue";
+	p[i].style.border = "1px solid red";
+}
+					</code></pre>
+				</div>
+				<div class="col jq">
+					<h4>jQuery</h4>
+					<pre class="code"><code class="language-javascript">
+$('p').css({ 
+	color: 'blue',
+	border: '1px solid red'
+});
+					</code></pre>
+				</div>
+			</div>
+			<div class="comparison">
+				<h3>Adding classes</h3>
+				<div class="col js">
+					<h4>JavaScript</h4>
+					<pre class="code"><code class="language-javascript">
+.correct {
+	color: green;
+}
+
+var questions = document.querySelectorAll("p.wrong");
+for(var i = 0; i < questions.length; i++) {
+	questions[i].classList.add("correct");
+	questions[i].classList.remove("wrong");
+	questions[i].classList.toggle("other");
+}
+					</code></pre>
+				</div>
+				<div class="col jq">
+					<h4>jQuery</h4>
+					<pre class="code"><code class="language-javascript">
+.correct {
+	color: green;
+}
+
+$('p.wrong').addClass(".correct");
+$('p.wrong').removeClass(".wrong");
+$('p.correct').toggleClass("other")
+					</code></pre>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="events" class="even">
+		<div class="inner">
+			<h2>Events</h2>
+			<div id="targeting" class="comparison">
+				<h3>On click</h3>
+				<div class="col js">
+					<h4>JavaScript</h4>
+					<pre class="code"><code class="language-javascript">
+var btn = document.querySelector('#btn-one');
+btn.addEventListener("click", function() {
+	this.style.border = "1px solid orange";
+});
+					</code></pre>
+				</div>
+				<div class="col jq">
+					<h4>jQuery</h4>
+					<pre class="code"><code class="language-javascript">
+$('#btn-one').on('click', function() {
+	$(this).css("border", "1px solid orange");
+});
+					</code></pre>
+				</div>				
+			</div>
+		</div>
+	</section>								
+	<script src="script.js"></script>
+</body>
+</html>

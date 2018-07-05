@@ -1,0 +1,112 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	text-align: center;
+}
+
+.even {
+	background: #FFF;
+}
+
+.odd {
+	background: #EEE;
+}
+
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+}
+
+h1, h3, h4 {
+	text-transform: uppercase;
+}
+
+/* Prisim Override */
+pre[class*="language-"] {
+	padding: 0 1em;
+	margin: 0.5em 0;
+	background: #f3f3f3;
+}
+
+
+section.odd pre[class*="language-"] {
+	background: #FFF;
+}
+
+/* Header */
+
+header {
+	padding: 5em 0;
+}
+
+header h1 {
+	color: #FFF;
+	background: #414141;
+	width: 50%;
+	margin: 0 auto;
+	font-size: 3em;
+	padding: 20px 20px;
+}
+
+header p {
+	text-align: justify;
+	margin: 0 auto;
+	width: 40em;
+	max-width: 100%;
+}
+
+/* Sections */
+
+section {
+	padding: 5em 0;
+}
+
+section h2 {
+	letter-spacing: 0.3em;
+	font-size: 3em;
+}
+
+section h3 {
+	font-size: 2em;
+	color: #444;
+}
+
+section h4 {
+	font-size: 1.3em;
+	text-align: left;
+	color: #666;
+}
+
+.inner {
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;	
+	padding: 0 1em;
+}
+
+.code {
+	background: #FFF;
+}
+
+.comparison::after {
+	content: " ";
+	clear: both;
+	display: block;
+}
+
+
+@media (min-width: 768px) {
+	.col.js {
+		float: left;
+		clear: left;
+		margin-right: 2%;			
+	}
+}
+
+@media (min-width: 768px) {
+	.col {
+		float: right;
+		clear: right;
+		width: 49%;			
+	}
+}

@@ -1,0 +1,119 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "About\n\n\nThe following documentation provides notes for things I am in the process of learning.",
+            "title": "Home"
+        },
+        {
+            "location": "/#about",
+            "text": "The following documentation provides notes for things I am in the process of learning.",
+            "title": "About"
+        },
+        {
+            "location": "/js/dom/",
+            "text": "",
+            "title": "DOM"
+        },
+        {
+            "location": "/js/jquery/",
+            "text": "",
+            "title": "jQuery"
+        },
+        {
+            "location": "/nodejs/express/",
+            "text": "Setup\n\n\nEnv\n\n\ntouch app.js\nnpm init\nnpm install express ejs --save\nnpm install body-parser --save # if needed\nmkdir views/partials\n\n\n\n\napp.js\n\n\nvar express = require(\"express\");\nvar bodyParser = require('body-parser');\nvar app = express();\n\n//app.use(bodyParser.urlencoded({extended: true}));\napp.set(\"view engine\", \"ejs\");\n//app.use(express.static(\"public\"));\n\napp.get(\"/\", function(req, res) {\n    res.send(\"Hello there!\");\n});\n\napp.listen(port, ip, function() {\n    console.log(\"Server has started\")\n});\n\n\n\n\nviews/partials/header.ejs\n\n\n<!-- include with <% include partials/header %> -->\n<!DOCTYPE html>\n<html>\n    <head>\n        <title>To-Do List</title>\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/style.css\">\n    </head>\n    <body>\n\n\n\n\nRoutes\n\n\nWildcard\n\n\n// Must go last!\napp.get(\"*\", function(req, res) {\n    res.send(\"Not a valid route\");\n});\n\n\n\n\nGet params\n\n\napp.get(\"/home/:data\", function(req, res) {\n    var data = req.params.data;\n});\n\n\n\n\nPost\n\n\n<form action=\"/post-req\" method=\"POST\">\n    <input type=\"text\" name=\"data\" placeholder=\"data\">\n    <button>Submit</button>\n</form>\n\n\n\n\napp.post(\"/post-req\", function(req, res) {\n    var data = req.body.data;\n    res.redirect(\"/\");\n});\n\n\n\n\nEJS\n\n\nIf logic\n\n\n<% if(true) { %>\n    <p>True</p>\n<% } else { %>\n    <p>False</p>\n<% } %>\n\n\n\n\nPassing information\n\n\n// app.js\nvar data = [1, 2, 3, 4, 5];\napp.get(\"/\", function(req, res) {\n    res.render(\"index.ejs\", {data: data});\n});\n\n\n\n\n<!-- index.ejs -->\n<p><%= data %></p>",
+            "title": "Express"
+        },
+        {
+            "location": "/nodejs/express/#setup",
+            "text": "",
+            "title": "Setup"
+        },
+        {
+            "location": "/nodejs/express/#env",
+            "text": "touch app.js\nnpm init\nnpm install express ejs --save\nnpm install body-parser --save # if needed\nmkdir views/partials",
+            "title": "Env"
+        },
+        {
+            "location": "/nodejs/express/#appjs",
+            "text": "var express = require(\"express\");\nvar bodyParser = require('body-parser');\nvar app = express();\n\n//app.use(bodyParser.urlencoded({extended: true}));\napp.set(\"view engine\", \"ejs\");\n//app.use(express.static(\"public\"));\n\napp.get(\"/\", function(req, res) {\n    res.send(\"Hello there!\");\n});\n\napp.listen(port, ip, function() {\n    console.log(\"Server has started\")\n});",
+            "title": "app.js"
+        },
+        {
+            "location": "/nodejs/express/#viewspartialsheaderejs",
+            "text": "<!-- include with <% include partials/header %> -->\n<!DOCTYPE html>\n<html>\n    <head>\n        <title>To-Do List</title>\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/style.css\">\n    </head>\n    <body>",
+            "title": "views/partials/header.ejs"
+        },
+        {
+            "location": "/nodejs/express/#routes",
+            "text": "",
+            "title": "Routes"
+        },
+        {
+            "location": "/nodejs/express/#wildcard",
+            "text": "// Must go last!\napp.get(\"*\", function(req, res) {\n    res.send(\"Not a valid route\");\n});",
+            "title": "Wildcard"
+        },
+        {
+            "location": "/nodejs/express/#get-params",
+            "text": "app.get(\"/home/:data\", function(req, res) {\n    var data = req.params.data;\n});",
+            "title": "Get params"
+        },
+        {
+            "location": "/nodejs/express/#post",
+            "text": "<form action=\"/post-req\" method=\"POST\">\n    <input type=\"text\" name=\"data\" placeholder=\"data\">\n    <button>Submit</button>\n</form>  app.post(\"/post-req\", function(req, res) {\n    var data = req.body.data;\n    res.redirect(\"/\");\n});",
+            "title": "Post"
+        },
+        {
+            "location": "/nodejs/express/#ejs",
+            "text": "",
+            "title": "EJS"
+        },
+        {
+            "location": "/nodejs/express/#if-logic",
+            "text": "<% if(true) { %>\n    <p>True</p>\n<% } else { %>\n    <p>False</p>\n<% } %>",
+            "title": "If logic"
+        },
+        {
+            "location": "/nodejs/express/#passing-information",
+            "text": "// app.js\nvar data = [1, 2, 3, 4, 5];\napp.get(\"/\", function(req, res) {\n    res.render(\"index.ejs\", {data: data});\n});  <!-- index.ejs -->\n<p><%= data %></p>",
+            "title": "Passing information"
+        },
+        {
+            "location": "/mongodb/mongo/",
+            "text": "Commands\n\n\nmongo\nshow dbs\nuse <db> // Created if it doesn't exist\ndb.<collection>.insert({param: \"val\", param2: \"val2\"})\nshow collections\n\ndb.<collection>.find() // returns everything\ndb.<collection>.find({name: \"Jim\"})\n\ndb.<collection>.update({age: 16}, {canDrive: true}) // Overrides everything\ndb.<collection>.update({age: 16}, {$set: {age: 21, canDrink: \"rue}})\n\ndb.<collection>.remove({age: 16})",
+            "title": "Mongo"
+        },
+        {
+            "location": "/mongodb/mongo/#commands",
+            "text": "mongo\nshow dbs\nuse <db> // Created if it doesn't exist\ndb.<collection>.insert({param: \"val\", param2: \"val2\"})\nshow collections\n\ndb.<collection>.find() // returns everything\ndb.<collection>.find({name: \"Jim\"})\n\ndb.<collection>.update({age: 16}, {canDrive: true}) // Overrides everything\ndb.<collection>.update({age: 16}, {$set: {age: 21, canDrink: \"rue}})\n\ndb.<collection>.remove({age: 16})",
+            "title": "Commands"
+        },
+        {
+            "location": "/mongodb/mongoose/",
+            "text": "Setup with node.js\n\n\nnpm install mongoose --save\n\n\n\n\nvar mongoose = require(\"mongoose\");\nmongoose.connect(\"mongodb://localhost:port/db_name\", {useNewUrlParser: true});\n\nvar mySchema = new mongoose.Schema({ \n    name: String,\n    age: Number,\n    canDrive: Boolean,\n    comments: [{body: String, data: Date}]\n\n});\nvar My = mongoose.model(\"My\", mySchema);\n\n\n\n\nCreate\n\n\nMy.create({\n    name: \"Bob\",\n    age: 15,\n    canDrive: true\n}, function(err, my) {\n    if(err) {\n        console.log(err);\n    } else {\n        console.log(my);\n    }\n});\n\n\n\n\nFind\n\n\nMy.find({}, function(err, my) {\n  if(err) {\n      console.log(err);\n  } else {\n      console.log(my);\n  }\n});\n\n\n\n\nFind by id\n\n\nMy.findById(id, function(err, my) {\n\n});",
+            "title": "Mongoose"
+        },
+        {
+            "location": "/mongodb/mongoose/#setup-with-nodejs",
+            "text": "npm install mongoose --save  var mongoose = require(\"mongoose\");\nmongoose.connect(\"mongodb://localhost:port/db_name\", {useNewUrlParser: true});\n\nvar mySchema = new mongoose.Schema({ \n    name: String,\n    age: Number,\n    canDrive: Boolean,\n    comments: [{body: String, data: Date}]\n\n});\nvar My = mongoose.model(\"My\", mySchema);",
+            "title": "Setup with node.js"
+        },
+        {
+            "location": "/mongodb/mongoose/#create",
+            "text": "My.create({\n    name: \"Bob\",\n    age: 15,\n    canDrive: true\n}, function(err, my) {\n    if(err) {\n        console.log(err);\n    } else {\n        console.log(my);\n    }\n});",
+            "title": "Create"
+        },
+        {
+            "location": "/mongodb/mongoose/#find",
+            "text": "My.find({}, function(err, my) {\n  if(err) {\n      console.log(err);\n  } else {\n      console.log(my);\n  }\n});",
+            "title": "Find"
+        },
+        {
+            "location": "/mongodb/mongoose/#find-by-id",
+            "text": "My.findById(id, function(err, my) {\n\n});",
+            "title": "Find by id"
+        }
+    ]
+}

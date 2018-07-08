@@ -1,0 +1,13 @@
+site_name: 'Web Notes'
+pages:
+  - Home: index.md
+  - JavaScript: 
+      - DOM: js/dom.md
+      - jQuery: js/jquery.md
+  - Node.js:
+      - Express: 'nodejs/express.md'
+  - Mongodb:
+      - Mongo: 'mongodb/mongo.md'
+      - Mongoose: 'mongodb/mongoose.md'
+theme:
+  name: 'rtd-dropdown'

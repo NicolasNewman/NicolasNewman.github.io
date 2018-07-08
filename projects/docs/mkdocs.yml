@@ -1,6 +1,8 @@
 site_name: 'Web Notes'
 pages:
   - Home: index.md
+  - CSS:
+      - Bootstrap: css/bootstrap.md
   - JavaScript: 
       - DOM: js/dom.md
       - jQuery: js/jquery.md

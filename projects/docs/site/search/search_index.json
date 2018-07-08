@@ -11,6 +11,21 @@
             "title": "About"
         },
         {
+            "location": "/css/bootstrap/",
+            "text": "Elements\n\n\nNavbar\n\n\nhere",
+            "title": "Bootstrap"
+        },
+        {
+            "location": "/css/bootstrap/#elements",
+            "text": "",
+            "title": "Elements"
+        },
+        {
+            "location": "/css/bootstrap/#navbar",
+            "text": "here",
+            "title": "Navbar"
+        },
+        {
             "location": "/js/dom/",
             "text": "",
             "title": "DOM"

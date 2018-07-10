@@ -7,9 +7,11 @@ pages:
       - DOM: js/dom.md
       - jQuery: js/jquery.md
   - Node.js:
-      - Express: 'nodejs/express.md'
+      - Express: nodejs/express.md
   - Mongodb:
-      - Mongo: 'mongodb/mongo.md'
-      - Mongoose: 'mongodb/mongoose.md'
+      - Mongo: mongodb/mongo.md
+      - Mongoose: mongodb/mongoose.md
+  - Other:
+      - RESTful Routes: other/rest.md
 theme:
   name: 'rtd-dropdown'

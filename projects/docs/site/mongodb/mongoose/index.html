@@ -234,8 +234,6 @@
   
   
   
-  
-  
   <ul class="current subnav">
     
       
@@ -256,12 +254,27 @@
   
 
 
+  <li class=" toctree-l2">
+    
+      <a href="#basics" title="Mongoose"
+          class="">
+        Basics
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
   <li class="toctree-l2 toc-item">
     <a href="#create" title="Mongoose">Create</a>
   </li>
 
-    
       
+        
 
   
   
@@ -271,8 +284,8 @@
     <a href="#find" title="Mongoose">Find</a>
   </li>
 
-    
       
+        
 
   
   
@@ -282,8 +295,8 @@
     <a href="#find-by-id" title="Mongoose">Find by id</a>
   </li>
 
-    
       
+        
 
   
   
@@ -291,6 +304,62 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#find-by-id-and-update" title="Mongoose">Find by id and update</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#delete-by-id" title="Mongoose">Delete by id</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#associations" title="Mongoose"
+          class="">
+        Associations
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#embed" title="Mongoose">Embed</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#reference" title="Mongoose">Reference</a>
+  </li>
+
+      
+    </ul>
   </li>
 
     
@@ -395,12 +464,14 @@ var mySchema = new mongoose.Schema({
     age: Number,
     canDrive: Boolean,
     comments: [{body: String, data: Date}]
+    created: {type: Date, default: Date.now}
 
 });
 var My = mongoose.model(&quot;My&quot;, mySchema);
 </code></pre>
 
-<h1 id="create">Create</h1>
+<h1 id="basics">Basics</h1>
+<h2 id="create">Create</h2>
 <pre><code class="javascript">My.create({
     name: &quot;Bob&quot;,
     age: 15,
@@ -414,7 +485,7 @@ var My = mongoose.model(&quot;My&quot;, mySchema);
 });
 </code></pre>
 
-<h1 id="find">Find</h1>
+<h2 id="find">Find</h2>
 <pre><code class="javascript">My.find({}, function(err, my) {
   if(err) {
       console.log(err);
@@ -424,16 +495,66 @@ var My = mongoose.model(&quot;My&quot;, mySchema);
 });
 </code></pre>
 
-<h1 id="find-by-id">Find by id</h1>
+<h2 id="find-by-id">Find by id</h2>
 <pre><code class="javascript">My.findById(id, function(err, my) {
 
 });
 </code></pre>
 
-<h1 id="find-by-id-and-update">Find by id and update</h1>
+<h2 id="find-by-id-and-update">Find by id and update</h2>
 <pre><code class="javascript">My.findByIdAndUpdate(id, my, function(err, my) {
 
 });
+</code></pre>
+
+<h2 id="delete-by-id">Delete by id</h2>
+<pre><code class="javascript">My.findByIdAndRemove(id, function(err, my) {
+
+});
+</code></pre>
+
+<h1 id="associations">Associations</h1>
+<h2 id="embed">Embed</h2>
+<pre><code class="javascript">var postSchema = new mongoose.Schema({
+   title: String,
+   content: String
+});
+var Post = mongoose.model(&quot;Post&quot;, postSchema);
+
+var userSchema = new mongoose.Schema({
+   email: String,
+   name: String,
+   posts: [postSchema]
+});
+var User = mongoose.model(&quot;User&quot;, userSchema);
+
+
+var newUser = new User({
+  email: &quot;email&quot;,
+  name: &quot;name&quot;
+});
+newUser.posts.push({
+  title: &quot;title&quot;,
+  content: &quot;content&quot;
+})
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+<pre><code class="javascript">var postSchema = new mongoose.Schema({
+   title: String,
+   content: String
+});
+var Post = mongoose.model(&quot;Post&quot;, postSchema);
+
+var userSchema = new mongoose.Schema({
+   email: String,
+   name: String,
+   posts: [{
+       type: mongoose.Schema.Types.ObjectId,
+       ref: &quot;Post&quot;
+   }]
+});
+var User = mongoose.model(&quot;User&quot;, userSchema);
 </code></pre>
               
             </div>

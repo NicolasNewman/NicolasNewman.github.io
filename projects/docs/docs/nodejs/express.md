@@ -6,6 +6,7 @@ npm init
 npm install express ejs --save
 npm install body-parser --save # if needed
 npm install method-override --save # if needed
+npm install mongoose --save # if needed
 mkdir views/partials
 mkdir public
 ```
@@ -13,6 +14,7 @@ mkdir public
 ```javascript
 var express = require("express");
 var bodyParser = require('body-parser');
+var methodOverride = require("method-override");
 var app = express();
 
 app.set("view engine", "ejs");

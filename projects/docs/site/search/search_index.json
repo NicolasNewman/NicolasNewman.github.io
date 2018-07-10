@@ -37,7 +37,7 @@
         },
         {
             "location": "/nodejs/express/",
-            "text": "Setup\n\n\nEnv\n\n\ntouch app.js\nnpm init\nnpm install express ejs --save\nnpm install body-parser --save # if needed\nnpm install method-override --save # if needed\nmkdir views/partials\nmkdir public\n\n\n\n\napp.js\n\n\nvar express = require(\"express\");\nvar bodyParser = require('body-parser');\nvar app = express();\n\napp.set(\"view engine\", \"ejs\");\napp.use(bodyParser.urlencoded({extended: true}));\napp.use(express.static(\"public\"));\napp.use(methodOverride(\"_method\"));\n\napp.get(\"/\", function(req, res) {\n    res.send(\"Hello there!\");\n});\n\napp.listen(port, ip, function() {\n    console.log(\"Server has started\")\n});\n\n\n\n\nviews/partials/header.ejs\n\n\n<!-- include with <% include partials/header %> -->\n<!DOCTYPE html>\n<html>\n    <head>\n        <title>To-Do List</title>\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/style.css\">\n    </head>\n    <body>\n\n\n\n\nRoutes\n\n\nWildcard\n\n\n// Must go last!\napp.get(\"*\", function(req, res) {\n    res.send(\"Not a valid route\");\n});\n\n\n\n\nGet params\n\n\napp.get(\"/home/:data\", function(req, res) {\n    var data = req.params.data;\n});\n\n\n\n\nPost\n\n\n<form action=\"/post-req\" method=\"POST\">\n    <input type=\"text\" name=\"data\" placeholder=\"data\">\n    <button>Submit</button>\n</form>\n\n\n\n\napp.post(\"/post-req\", function(req, res) {\n    var data = req.body.data;\n    res.redirect(\"/\");\n});\n\n\n\n\nEJS\n\n\nIf logic\n\n\n<% if(true) { %>\n    <p>True</p>\n<% } else { %>\n    <p>False</p>\n<% } %>\n\n\n\n\nPassing information\n\n\n// app.js\nvar data = [1, 2, 3, 4, 5];\napp.get(\"/\", function(req, res) {\n    res.render(\"index.ejs\", {data: data});\n});\n\n\n\n\n<!-- index.ejs -->\n<p><%= data %></p>",
+            "text": "Setup\n\n\nEnv\n\n\ntouch app.js\nnpm init\nnpm install express ejs --save\nnpm install body-parser --save # if needed\nnpm install method-override --save # if needed\nnpm install mongoose --save # if needed\nmkdir views/partials\nmkdir public\n\n\n\n\napp.js\n\n\nvar express = require(\"express\");\nvar bodyParser = require('body-parser');\nvar methodOverride = require(\"method-override\");\nvar app = express();\n\napp.set(\"view engine\", \"ejs\");\napp.use(bodyParser.urlencoded({extended: true}));\napp.use(express.static(\"public\"));\napp.use(methodOverride(\"_method\"));\n\napp.get(\"/\", function(req, res) {\n    res.send(\"Hello there!\");\n});\n\napp.listen(port, ip, function() {\n    console.log(\"Server has started\")\n});\n\n\n\n\nviews/partials/header.ejs\n\n\n<!-- include with <% include partials/header %> -->\n<!DOCTYPE html>\n<html>\n    <head>\n        <title>To-Do List</title>\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/style.css\">\n    </head>\n    <body>\n\n\n\n\nRoutes\n\n\nWildcard\n\n\n// Must go last!\napp.get(\"*\", function(req, res) {\n    res.send(\"Not a valid route\");\n});\n\n\n\n\nGet params\n\n\napp.get(\"/home/:data\", function(req, res) {\n    var data = req.params.data;\n});\n\n\n\n\nPost\n\n\n<form action=\"/post-req\" method=\"POST\">\n    <input type=\"text\" name=\"data\" placeholder=\"data\">\n    <button>Submit</button>\n</form>\n\n\n\n\napp.post(\"/post-req\", function(req, res) {\n    var data = req.body.data;\n    res.redirect(\"/\");\n});\n\n\n\n\nEJS\n\n\nIf logic\n\n\n<% if(true) { %>\n    <p>True</p>\n<% } else { %>\n    <p>False</p>\n<% } %>\n\n\n\n\nPassing information\n\n\n// app.js\nvar data = [1, 2, 3, 4, 5];\napp.get(\"/\", function(req, res) {\n    res.render(\"index.ejs\", {data: data});\n});\n\n\n\n\n<!-- index.ejs -->\n<p><%= data %></p>",
             "title": "Express"
         },
         {
@@ -47,12 +47,12 @@
         },
         {
             "location": "/nodejs/express/#env",
-            "text": "touch app.js\nnpm init\nnpm install express ejs --save\nnpm install body-parser --save # if needed\nnpm install method-override --save # if needed\nmkdir views/partials\nmkdir public",
+            "text": "touch app.js\nnpm init\nnpm install express ejs --save\nnpm install body-parser --save # if needed\nnpm install method-override --save # if needed\nnpm install mongoose --save # if needed\nmkdir views/partials\nmkdir public",
             "title": "Env"
         },
         {
             "location": "/nodejs/express/#appjs",
-            "text": "var express = require(\"express\");\nvar bodyParser = require('body-parser');\nvar app = express();\n\napp.set(\"view engine\", \"ejs\");\napp.use(bodyParser.urlencoded({extended: true}));\napp.use(express.static(\"public\"));\napp.use(methodOverride(\"_method\"));\n\napp.get(\"/\", function(req, res) {\n    res.send(\"Hello there!\");\n});\n\napp.listen(port, ip, function() {\n    console.log(\"Server has started\")\n});",
+            "text": "var express = require(\"express\");\nvar bodyParser = require('body-parser');\nvar methodOverride = require(\"method-override\");\nvar app = express();\n\napp.set(\"view engine\", \"ejs\");\napp.use(bodyParser.urlencoded({extended: true}));\napp.use(express.static(\"public\"));\napp.use(methodOverride(\"_method\"));\n\napp.get(\"/\", function(req, res) {\n    res.send(\"Hello there!\");\n});\n\napp.listen(port, ip, function() {\n    console.log(\"Server has started\")\n});",
             "title": "app.js"
         },
         {
@@ -107,13 +107,18 @@
         },
         {
             "location": "/mongodb/mongoose/",
-            "text": "Setup with node.js\n\n\nnpm install mongoose --save\n\n\n\n\nvar mongoose = require(\"mongoose\");\nmongoose.connect(\"mongodb://localhost:port/db_name\", {useNewUrlParser: true});\n\nvar mySchema = new mongoose.Schema({ \n    name: String,\n    age: Number,\n    canDrive: Boolean,\n    comments: [{body: String, data: Date}]\n\n});\nvar My = mongoose.model(\"My\", mySchema);\n\n\n\n\nCreate\n\n\nMy.create({\n    name: \"Bob\",\n    age: 15,\n    canDrive: true\n}, function(err, my) {\n    if(err) {\n        console.log(err);\n    } else {\n        console.log(my);\n    }\n});\n\n\n\n\nFind\n\n\nMy.find({}, function(err, my) {\n  if(err) {\n      console.log(err);\n  } else {\n      console.log(my);\n  }\n});\n\n\n\n\nFind by id\n\n\nMy.findById(id, function(err, my) {\n\n});\n\n\n\n\nFind by id and update\n\n\nMy.findByIdAndUpdate(id, my, function(err, my) {\n\n});",
+            "text": "Setup with node.js\n\n\nnpm install mongoose --save\n\n\n\n\nvar mongoose = require(\"mongoose\");\nmongoose.connect(\"mongodb://localhost:port/db_name\", {useNewUrlParser: true});\n\nvar mySchema = new mongoose.Schema({ \n    name: String,\n    age: Number,\n    canDrive: Boolean,\n    comments: [{body: String, data: Date}]\n    created: {type: Date, default: Date.now}\n\n});\nvar My = mongoose.model(\"My\", mySchema);\n\n\n\n\nBasics\n\n\nCreate\n\n\nMy.create({\n    name: \"Bob\",\n    age: 15,\n    canDrive: true\n}, function(err, my) {\n    if(err) {\n        console.log(err);\n    } else {\n        console.log(my);\n    }\n});\n\n\n\n\nFind\n\n\nMy.find({}, function(err, my) {\n  if(err) {\n      console.log(err);\n  } else {\n      console.log(my);\n  }\n});\n\n\n\n\nFind by id\n\n\nMy.findById(id, function(err, my) {\n\n});\n\n\n\n\nFind by id and update\n\n\nMy.findByIdAndUpdate(id, my, function(err, my) {\n\n});\n\n\n\n\nDelete by id\n\n\nMy.findByIdAndRemove(id, function(err, my) {\n\n});\n\n\n\n\nAssociations\n\n\nEmbed\n\n\nvar postSchema = new mongoose.Schema({\n   title: String,\n   content: String\n});\nvar Post = mongoose.model(\"Post\", postSchema);\n\nvar userSchema = new mongoose.Schema({\n   email: String,\n   name: String,\n   posts: [postSchema]\n});\nvar User = mongoose.model(\"User\", userSchema);\n\n\nvar newUser = new User({\n  email: \"email\",\n  name: \"name\"\n});\nnewUser.posts.push({\n  title: \"title\",\n  content: \"content\"\n})\n\n\n\n\nReference\n\n\nvar postSchema = new mongoose.Schema({\n   title: String,\n   content: String\n});\nvar Post = mongoose.model(\"Post\", postSchema);\n\nvar userSchema = new mongoose.Schema({\n   email: String,\n   name: String,\n   posts: [{\n       type: mongoose.Schema.Types.ObjectId,\n       ref: \"Post\"\n   }]\n});\nvar User = mongoose.model(\"User\", userSchema);",
             "title": "Mongoose"
         },
         {
             "location": "/mongodb/mongoose/#setup-with-nodejs",
-            "text": "npm install mongoose --save  var mongoose = require(\"mongoose\");\nmongoose.connect(\"mongodb://localhost:port/db_name\", {useNewUrlParser: true});\n\nvar mySchema = new mongoose.Schema({ \n    name: String,\n    age: Number,\n    canDrive: Boolean,\n    comments: [{body: String, data: Date}]\n\n});\nvar My = mongoose.model(\"My\", mySchema);",
+            "text": "npm install mongoose --save  var mongoose = require(\"mongoose\");\nmongoose.connect(\"mongodb://localhost:port/db_name\", {useNewUrlParser: true});\n\nvar mySchema = new mongoose.Schema({ \n    name: String,\n    age: Number,\n    canDrive: Boolean,\n    comments: [{body: String, data: Date}]\n    created: {type: Date, default: Date.now}\n\n});\nvar My = mongoose.model(\"My\", mySchema);",
             "title": "Setup with node.js"
+        },
+        {
+            "location": "/mongodb/mongoose/#basics",
+            "text": "",
+            "title": "Basics"
         },
         {
             "location": "/mongodb/mongoose/#create",
@@ -136,8 +141,28 @@
             "title": "Find by id and update"
         },
         {
+            "location": "/mongodb/mongoose/#delete-by-id",
+            "text": "My.findByIdAndRemove(id, function(err, my) {\n\n});",
+            "title": "Delete by id"
+        },
+        {
+            "location": "/mongodb/mongoose/#associations",
+            "text": "",
+            "title": "Associations"
+        },
+        {
+            "location": "/mongodb/mongoose/#embed",
+            "text": "var postSchema = new mongoose.Schema({\n   title: String,\n   content: String\n});\nvar Post = mongoose.model(\"Post\", postSchema);\n\nvar userSchema = new mongoose.Schema({\n   email: String,\n   name: String,\n   posts: [postSchema]\n});\nvar User = mongoose.model(\"User\", userSchema);\n\n\nvar newUser = new User({\n  email: \"email\",\n  name: \"name\"\n});\nnewUser.posts.push({\n  title: \"title\",\n  content: \"content\"\n})",
+            "title": "Embed"
+        },
+        {
+            "location": "/mongodb/mongoose/#reference",
+            "text": "var postSchema = new mongoose.Schema({\n   title: String,\n   content: String\n});\nvar Post = mongoose.model(\"Post\", postSchema);\n\nvar userSchema = new mongoose.Schema({\n   email: String,\n   name: String,\n   posts: [{\n       type: mongoose.Schema.Types.ObjectId,\n       ref: \"Post\"\n   }]\n});\nvar User = mongoose.model(\"User\", userSchema);",
+            "title": "Reference"
+        },
+        {
             "location": "/other/rest/",
-            "text": "RESTful Routes\n\n\n\n\n\n\n\n\nName\n\n\nPath\n\n\nHTTP Verb\n\n\nPurpose\n\n\nMongoose Method\n\n\n\n\n\n\n\n\n\n\nIndex\n\n\n/dogs\n\n\nGET\n\n\nList all dogs\n\n\nDog.find()\n\n\n\n\n\n\nNew\n\n\n/dogs/new\n\n\nGET\n\n\nShow new dog form\n\n\nN/A\n\n\n\n\n\n\nCreate\n\n\n/dogs\n\n\nPOST\n\n\nCreate a new dog, then redirect somewhere\n\n\nDog.create()\n\n\n\n\n\n\nShow\n\n\n/dogs/:id\n\n\nGET\n\n\nShow info about one specific dog\n\n\nDog.findById()\n\n\n\n\n\n\nEdit\n\n\n/dogs/:id/edit\n\n\nGET\n\n\nShow edit form for one dog\n\n\nDog.findById()\n\n\n\n\n\n\nUpdate\n\n\n/dogs/:id\n\n\nPUT\n\n\nUpdate a particular dog, then redirect somewhere\n\n\nDog.findByIdAndUpdate()\n\n\n\n\n\n\nDestroy\n\n\n/dogs/:id\n\n\nDELETE\n\n\nDelete a particular dog, then redirect somewhere\n\n\nDog.findByIdAndRemove()\n\n\n\n\n\n\n\n\nExample\n\n\nIndex\n\n\napp.get(\"/blogs\", function(req, res) {\n    Blog.find({}, function(err, blogs) {\n       if(err) {\n           console.log(err);\n       } else {\n           res.render(\"index\", {blogs: blogs});\n       }\n    });\n});\n\n\n\n\nNew\n\n\napp.get(\"/blogs/new\", function(req, res) {\n   res.render(\"new\"); \n});\n\n\n\n\nCreate\n\n\napp.post(\"/blogs\", function(req, res) {\n   Blog.create(req.body.blog, function(err, newBlog) {\n       if(err) {\n           res.render(\"new\");\n       } else {\n           res.redirect(\"/blogs\");\n       }\n   }); \n});\n\n\n\n\nShow\n\n\napp.get(\"/blogs/:id\", function(req, res) {\n   Blog.findById(req.params.id, function(err, foundBlog) {\n      if(err) {\n          res.redirect(\"/blogs\");\n      } else {\n          res.render(\"show\", {blog: foundBlog});\n      } \n   });\n});\n\n\n\n\nEdit\n\n\napp.get(\"/blogs/:id/edit\", function(req, res) {\n    Blog.findById(req.params.id, function(err, foundBlog) {\n        if(err) {\n            res.redirect(\"/blogs\")\n        } else {\n            res.render(\"edit\", {blog: foundBlog});\n        }\n    });\n}); \n\n\n\n\nUpdate\n\n\n// action=\"/blogs/<%= blog._id %>?_method=PUT\" method=\"POST\"\napp.put(\"/blogs/:id\", function(req, res) {\n    Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog) {\n       if(err) {\n           res.redirect(\"/blogs\");\n       } else {\n           res.redirect(\"/blogs/\" + req.params.id);\n       }\n    });\n});\n\n\n\n\nDestroy",
+            "text": "RESTful Routes\n\n\n\n\n\n\n\n\nName\n\n\nPath\n\n\nHTTP Verb\n\n\nPurpose\n\n\nMongoose Method\n\n\n\n\n\n\n\n\n\n\nIndex\n\n\n/dogs\n\n\nGET\n\n\nList all dogs\n\n\nDog.find()\n\n\n\n\n\n\nNew\n\n\n/dogs/new\n\n\nGET\n\n\nShow new dog form\n\n\nN/A\n\n\n\n\n\n\nCreate\n\n\n/dogs\n\n\nPOST\n\n\nCreate a new dog, then redirect somewhere\n\n\nDog.create()\n\n\n\n\n\n\nShow\n\n\n/dogs/:id\n\n\nGET\n\n\nShow info about one specific dog\n\n\nDog.findById()\n\n\n\n\n\n\nEdit\n\n\n/dogs/:id/edit\n\n\nGET\n\n\nShow edit form for one dog\n\n\nDog.findById()\n\n\n\n\n\n\nUpdate\n\n\n/dogs/:id\n\n\nPUT\n\n\nUpdate a particular dog, then redirect somewhere\n\n\nDog.findByIdAndUpdate()\n\n\n\n\n\n\nDestroy\n\n\n/dogs/:id\n\n\nDELETE\n\n\nDelete a particular dog, then redirect somewhere\n\n\nDog.findByIdAndRemove()\n\n\n\n\n\n\n\n\nExample\n\n\nIndex\n\n\napp.get(\"/blogs\", function(req, res) {\n    Blog.find({}, function(err, blogs) {\n       if(err) {\n           console.log(err);\n       } else {\n           res.render(\"index\", {blogs: blogs});\n       }\n    });\n});\n\n\n\n\nNew\n\n\napp.get(\"/blogs/new\", function(req, res) {\n   res.render(\"new\"); \n});\n\n\n\n\nCreate\n\n\napp.post(\"/blogs\", function(req, res) {\n   Blog.create(req.body.blog, function(err, newBlog) {\n       if(err) {\n           res.render(\"new\");\n       } else {\n           res.redirect(\"/blogs\");\n       }\n   }); \n});\n\n\n\n\nShow\n\n\napp.get(\"/blogs/:id\", function(req, res) {\n   Blog.findById(req.params.id, function(err, foundBlog) {\n      if(err) {\n          res.redirect(\"/blogs\");\n      } else {\n          res.render(\"show\", {blog: foundBlog});\n      } \n   });\n});\n\n\n\n\nEdit\n\n\napp.get(\"/blogs/:id/edit\", function(req, res) {\n    Blog.findById(req.params.id, function(err, foundBlog) {\n        if(err) {\n            res.redirect(\"/blogs\")\n        } else {\n            res.render(\"edit\", {blog: foundBlog});\n        }\n    });\n}); \n\n\n\n\nUpdate\n\n\n// action=\"/blogs/<%= blog._id %>?_method=PUT\" method=\"POST\"\napp.put(\"/blogs/:id\", function(req, res) {\n    Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog) {\n       if(err) {\n           res.redirect(\"/blogs\");\n       } else {\n           res.redirect(\"/blogs/\" + req.params.id);\n       }\n    });\n});\n\n\n\n\nDestroy\n\n\n// action=\"/blogs/<%= blog._id %>?_method=DELETE\" method=\"POST\"\napp.delete(\"/blogs/:id\", function(req, res) {\n    Blog.findByIdAndRemove(req.params.id, function(err) {\n       if(err) {\n           res.redirect(\"/blogs\");\n       } else {\n           res.redirect(\"/blogs\");\n       }\n    });\n});",
             "title": "RESTful Routes"
         },
         {
@@ -182,7 +207,7 @@
         },
         {
             "location": "/other/rest/#destroy",
-            "text": "",
+            "text": "// action=\"/blogs/<%= blog._id %>?_method=DELETE\" method=\"POST\"\napp.delete(\"/blogs/:id\", function(req, res) {\n    Blog.findByIdAndRemove(req.params.id, function(err) {\n       if(err) {\n           res.redirect(\"/blogs\");\n       } else {\n           res.redirect(\"/blogs\");\n       }\n    });\n});",
             "title": "Destroy"
         }
     ]

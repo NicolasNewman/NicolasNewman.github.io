@@ -564,7 +564,16 @@ app.put(&quot;/blogs/:id&quot;, function(req, res) {
 </code></pre>
 
 <h2 id="destroy">Destroy</h2>
-<pre><code class="javascript">
+<pre><code class="javascript">// action=&quot;/blogs/&lt;%= blog._id %&gt;?_method=DELETE&quot; method=&quot;POST&quot;
+app.delete(&quot;/blogs/:id&quot;, function(req, res) {
+    Blog.findByIdAndRemove(req.params.id, function(err) {
+       if(err) {
+           res.redirect(&quot;/blogs&quot;);
+       } else {
+           res.redirect(&quot;/blogs&quot;);
+       }
+    });
+});
 </code></pre>
               
             </div>

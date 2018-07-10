@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>jQuery - Web Notes</title>
+  <title>RESTful Routes - Web Notes</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "jQuery";
-    var mkdocs_page_input_path = "js\\jquery.md";
-    var mkdocs_page_url = "/js/jquery/";
+    var mkdocs_page_name = "RESTful Routes";
+    var mkdocs_page_input_path = "other\\rest.md";
+    var mkdocs_page_url = "/other/rest/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -119,12 +119,12 @@
   <p class="caption">JavaScript</p>
 
 
-<ul class="current" href="js\dom">
+<ul class="" href="js\dom">
   
     
       
 <li class=" toctree-l1">
-  <a href="../dom/" title="DOM"
+  <a href="../../js/dom/" title="DOM"
       class="">
     DOM
   </a>
@@ -134,18 +134,13 @@
 </li>
     
       
-<li class="current toctree-l1">
-  <a href="./" title="jQuery"
-      class="current">
+<li class=" toctree-l1">
+  <a href="../../js/jquery/" title="jQuery"
+      class="">
     jQuery
   </a>
 
   
-  
-    
-    
-      
-    
   
 </li>
     
@@ -257,17 +252,137 @@
   <p class="caption">Other</p>
 
 
-<ul class="" href="other\rest">
+<ul class="current" href="other\rest">
   
     
       
-<li class=" toctree-l1">
-  <a href="../../other/rest/" title="RESTful Routes"
-      class="">
+<li class="current toctree-l1">
+  <a href="./" title="RESTful Routes"
+      class="current">
     RESTful Routes
   </a>
 
   
+  
+    
+    
+      
+  
+  
+  
+  <ul class="current subnav">
+    
+      
+
+  
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#restful-routes" title="RESTful Routes">RESTful Routes</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#example" title="RESTful Routes"
+          class="">
+        Example
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#index" title="RESTful Routes">Index</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#new" title="RESTful Routes">New</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#create" title="RESTful Routes">Create</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#show" title="RESTful Routes">Show</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#edit" title="RESTful Routes">Edit</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#update" title="RESTful Routes">Update</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#destroy" title="RESTful Routes">Destroy</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+  </ul>
+
+    
   
 </li>
     
@@ -303,11 +418,11 @@
     
       
         
-          <li>JavaScript &raquo;</li>
+          <li>Other &raquo;</li>
         
       
     
-    <li>jQuery</li>
+    <li>RESTful Routes</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -317,7 +432,86 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="restful-routes">RESTful Routes</h1>
+<p>|---------|----------------|-----------|--------------------------------------------------|
+| Index   | /dogs          | GET       | List all dogs                                    |
+| New     | /dogs/new      | GET       | Show new dog form                                | 
+| Create  | /dogs          | POST      | Create a new dog, then redirect somewhere        |
+| Show    | /dogs/:id      | GET       | Show info about one specific dog                 |
+| Edit    | /dogs/:id/edit | GET       | Show edit form for one dog                       |
+| Update  | /dogs/:id      | PUT       | Update a particular dog, then redirect somewhere |
+| Destroy | /dogs/:id      | DELETE    | Delete a particular dog, then redirect somewhere |</p>
+<h1 id="example">Example</h1>
+<h2 id="index">Index</h2>
+<pre><code class="javascript">app.get(&quot;/blogs&quot;, function(req, res) {
+    Blog.find({}, function(err, blogs) {
+       if(err) {
+           console.log(err);
+       } else {
+           res.render(&quot;index&quot;, {blogs: blogs});
+       }
+    });
+});
+</code></pre>
+
+<h2 id="new">New</h2>
+<pre><code class="javascript">app.get(&quot;/blogs/new&quot;, function(req, res) {
+   res.render(&quot;new&quot;); 
+});
+</code></pre>
+
+<h2 id="create">Create</h2>
+<pre><code class="javascript">app.post(&quot;/blogs&quot;, function(req, res) {
+   Blog.create(req.body.blog, function(err, newBlog) {
+       if(err) {
+           res.render(&quot;new&quot;);
+       } else {
+           res.redirect(&quot;/blogs&quot;);
+       }
+   }); 
+});
+</code></pre>
+
+<h2 id="show">Show</h2>
+<pre><code class="javascript">app.get(&quot;/blogs/:id&quot;, function(req, res) {
+   Blog.findById(req.params.id, function(err, foundBlog) {
+      if(err) {
+          res.redirect(&quot;/blogs&quot;);
+      } else {
+          res.render(&quot;show&quot;, {blog: foundBlog});
+      } 
+   });
+});
+</code></pre>
+
+<h2 id="edit">Edit</h2>
+<pre><code class="javascript">app.get(&quot;/blogs/:id/edit&quot;, function(req, res) {
+    Blog.findById(req.params.id, function(err, foundBlog) {
+        if(err) {
+            res.redirect(&quot;/blogs&quot;)
+        } else {
+            res.render(&quot;edit&quot;, {blog: foundBlog});
+        }
+    });
+}); 
+</code></pre>
+
+<h2 id="update">Update</h2>
+<pre><code class="javascript">// action=&quot;/blogs/&lt;%= blog._id %&gt;?_method=PUT&quot; method=&quot;POST&quot;
+app.put(&quot;/blogs/:id&quot;, function(req, res) {
+    Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog) {
+       if(err) {
+           res.redirect(&quot;/blogs&quot;);
+       } else {
+           res.redirect(&quot;/blogs/&quot; + req.params.id);
+       }
+    });
+});
+</code></pre>
+
+<h2 id="destroy">Destroy</h2>
+<pre><code class="javascript">
+</code></pre>
               
             </div>
           </div>
@@ -325,10 +519,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../nodejs/express/" class="btn btn-neutral float-right" title="Express">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../dom/" class="btn btn-neutral" title="DOM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../mongodb/mongoose/" class="btn btn-neutral" title="Mongoose"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -354,10 +546,8 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../dom/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../mongodb/mongoose/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../../nodejs/express/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

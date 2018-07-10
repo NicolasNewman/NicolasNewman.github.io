@@ -37,7 +37,7 @@
         },
         {
             "location": "/nodejs/express/",
-            "text": "Setup\n\n\nEnv\n\n\ntouch app.js\nnpm init\nnpm install express ejs --save\nnpm install body-parser --save # if needed\nmkdir views/partials\n\n\n\n\napp.js\n\n\nvar express = require(\"express\");\nvar bodyParser = require('body-parser');\nvar app = express();\n\n//app.use(bodyParser.urlencoded({extended: true}));\napp.set(\"view engine\", \"ejs\");\n//app.use(express.static(\"public\"));\n\napp.get(\"/\", function(req, res) {\n    res.send(\"Hello there!\");\n});\n\napp.listen(port, ip, function() {\n    console.log(\"Server has started\")\n});\n\n\n\n\nviews/partials/header.ejs\n\n\n<!-- include with <% include partials/header %> -->\n<!DOCTYPE html>\n<html>\n    <head>\n        <title>To-Do List</title>\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/style.css\">\n    </head>\n    <body>\n\n\n\n\nRoutes\n\n\nWildcard\n\n\n// Must go last!\napp.get(\"*\", function(req, res) {\n    res.send(\"Not a valid route\");\n});\n\n\n\n\nGet params\n\n\napp.get(\"/home/:data\", function(req, res) {\n    var data = req.params.data;\n});\n\n\n\n\nPost\n\n\n<form action=\"/post-req\" method=\"POST\">\n    <input type=\"text\" name=\"data\" placeholder=\"data\">\n    <button>Submit</button>\n</form>\n\n\n\n\napp.post(\"/post-req\", function(req, res) {\n    var data = req.body.data;\n    res.redirect(\"/\");\n});\n\n\n\n\nEJS\n\n\nIf logic\n\n\n<% if(true) { %>\n    <p>True</p>\n<% } else { %>\n    <p>False</p>\n<% } %>\n\n\n\n\nPassing information\n\n\n// app.js\nvar data = [1, 2, 3, 4, 5];\napp.get(\"/\", function(req, res) {\n    res.render(\"index.ejs\", {data: data});\n});\n\n\n\n\n<!-- index.ejs -->\n<p><%= data %></p>",
+            "text": "Setup\n\n\nEnv\n\n\ntouch app.js\nnpm init\nnpm install express ejs --save\nnpm install body-parser --save # if needed\nnpm install method-override --save # if needed\nmkdir views/partials\nmkdir public\n\n\n\n\napp.js\n\n\nvar express = require(\"express\");\nvar bodyParser = require('body-parser');\nvar app = express();\n\napp.set(\"view engine\", \"ejs\");\napp.use(bodyParser.urlencoded({extended: true}));\napp.use(express.static(\"public\"));\napp.use(methodOverride(\"_method\"));\n\napp.get(\"/\", function(req, res) {\n    res.send(\"Hello there!\");\n});\n\napp.listen(port, ip, function() {\n    console.log(\"Server has started\")\n});\n\n\n\n\nviews/partials/header.ejs\n\n\n<!-- include with <% include partials/header %> -->\n<!DOCTYPE html>\n<html>\n    <head>\n        <title>To-Do List</title>\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/style.css\">\n    </head>\n    <body>\n\n\n\n\nRoutes\n\n\nWildcard\n\n\n// Must go last!\napp.get(\"*\", function(req, res) {\n    res.send(\"Not a valid route\");\n});\n\n\n\n\nGet params\n\n\napp.get(\"/home/:data\", function(req, res) {\n    var data = req.params.data;\n});\n\n\n\n\nPost\n\n\n<form action=\"/post-req\" method=\"POST\">\n    <input type=\"text\" name=\"data\" placeholder=\"data\">\n    <button>Submit</button>\n</form>\n\n\n\n\napp.post(\"/post-req\", function(req, res) {\n    var data = req.body.data;\n    res.redirect(\"/\");\n});\n\n\n\n\nEJS\n\n\nIf logic\n\n\n<% if(true) { %>\n    <p>True</p>\n<% } else { %>\n    <p>False</p>\n<% } %>\n\n\n\n\nPassing information\n\n\n// app.js\nvar data = [1, 2, 3, 4, 5];\napp.get(\"/\", function(req, res) {\n    res.render(\"index.ejs\", {data: data});\n});\n\n\n\n\n<!-- index.ejs -->\n<p><%= data %></p>",
             "title": "Express"
         },
         {
@@ -47,12 +47,12 @@
         },
         {
             "location": "/nodejs/express/#env",
-            "text": "touch app.js\nnpm init\nnpm install express ejs --save\nnpm install body-parser --save # if needed\nmkdir views/partials",
+            "text": "touch app.js\nnpm init\nnpm install express ejs --save\nnpm install body-parser --save # if needed\nnpm install method-override --save # if needed\nmkdir views/partials\nmkdir public",
             "title": "Env"
         },
         {
             "location": "/nodejs/express/#appjs",
-            "text": "var express = require(\"express\");\nvar bodyParser = require('body-parser');\nvar app = express();\n\n//app.use(bodyParser.urlencoded({extended: true}));\napp.set(\"view engine\", \"ejs\");\n//app.use(express.static(\"public\"));\n\napp.get(\"/\", function(req, res) {\n    res.send(\"Hello there!\");\n});\n\napp.listen(port, ip, function() {\n    console.log(\"Server has started\")\n});",
+            "text": "var express = require(\"express\");\nvar bodyParser = require('body-parser');\nvar app = express();\n\napp.set(\"view engine\", \"ejs\");\napp.use(bodyParser.urlencoded({extended: true}));\napp.use(express.static(\"public\"));\napp.use(methodOverride(\"_method\"));\n\napp.get(\"/\", function(req, res) {\n    res.send(\"Hello there!\");\n});\n\napp.listen(port, ip, function() {\n    console.log(\"Server has started\")\n});",
             "title": "app.js"
         },
         {
@@ -107,7 +107,7 @@
         },
         {
             "location": "/mongodb/mongoose/",
-            "text": "Setup with node.js\n\n\nnpm install mongoose --save\n\n\n\n\nvar mongoose = require(\"mongoose\");\nmongoose.connect(\"mongodb://localhost:port/db_name\", {useNewUrlParser: true});\n\nvar mySchema = new mongoose.Schema({ \n    name: String,\n    age: Number,\n    canDrive: Boolean,\n    comments: [{body: String, data: Date}]\n\n});\nvar My = mongoose.model(\"My\", mySchema);\n\n\n\n\nCreate\n\n\nMy.create({\n    name: \"Bob\",\n    age: 15,\n    canDrive: true\n}, function(err, my) {\n    if(err) {\n        console.log(err);\n    } else {\n        console.log(my);\n    }\n});\n\n\n\n\nFind\n\n\nMy.find({}, function(err, my) {\n  if(err) {\n      console.log(err);\n  } else {\n      console.log(my);\n  }\n});\n\n\n\n\nFind by id\n\n\nMy.findById(id, function(err, my) {\n\n});",
+            "text": "Setup with node.js\n\n\nnpm install mongoose --save\n\n\n\n\nvar mongoose = require(\"mongoose\");\nmongoose.connect(\"mongodb://localhost:port/db_name\", {useNewUrlParser: true});\n\nvar mySchema = new mongoose.Schema({ \n    name: String,\n    age: Number,\n    canDrive: Boolean,\n    comments: [{body: String, data: Date}]\n\n});\nvar My = mongoose.model(\"My\", mySchema);\n\n\n\n\nCreate\n\n\nMy.create({\n    name: \"Bob\",\n    age: 15,\n    canDrive: true\n}, function(err, my) {\n    if(err) {\n        console.log(err);\n    } else {\n        console.log(my);\n    }\n});\n\n\n\n\nFind\n\n\nMy.find({}, function(err, my) {\n  if(err) {\n      console.log(err);\n  } else {\n      console.log(my);\n  }\n});\n\n\n\n\nFind by id\n\n\nMy.findById(id, function(err, my) {\n\n});\n\n\n\n\nFind by id and update\n\n\nMy.findByIdAndUpdate(id, my, function(err, my) {\n\n});",
             "title": "Mongoose"
         },
         {
@@ -129,6 +129,61 @@
             "location": "/mongodb/mongoose/#find-by-id",
             "text": "My.findById(id, function(err, my) {\n\n});",
             "title": "Find by id"
+        },
+        {
+            "location": "/mongodb/mongoose/#find-by-id-and-update",
+            "text": "My.findByIdAndUpdate(id, my, function(err, my) {\n\n});",
+            "title": "Find by id and update"
+        },
+        {
+            "location": "/other/rest/",
+            "text": "RESTful Routes\n\n\n|---------|----------------|-----------|--------------------------------------------------|\n| Index   | /dogs          | GET       | List all dogs                                    |\n| New     | /dogs/new      | GET       | Show new dog form                                | \n| Create  | /dogs          | POST      | Create a new dog, then redirect somewhere        |\n| Show    | /dogs/:id      | GET       | Show info about one specific dog                 |\n| Edit    | /dogs/:id/edit | GET       | Show edit form for one dog                       |\n| Update  | /dogs/:id      | PUT       | Update a particular dog, then redirect somewhere |\n| Destroy | /dogs/:id      | DELETE    | Delete a particular dog, then redirect somewhere |\n\n\nExample\n\n\nIndex\n\n\napp.get(\"/blogs\", function(req, res) {\n    Blog.find({}, function(err, blogs) {\n       if(err) {\n           console.log(err);\n       } else {\n           res.render(\"index\", {blogs: blogs});\n       }\n    });\n});\n\n\n\n\nNew\n\n\napp.get(\"/blogs/new\", function(req, res) {\n   res.render(\"new\"); \n});\n\n\n\n\nCreate\n\n\napp.post(\"/blogs\", function(req, res) {\n   Blog.create(req.body.blog, function(err, newBlog) {\n       if(err) {\n           res.render(\"new\");\n       } else {\n           res.redirect(\"/blogs\");\n       }\n   }); \n});\n\n\n\n\nShow\n\n\napp.get(\"/blogs/:id\", function(req, res) {\n   Blog.findById(req.params.id, function(err, foundBlog) {\n      if(err) {\n          res.redirect(\"/blogs\");\n      } else {\n          res.render(\"show\", {blog: foundBlog});\n      } \n   });\n});\n\n\n\n\nEdit\n\n\napp.get(\"/blogs/:id/edit\", function(req, res) {\n    Blog.findById(req.params.id, function(err, foundBlog) {\n        if(err) {\n            res.redirect(\"/blogs\")\n        } else {\n            res.render(\"edit\", {blog: foundBlog});\n        }\n    });\n}); \n\n\n\n\nUpdate\n\n\n// action=\"/blogs/<%= blog._id %>?_method=PUT\" method=\"POST\"\napp.put(\"/blogs/:id\", function(req, res) {\n    Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog) {\n       if(err) {\n           res.redirect(\"/blogs\");\n       } else {\n           res.redirect(\"/blogs/\" + req.params.id);\n       }\n    });\n});\n\n\n\n\nDestroy",
+            "title": "RESTful Routes"
+        },
+        {
+            "location": "/other/rest/#restful-routes",
+            "text": "|---------|----------------|-----------|--------------------------------------------------|\n| Index   | /dogs          | GET       | List all dogs                                    |\n| New     | /dogs/new      | GET       | Show new dog form                                | \n| Create  | /dogs          | POST      | Create a new dog, then redirect somewhere        |\n| Show    | /dogs/:id      | GET       | Show info about one specific dog                 |\n| Edit    | /dogs/:id/edit | GET       | Show edit form for one dog                       |\n| Update  | /dogs/:id      | PUT       | Update a particular dog, then redirect somewhere |\n| Destroy | /dogs/:id      | DELETE    | Delete a particular dog, then redirect somewhere |",
+            "title": "RESTful Routes"
+        },
+        {
+            "location": "/other/rest/#example",
+            "text": "",
+            "title": "Example"
+        },
+        {
+            "location": "/other/rest/#index",
+            "text": "app.get(\"/blogs\", function(req, res) {\n    Blog.find({}, function(err, blogs) {\n       if(err) {\n           console.log(err);\n       } else {\n           res.render(\"index\", {blogs: blogs});\n       }\n    });\n});",
+            "title": "Index"
+        },
+        {
+            "location": "/other/rest/#new",
+            "text": "app.get(\"/blogs/new\", function(req, res) {\n   res.render(\"new\"); \n});",
+            "title": "New"
+        },
+        {
+            "location": "/other/rest/#create",
+            "text": "app.post(\"/blogs\", function(req, res) {\n   Blog.create(req.body.blog, function(err, newBlog) {\n       if(err) {\n           res.render(\"new\");\n       } else {\n           res.redirect(\"/blogs\");\n       }\n   }); \n});",
+            "title": "Create"
+        },
+        {
+            "location": "/other/rest/#show",
+            "text": "app.get(\"/blogs/:id\", function(req, res) {\n   Blog.findById(req.params.id, function(err, foundBlog) {\n      if(err) {\n          res.redirect(\"/blogs\");\n      } else {\n          res.render(\"show\", {blog: foundBlog});\n      } \n   });\n});",
+            "title": "Show"
+        },
+        {
+            "location": "/other/rest/#edit",
+            "text": "app.get(\"/blogs/:id/edit\", function(req, res) {\n    Blog.findById(req.params.id, function(err, foundBlog) {\n        if(err) {\n            res.redirect(\"/blogs\")\n        } else {\n            res.render(\"edit\", {blog: foundBlog});\n        }\n    });\n});",
+            "title": "Edit"
+        },
+        {
+            "location": "/other/rest/#update",
+            "text": "// action=\"/blogs/<%= blog._id %>?_method=PUT\" method=\"POST\"\napp.put(\"/blogs/:id\", function(req, res) {\n    Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog) {\n       if(err) {\n           res.redirect(\"/blogs\");\n       } else {\n           res.redirect(\"/blogs/\" + req.params.id);\n       }\n    });\n});",
+            "title": "Update"
+        },
+        {
+            "location": "/other/rest/#destroy",
+            "text": "",
+            "title": "Destroy"
         }
     ]
 }

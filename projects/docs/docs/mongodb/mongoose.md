@@ -46,3 +46,10 @@ My.findById(id, function(err, my) {
 
 });
 ```
+
+# Find by id and update
+```javascript
+My.findByIdAndUpdate(id, my, function(err, my) {
+
+});
+```

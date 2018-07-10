@@ -5,7 +5,9 @@ touch app.js
 npm init
 npm install express ejs --save
 npm install body-parser --save # if needed
+npm install method-override --save # if needed
 mkdir views/partials
+mkdir public
 ```
 ## app.js
 ```javascript
@@ -13,9 +15,10 @@ var express = require("express");
 var bodyParser = require('body-parser');
 var app = express();
 
-//app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-//app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
+app.use(methodOverride("_method"));
 
 app.get("/", function(req, res) {
     res.send("Hello there!");

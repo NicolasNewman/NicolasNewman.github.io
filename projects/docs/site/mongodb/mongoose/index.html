@@ -235,6 +235,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -282,9 +283,57 @@
   </li>
 
     
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#find-by-id-and-update" title="Mongoose">Find by id and update</a>
+  </li>
+
+    
   </ul>
 
     
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Other</p>
+
+
+<ul class="" href="other\rest">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../other/rest/" title="RESTful Routes"
+      class="">
+    RESTful Routes
+  </a>
+
+  
   
 </li>
     
@@ -380,12 +429,20 @@ var My = mongoose.model(&quot;My&quot;, mySchema);
 
 });
 </code></pre>
+
+<h1 id="find-by-id-and-update">Find by id and update</h1>
+<pre><code class="javascript">My.findByIdAndUpdate(id, my, function(err, my) {
+
+});
+</code></pre>
               
             </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../other/rest/" class="btn btn-neutral float-right" title="RESTful Routes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../mongo/" class="btn btn-neutral" title="Mongo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -416,6 +473,8 @@ var My = mongoose.model(&quot;My&quot;, mySchema);
       
         <span><a href="../mongo/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../../other/rest/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

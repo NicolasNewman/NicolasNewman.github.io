@@ -186,6 +186,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -327,6 +328,91 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#passing-information" title="Express">Passing information</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#passport" title="Express"
+          class="">
+        Passport
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#schema" title="Express">Schema</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#setup_1" title="Express">Setup</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#sign-up" title="Express">Sign Up</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#login" title="Express">Login</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#logout" title="Express">Logout</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#secret-page" title="Express">Secret Page</a>
   </li>
 
       
@@ -535,7 +621,8 @@ app.get(&quot;*&quot;, function(req, res) {
 &lt;/form&gt;
 </code></pre>
 
-<pre><code class="javascript">app.post(&quot;/post-req&quot;, function(req, res) {
+<pre><code class="javascript">app.use(bodyParser.urlencoded({extended: true}));
+app.post(&quot;/post-req&quot;, function(req, res) {
     var data = req.body.data;
     res.redirect(&quot;/&quot;);
 });
@@ -560,6 +647,101 @@ app.get(&quot;/&quot;, function(req, res) {
 
 <pre><code class="html">&lt;!-- index.ejs --&gt;
 &lt;p&gt;&lt;%= data %&gt;&lt;/p&gt;
+</code></pre>
+
+<h1 id="passport">Passport</h1>
+<h2 id="schema">Schema</h2>
+<pre><code class="javascript">var mongoose              = require(&quot;mongoose&quot;),
+    passportLocalMongoose = require(&quot;passport-local-mongoose&quot;);
+
+var userSchema = new mongoose.Schema({
+   username: String,
+   password: String
+});
+
+userSchema.plugin(passportLocalMongoose);
+
+module.exports = mongoose.model(&quot;User&quot;, userSchema);
+</code></pre>
+
+<h2 id="setup_1">Setup</h2>
+<pre><code class="sh">npm install express mongoose passport passport-local passport-local-mongoose body-parser express-session ejs --save
+</code></pre>
+
+<pre><code class="javascript">var express               = require(&quot;express&quot;),
+    app                   = express(),
+    mongoose              = require(&quot;mongoose&quot;),
+    passport              = require(&quot;passport&quot;),
+    bodyParser            = require(&quot;body-parser&quot;),
+    LocalStrategy         = require(&quot;passport-local&quot;),
+    passportLocalMongoose = require(&quot;passport-local-mongoose&quot;),
+    User                  = require(&quot;./models/user&quot;);
+
+mongoose.connect(&quot;mongodb://localhost:27017/db_name&quot;, {useNewUrlParser: true});
+app.use(require(&quot;express-session&quot;)({
+    secret: &quot;secret_code&quot;,
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+</code></pre>
+
+<h2 id="sign-up">Sign Up</h2>
+<pre><code class="javascript">app.get(&quot;/register&quot;, function(req, res) {
+    res.render(&quot;register&quot;);
+}) 
+
+app.post(&quot;/register&quot;, function(req, res) {
+    User.register(new User({username: req.body.username}), req.body.password, function(err, user) {
+        if(err) {
+            console.log(err);
+            return res.render(&quot;register&quot;);
+        }
+        passport.authenticate(&quot;local&quot;)(req, res, function() {
+            res.redirect(&quot;/secret&quot;);
+        });
+    });
+});
+</code></pre>
+
+<h2 id="login">Login</h2>
+<pre><code class="javascript">app.get(&quot;/login&quot;, function(req, res) {
+   res.render(&quot;login&quot;); 
+});
+
+app.post(&quot;/login&quot;, passport.authenticate(&quot;local&quot;, {
+    successRedirect: &quot;/secret&quot;, 
+    failureRedirect: &quot;/login&quot;
+
+}), function(req, res) {
+
+});
+</code></pre>
+
+<h2 id="logout">Logout</h2>
+<pre><code class="javascript">app.get(&quot;/logout&quot;, function(req, res) {
+    req.logout();
+    res.redirect(&quot;/&quot;);
+});
+</code></pre>
+
+<h2 id="secret-page">Secret Page</h2>
+<pre><code class="javascript">function isLoggedIn(req, res, next) {
+    if(req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect(&quot;/login&quot;);
+}
+
+app.get(&quot;/secret&quot;, isLoggedIn, function(req, res) {
+   res.render(&quot;secret&quot;) ;
+});
 </code></pre>
               
             </div>

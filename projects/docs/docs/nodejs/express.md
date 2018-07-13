@@ -64,6 +64,7 @@ app.get("/home/:data", function(req, res) {
 </form>
 ```
 ```javascript
+app.use(bodyParser.urlencoded({extended: true}));
 app.post("/post-req", function(req, res) {
 	var data = req.body.data;
 	res.redirect("/");
@@ -92,3 +93,105 @@ app.get("/", function(req, res) {
 <!-- index.ejs -->
 <p><%= data %></p>
 ```
+
+# Passport
+## Schema
+```javascript
+var mongoose              = require("mongoose"),
+    passportLocalMongoose = require("passport-local-mongoose");
+
+var userSchema = new mongoose.Schema({
+   username: String,
+   password: String
+});
+
+userSchema.plugin(passportLocalMongoose);
+
+module.exports = mongoose.model("User", userSchema);
+```
+
+## Setup
+```sh
+npm install express mongoose passport passport-local passport-local-mongoose body-parser express-session ejs --save
+```
+```javascript
+var express               = require("express"),
+    app                   = express(),
+    mongoose              = require("mongoose"),
+    passport              = require("passport"),
+    bodyParser            = require("body-parser"),
+    LocalStrategy         = require("passport-local"),
+    passportLocalMongoose = require("passport-local-mongoose"),
+    User                  = require("./models/user");
+
+mongoose.connect("mongodb://localhost:27017/db_name", {useNewUrlParser: true});
+app.use(require("express-session")({
+    secret: "secret_code",
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+```
+
+## Sign Up
+```javascript
+app.get("/register", function(req, res) {
+    res.render("register");
+}) 
+
+app.post("/register", function(req, res) {
+    User.register(new User({username: req.body.username}), req.body.password, function(err, user) {
+        if(err) {
+            console.log(err);
+            return res.render("register");
+        }
+        passport.authenticate("local")(req, res, function() {
+            res.redirect("/secret");
+        });
+    });
+});
+```
+
+## Login
+```javascript
+app.get("/login", function(req, res) {
+   res.render("login"); 
+});
+
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/secret", 
+    failureRedirect: "/login"
+    
+}), function(req, res) {
+    
+});
+```
+
+## Logout
+```javascript
+app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/");
+});
+```
+
+## Secret Page
+```javascript
+function isLoggedIn(req, res, next) {
+    if(req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect("/login");
+}
+
+app.get("/secret", isLoggedIn, function(req, res) {
+   res.render("secret") ;
+});
+```
+

@@ -427,6 +427,17 @@
   </li>
 
       
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#authorization" title="Express">Authorization</a>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -771,6 +782,35 @@ app.post(&quot;/login&quot;, passport.authenticate(&quot;local&quot;, {
 app.get(&quot;/secret&quot;, isLoggedIn, function(req, res) {
    res.render(&quot;secret&quot;) ;
 });
+</code></pre>
+
+<h2 id="authorization">Authorization</h2>
+<pre><code class="javascript">// Is logged in
+middlewareObj.isLoggedIn = function(req, res, next) {
+    if(req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect(&quot;/login&quot;);
+}
+
+// Ownership
+middlewareObj.checkCommentOwnership = function(req, res, next) {
+    if(req.isAuthenticated()) {
+        Comment.findById(req.params.comment_id, function(err, foundComment) {
+            if(err) {
+                res.redirect(&quot;back&quot;);
+            } else {
+                if(foundComment.author.id.equals(req.user._id)) {
+                    next();
+                } else {
+                    res.redirect(&quot;back&quot;);
+                }
+            }
+        });
+    } else {
+        res.redirect(&quot;back&quot;);
+    }
+}
 </code></pre>
               
             </div>

@@ -290,6 +290,17 @@
   </li>
 
       
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#router" title="Express">Router</a>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -626,6 +637,24 @@ app.post(&quot;/post-req&quot;, function(req, res) {
     var data = req.body.data;
     res.redirect(&quot;/&quot;);
 });
+</code></pre>
+
+<h2 id="router">Router</h2>
+<pre><code class="javascript">// app.js
+var indexRoutes = require(&quot;./routes/index&quot;);
+
+app.use(&quot;/indexRoutes&quot;, indexRoutes);
+</code></pre>
+
+<pre><code class="javascript">//index.js
+var express  = require(&quot;express&quot;),
+    router   = express.Router({mergeParams: true}),
+
+router.get(&quot;/&quot;, function(req, res) {
+   res.render(&quot;index&quot;);
+});
+
+module.exports = router;
 </code></pre>
 
 <h1 id="ejs">EJS</h1>

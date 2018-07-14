@@ -71,6 +71,25 @@ app.post("/post-req", function(req, res) {
 });
 ```
 
+## Router
+```javascript
+// app.js
+var indexRoutes = require("./routes/index");
+
+app.use("/indexRoutes", indexRoutes);
+```
+```javascript
+//index.js
+var express  = require("express"),
+    router   = express.Router({mergeParams: true}),
+
+router.get("/", function(req, res) {
+   res.render("index");
+});
+
+module.exports = router;
+```
+
 # EJS
 ## If logic
 ```javascript

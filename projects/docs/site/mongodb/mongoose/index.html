@@ -472,7 +472,8 @@ var My = mongoose.model(&quot;My&quot;, mySchema);
 
 <h1 id="basics">Basics</h1>
 <h2 id="create">Create</h2>
-<pre><code class="javascript">My.create({
+<pre><code class="javascript">// Example One
+My.create({
     name: &quot;Bob&quot;,
     age: 15,
     canDrive: true
@@ -483,6 +484,23 @@ var My = mongoose.model(&quot;My&quot;, mySchema);
         console.log(my);
     }
 });
+
+// Example Two
+var name = req.body.name;
+var image = req.body.image;
+var description = req.body.description;
+var author = {
+    id: req.user._id,
+    username: req.user.username
+};
+
+var newCampground = {name: name, image: image, description: description, author: author};
+Campground.create(newCampground, function(err, newSite) {
+if(err) {
+    console.log(&quot;Error&quot;);
+} else {
+    res.redirect(&quot;/&quot;);
+}
 </code></pre>
 
 <h2 id="find">Find</h2>
@@ -547,12 +565,20 @@ newUser.posts.push({
 var Post = mongoose.model(&quot;Post&quot;, postSchema);
 
 var userSchema = new mongoose.Schema({
-   email: String,
-   name: String,
-   posts: [{
-       type: mongoose.Schema.Types.ObjectId,
-       ref: &quot;Post&quot;
-   }]
+    name: String,
+    description: String,
+    posts: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: &quot;Post&quot;
+    }],
+    author: {
+        id: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: &quot;User&quot; // defined elsewhere
+        },
+        username: String
+    }
+
 });
 var User = mongoose.model(&quot;User&quot;, userSchema);
 </code></pre>

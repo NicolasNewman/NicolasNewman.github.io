@@ -3,10 +3,14 @@
 ```sh
 touch app.js
 npm init
-npm install express ejs --save
-npm install body-parser --save # if needed
-npm install method-override --save # if needed
-npm install mongoose --save # if needed
+# npm install express ejs --save
+# npm install body-parser --save # if needed
+# npm install method-override --save # if needed
+# npm install mongoose --save # if needed
+
+npm install express ejs body-parser method-override mongoose --save
+npm install connect-flash --save
+
 mkdir views/partials
 mkdir public
 ```

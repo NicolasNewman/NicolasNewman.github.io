@@ -13,5 +13,6 @@ pages:
       - Mongoose: mongodb/mongoose.md
   - Other:
       - RESTful Routes: other/rest.md
+      - Express Template: other/expressTemplate.md
 theme:
   name: 'rtd-dropdown'

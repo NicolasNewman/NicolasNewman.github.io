@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>RESTful Routes - Web Notes</title>
+  <title>Express Template - Web Notes</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "RESTful Routes";
-    var mkdocs_page_input_path = "other\\rest.md";
-    var mkdocs_page_url = "/other/rest/";
+    var mkdocs_page_name = "Express Template";
+    var mkdocs_page_input_path = "other\\expressTemplate.md";
+    var mkdocs_page_url = "/other/expressTemplate/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -256,10 +256,21 @@
   
     
       
-<li class="current toctree-l1">
-  <a href="./" title="RESTful Routes"
-      class="current">
+<li class=" toctree-l1">
+  <a href="../rest/" title="RESTful Routes"
+      class="">
     RESTful Routes
+  </a>
+
+  
+  
+</li>
+    
+      
+<li class="current toctree-l1">
+  <a href="./" title="Express Template"
+      class="current">
+    Express Template
   </a>
 
   
@@ -267,7 +278,6 @@
     
     
       
-  
   
   
   <ul class="current subnav">
@@ -279,25 +289,9 @@
   
 
 
-  <li class="toctree-l2 toc-item">
-    <a href="#restful-routes" title="RESTful Routes">RESTful Routes</a>
-  </li>
-
+  <li class="current toctree-l2">
     
-      
-
-  
-  
-
-
-  <li class=" toctree-l2">
-    
-      <a href="#example" title="RESTful Routes"
-          class="">
-        Example
-      </a>
-    
-    <ul class=" subnav">
+    <ul class="current subnav">
       
         
 
@@ -306,7 +300,7 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#index" title="RESTful Routes">Index</a>
+    <a href="#install" title="Express Template">Install</a>
   </li>
 
       
@@ -317,7 +311,7 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#new" title="RESTful Routes">New</a>
+    <a href="#appjs" title="Express Template">app.js</a>
   </li>
 
       
@@ -328,51 +322,7 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#create" title="RESTful Routes">Create</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#show" title="RESTful Routes">Show</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#edit" title="RESTful Routes">Edit</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#update" title="RESTful Routes">Update</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#destroy" title="RESTful Routes">Destroy</a>
+    <a href="#routes-module" title="Express Template">Routes module</a>
   </li>
 
       
@@ -383,17 +333,6 @@
   </ul>
 
     
-  
-</li>
-    
-      
-<li class=" toctree-l1">
-  <a href="../expressTemplate/" title="Express Template"
-      class="">
-    Express Template
-  </a>
-
-  
   
 </li>
     
@@ -433,7 +372,7 @@
         
       
     
-    <li>RESTful Routes</li>
+    <li>Express Template</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -443,148 +382,76 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="restful-routes">RESTful Routes</h1>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Path</th>
-<th>HTTP Verb</th>
-<th>Purpose</th>
-<th>Mongoose Method</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Index</td>
-<td>/dogs</td>
-<td>GET</td>
-<td>List all dogs</td>
-<td>Dog.find()</td>
-</tr>
-<tr>
-<td>New</td>
-<td>/dogs/new</td>
-<td>GET</td>
-<td>Show new dog form</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>Create</td>
-<td>/dogs</td>
-<td>POST</td>
-<td>Create a new dog, then redirect somewhere</td>
-<td>Dog.create()</td>
-</tr>
-<tr>
-<td>Show</td>
-<td>/dogs/:id</td>
-<td>GET</td>
-<td>Show info about one specific dog</td>
-<td>Dog.findById()</td>
-</tr>
-<tr>
-<td>Edit</td>
-<td>/dogs/:id/edit</td>
-<td>GET</td>
-<td>Show edit form for one dog</td>
-<td>Dog.findById()</td>
-</tr>
-<tr>
-<td>Update</td>
-<td>/dogs/:id</td>
-<td>PUT</td>
-<td>Update a particular dog, then redirect somewhere</td>
-<td>Dog.findByIdAndUpdate()</td>
-</tr>
-<tr>
-<td>Destroy</td>
-<td>/dogs/:id</td>
-<td>DELETE</td>
-<td>Delete a particular dog, then redirect somewhere</td>
-<td>Dog.findByIdAndRemove()</td>
-</tr>
-</tbody>
-</table>
-<h1 id="example">Example</h1>
-<h2 id="index">Index</h2>
-<pre><code class="javascript">app.get(&quot;/blogs&quot;, function(req, res) {
-    Blog.find({}, function(err, blogs) {
-       if(err) {
-           console.log(err);
-       } else {
-           res.render(&quot;index&quot;, {blogs: blogs});
-       }
-    });
+                <h1 id="express-template">Express Template</h1>
+<h2 id="install">Install</h2>
+<pre><code class="sh">touch app.js
+npm init
+
+npm install express ejs body-parser method-override mongoose --save
+npm install passport passport-local passport-local-mongoose body-parser express-session ejs --save
+npm install connect-flash --save
+npm install moment --save
+
+mkdir views views/partials views/partials/header.ejs views/partials/footer.ejs public public/stylesheets public/scripts models routes middleware
+</code></pre>
+
+<h2 id="appjs">app.js</h2>
+<pre><code class="javascript">var express        = require(&quot;express&quot;),
+    app            = express(),
+    bodyParser     = require(&quot;body-parser&quot;),
+    mongoose       = require(&quot;mongoose&quot;),
+    flash          = require(&quot;connect-flash&quot;),
+    passport       = require(&quot;passport&quot;),
+    LocalStrategy  = require(&quot;passport-local&quot;),
+    methodOverride = require(&quot;method-override&quot;),
+
+mongoose.connect(&quot;mongodb://localhost:port/db_name&quot;, {useNewUrlParser: true});
+app.use(bodyParser.urlencoded({extended: true}));
+app.set(&quot;view engine&quot;, &quot;ejs&quot;);
+app.use(express.static(__dirname + &quot;/public&quot;));
+app.use(methodOverride(&quot;_method&quot;));
+app.use(flash());
+
+// passport config
+app.use(require(&quot;express-session&quot;)({
+    secret: &quot;Add super secret code here&quot;,
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// add the currentUser var to every route
+app.use(function(req, res, next) {
+    res.locals.currentUser = req.user;
+    res.locals.error = req.flash(&quot;error&quot;);
+    res.locals.success = req.flash(&quot;success&quot;);
+    //app.locals.moment = require('moment'); // if needed
+    next();
+});
+
+// add different route files
+app.use(indexRoutes);
+app.use(&quot;/path/:id/path2&quot;, idRoutes);
+
+app.listen(process.env.PORT, process.env.IP, function() {
+   console.log(&quot;The server has started&quot;);
 });
 </code></pre>
 
-<h2 id="new">New</h2>
-<pre><code class="javascript">app.get(&quot;/blogs/new&quot;, function(req, res) {
-   res.render(&quot;new&quot;); 
-});
-</code></pre>
+<h2 id="routes-module">Routes module</h2>
+<pre><code class="javascript">var express    = require(&quot;express&quot;),
+    router     = express.Router(),
+    passport   = require(&quot;passport&quot;),
 
-<h2 id="create">Create</h2>
-<pre><code class="javascript">app.post(&quot;/blogs&quot;, function(req, res) {
-   Blog.create(req.body.blog, function(err, newBlog) {
-       if(err) {
-           res.render(&quot;new&quot;);
-       } else {
-           res.redirect(&quot;/blogs&quot;);
-       }
-   }); 
+router.get(&quot;/&quot;, function(req, res) {
+   res.render(&quot;landing&quot;);
 });
-</code></pre>
 
-<h2 id="show">Show</h2>
-<pre><code class="javascript">app.get(&quot;/blogs/:id&quot;, function(req, res) {
-   Blog.findById(req.params.id, function(err, foundBlog) {
-      if(err) {
-          res.redirect(&quot;/blogs&quot;);
-      } else {
-          res.render(&quot;show&quot;, {blog: foundBlog});
-      } 
-   });
-});
-</code></pre>
-
-<h2 id="edit">Edit</h2>
-<pre><code class="javascript">app.get(&quot;/blogs/:id/edit&quot;, function(req, res) {
-    Blog.findById(req.params.id, function(err, foundBlog) {
-        if(err) {
-            res.redirect(&quot;/blogs&quot;)
-        } else {
-            res.render(&quot;edit&quot;, {blog: foundBlog});
-        }
-    });
-}); 
-</code></pre>
-
-<h2 id="update">Update</h2>
-<pre><code class="javascript">// action=&quot;/blogs/&lt;%= blog._id %&gt;?_method=PUT&quot; method=&quot;POST&quot;
-app.put(&quot;/blogs/:id&quot;, function(req, res) {
-    Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog) {
-       if(err) {
-           res.redirect(&quot;/blogs&quot;);
-       } else {
-           res.redirect(&quot;/blogs/&quot; + req.params.id);
-       }
-    });
-});
-</code></pre>
-
-<h2 id="destroy">Destroy</h2>
-<pre><code class="javascript">// action=&quot;/blogs/&lt;%= blog._id %&gt;?_method=DELETE&quot; method=&quot;POST&quot;
-app.delete(&quot;/blogs/:id&quot;, function(req, res) {
-    Blog.findByIdAndRemove(req.params.id, function(err) {
-       if(err) {
-           res.redirect(&quot;/blogs&quot;);
-       } else {
-           res.redirect(&quot;/blogs&quot;);
-       }
-    });
-});
+module.exports = router;
 </code></pre>
               
             </div>
@@ -593,10 +460,8 @@ app.delete(&quot;/blogs/:id&quot;, function(req, res) {
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../expressTemplate/" class="btn btn-neutral float-right" title="Express Template">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../../mongodb/mongoose/" class="btn btn-neutral" title="Mongoose"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../rest/" class="btn btn-neutral" title="RESTful Routes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -622,10 +487,8 @@ app.delete(&quot;/blogs/:id&quot;, function(req, res) {
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../mongodb/mongoose/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../rest/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../expressTemplate/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

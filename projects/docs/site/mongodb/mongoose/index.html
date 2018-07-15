@@ -234,6 +234,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -356,6 +357,36 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#reference" title="Mongoose">Reference</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#models" title="Mongoose"
+          class="">
+        Models
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#campground-example" title="Mongoose">Campground example</a>
   </li>
 
       
@@ -581,6 +612,32 @@ var userSchema = new mongoose.Schema({
 
 });
 var User = mongoose.model(&quot;User&quot;, userSchema);
+</code></pre>
+
+<h1 id="models">Models</h1>
+<h2 id="campground-example">Campground example</h2>
+<pre><code class="javascript">var mongoose = require(&quot;mongoose&quot;);
+
+var campgroundSchema = new mongoose.Schema({
+   name: String,
+   image: String,
+   description: String,
+   cost: Number,
+   createdAt: {type: Date, default: Date.now},
+   comments : [{
+       type: mongoose.Schema.Types.ObjectId,
+       ref: &quot;Comment&quot;
+   }],
+   author: {
+      id: {
+         type: mongoose.Schema.Types.ObjectId,
+         ref: &quot;User&quot;
+      },
+      username: String
+   }
+});
+
+module.exports = mongoose.model(&quot;Campground&quot;, campgroundSchema);
 </code></pre>
               
             </div>

@@ -10,6 +10,7 @@ npm init
 
 npm install express ejs body-parser method-override mongoose --save
 npm install connect-flash --save
+npm install passport passport-local passport-local-mongoose body-parser express-session ejs --save
 
 mkdir views/partials
 mkdir public
@@ -248,3 +249,17 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
 }
 ```
 
+## Form
+```html
+<form action="/login" method="POST">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button>Login</button>
+</form>
+
+<form action="/register" method="POST">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button>Sign Up!</button>
+</form>
+```

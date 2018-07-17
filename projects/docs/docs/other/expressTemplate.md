@@ -23,6 +23,9 @@ var express        = require("express"),
     passport       = require("passport"),
     LocalStrategy  = require("passport-local"),
     methodOverride = require("method-override"),
+    MyModel        = require("./models/model");
+
+var indexRoutes = require("./routes/index");
 
 mongoose.connect("mongodb://localhost:port/db_name", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
@@ -65,7 +68,7 @@ app.listen(process.env.PORT, process.env.IP, function() {
 ```javascript
 var express    = require("express"),
     router     = express.Router(),
-    passport   = require("passport"),
+    passport   = require("passport");
 
 router.get("/", function(req, res) {
    res.render("landing");

@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Express Template - Web Notes</title>
+  <title>Commands - Web Notes</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Express Template";
-    var mkdocs_page_input_path = "other\\expressTemplate.md";
-    var mkdocs_page_url = "/other/expressTemplate/";
+    var mkdocs_page_name = "Commands";
+    var mkdocs_page_input_path = "linux\\commands.md";
+    var mkdocs_page_url = "/linux/commands/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -252,17 +252,76 @@
   <p class="caption">Linux</p>
 
 
-<ul class="" href="linux\commands">
+<ul class="current" href="linux\commands">
   
     
       
-<li class=" toctree-l1">
-  <a href="../../linux/commands/" title="Commands"
-      class="">
+<li class="current toctree-l1">
+  <a href="./" title="Commands"
+      class="current">
     Commands
   </a>
 
   
+  
+    
+    
+      
+  
+  
+  
+  
+  
+  <ul class="current subnav">
+    
+      
+
+  
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#chmod" title="Commands">chmod</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#shutdown" title="Commands">shutdown</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#nginx" title="Commands">nginx</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#pm2" title="Commands">pm2</a>
+  </li>
+
+    
+  </ul>
+
+    
   
 </li>
     
@@ -289,12 +348,12 @@
   <p class="caption">Other</p>
 
 
-<ul class="current" href="other\rest">
+<ul class="" href="other\rest">
   
     
       
 <li class=" toctree-l1">
-  <a href="../rest/" title="RESTful Routes"
+  <a href="../../other/rest/" title="RESTful Routes"
       class="">
     RESTful Routes
   </a>
@@ -304,72 +363,13 @@
 </li>
     
       
-<li class="current toctree-l1">
-  <a href="./" title="Express Template"
-      class="current">
+<li class=" toctree-l1">
+  <a href="../../other/expressTemplate/" title="Express Template"
+      class="">
     Express Template
   </a>
 
   
-  
-    
-    
-      
-  
-  
-  <ul class="current subnav">
-    
-      
-
-  
-  
-  
-
-
-  <li class="current toctree-l2">
-    
-    <ul class="current subnav">
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#install" title="Express Template">Install</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#appjs" title="Express Template">app.js</a>
-  </li>
-
-      
-        
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#routes-module" title="Express Template">Routes module</a>
-  </li>
-
-      
-    </ul>
-  </li>
-
-    
-  </ul>
-
-    
   
 </li>
     
@@ -405,11 +405,11 @@
     
       
         
-          <li>Other &raquo;</li>
+          <li>Linux &raquo;</li>
         
       
     
-    <li>Express Template</li>
+    <li>Commands</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -419,79 +419,59 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="express-template">Express Template</h1>
-<h2 id="install">Install</h2>
-<pre><code class="sh">touch app.js
-npm init
+                <h1 id="chmod">chmod</h1>
+<p><a href="http://www.thinkplexx.com/learn/article/unix/command/chmod-permissions-flags-explained-600-0600-700-777-100-etc">Explination of numbers</a></p>
+<p>Permission:
+1 - can execute
+2 - can write
+4 - can read</p>
+<p>3 (1+2) - can execute and write
+6 (2+4) - can write and read</p>
+<p>Position of the digit:
+1 - what owner can
+2 - what users in the file group can
+3 - what users not in the file group can</p>
+<p>chmod 700 - owner can read, write, and execute
+chmod 777 - everyone can read, write, and execute</p>
+<h1 id="shutdown">shutdown</h1>
+<p><a href="https://www.computerhope.com/unix/ushutdow.htm">Explination</a>
+shutdown [-akrhPHfFnc] [-t sec] time [message]</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-r</td>
+<td>Reboot after shutdown</td>
+</tr>
+<tr>
+<td>-P</td>
+<td>Shutdown and then power down</td>
+</tr>
+<tr>
+<td>now</td>
+<td>Shutdown right after execution</td>
+</tr>
+</tbody>
+</table>
+<p>sudo shutdown -r now</p>
+<h1 id="nginx">nginx</h1>
+<pre><code class="sh">sudo systemctl stop nginx
+sudo systemctl start nginx
+sudo systemctl restart nginx
 
-npm install express ejs body-parser method-override mongoose --save
-npm install passport passport-local passport-local-mongoose body-parser express-session ejs --save
-npm install connect-flash --save
-npm install moment --save
-
-mkdir views views/partials views/partials/header.ejs views/partials/footer.ejs public public/stylesheets public/scripts models routes middleware
+sudo systemctl reload nginx
 </code></pre>
 
-<h2 id="appjs">app.js</h2>
-<pre><code class="javascript">var express        = require(&quot;express&quot;),
-    app            = express(),
-    bodyParser     = require(&quot;body-parser&quot;),
-    mongoose       = require(&quot;mongoose&quot;),
-    flash          = require(&quot;connect-flash&quot;),
-    passport       = require(&quot;passport&quot;),
-    LocalStrategy  = require(&quot;passport-local&quot;),
-    methodOverride = require(&quot;method-override&quot;),
-    MyModel        = require(&quot;./models/model&quot;);
-
-var indexRoutes = require(&quot;./routes/index&quot;);
-
-mongoose.connect(&quot;mongodb://localhost:port/db_name&quot;, {useNewUrlParser: true});
-app.use(bodyParser.urlencoded({extended: true}));
-app.set(&quot;view engine&quot;, &quot;ejs&quot;);
-app.use(express.static(__dirname + &quot;/public&quot;));
-app.use(methodOverride(&quot;_method&quot;));
-app.use(flash());
-
-// passport config
-app.use(require(&quot;express-session&quot;)({
-    secret: &quot;Add super secret code here&quot;,
-    resave: false,
-    saveUninitialized: false
-}));
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
-// add the currentUser var to every route
-app.use(function(req, res, next) {
-    res.locals.currentUser = req.user;
-    res.locals.error = req.flash(&quot;error&quot;);
-    res.locals.success = req.flash(&quot;success&quot;);
-    //app.locals.moment = require('moment'); // if needed
-    next();
-});
-
-// add different route files
-app.use(indexRoutes);
-app.use(&quot;/path/:id/path2&quot;, idRoutes);
-
-app.listen(process.env.PORT, process.env.IP, function() {
-   console.log(&quot;The server has started&quot;);
-});
-</code></pre>
-
-<h2 id="routes-module">Routes module</h2>
-<pre><code class="javascript">var express    = require(&quot;express&quot;),
-    router     = express.Router(),
-    passport   = require(&quot;passport&quot;);
-
-router.get(&quot;/&quot;, function(req, res) {
-   res.render(&quot;landing&quot;);
-});
-
-module.exports = router;
+<h1 id="pm2">pm2</h1>
+<pre><code class="sh">pm2 start script.js
+pm2 stop app_name_or_id
+pm2 restart app_name_or_id
+pm2 list
 </code></pre>
               
             </div>
@@ -500,8 +480,10 @@ module.exports = router;
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../../other/rest/" class="btn btn-neutral float-right" title="RESTful Routes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../rest/" class="btn btn-neutral" title="RESTful Routes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../../mongodb/mongoose/" class="btn btn-neutral" title="Mongoose"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -527,8 +509,10 @@ module.exports = router;
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../rest/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../mongodb/mongoose/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../../other/rest/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

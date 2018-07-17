@@ -60,6 +60,16 @@ My.find({}, function(err, my) {
   }
 });
 ```
+
+## Remove
+```javascript
+Campground.remove({}, function(err) {
+  if(err) {
+    console.log(err);
+  }
+});
+```
+
 ## Find by id
 ```javascript
 My.findById(id, function(err, my) {

@@ -11,6 +11,8 @@ pages:
   - Mongodb:
       - Mongo: mongodb/mongo.md
       - Mongoose: mongodb/mongoose.md
+  - Linux:
+      - Commands: linux/commands.md
   - Other:
       - RESTful Routes: other/rest.md
       - Express Template: other/expressTemplate.md

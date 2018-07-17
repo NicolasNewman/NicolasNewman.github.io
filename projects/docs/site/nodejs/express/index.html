@@ -438,6 +438,17 @@
   </li>
 
       
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#form" title="Express">Form</a>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -490,6 +501,43 @@
   <a href="../../mongodb/mongoose/" title="Mongoose"
       class="">
     Mongoose
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Linux</p>
+
+
+<ul class="" href="linux\commands">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../linux/commands/" title="Commands"
+      class="">
+    Commands
   </a>
 
   
@@ -601,6 +649,7 @@ npm init
 
 npm install express ejs body-parser method-override mongoose --save
 npm install connect-flash --save
+npm install passport passport-local passport-local-mongoose body-parser express-session ejs --save
 
 mkdir views/partials
 mkdir public
@@ -826,6 +875,20 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
         res.redirect(&quot;back&quot;);
     }
 }
+</code></pre>
+
+<h2 id="form">Form</h2>
+<pre><code class="html">&lt;form action=&quot;/login&quot; method=&quot;POST&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;username&quot;&gt;
+    &lt;input type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;password&quot;&gt;
+    &lt;button&gt;Login&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;form action=&quot;/register&quot; method=&quot;POST&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;username&quot; placeholder=&quot;username&quot;&gt;
+    &lt;input type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;password&quot;&gt;
+    &lt;button&gt;Sign Up!&lt;/button&gt;
+&lt;/form&gt;
 </code></pre>
               
             </div>

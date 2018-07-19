@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>DOM - Web Notes</title>
+  <title>Vinella - Web Notes</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "DOM";
-    var mkdocs_page_input_path = "js\\dom.md";
-    var mkdocs_page_url = "/js/dom/";
+    var mkdocs_page_name = "Vinella";
+    var mkdocs_page_input_path = "js\\vinella.md";
+    var mkdocs_page_url = "/js/vinella/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -123,29 +123,108 @@
   
     
       
-<li class=" toctree-l1">
-  <a href="../vinella/" title="Vinella"
-      class="">
+<li class="current toctree-l1">
+  <a href="./" title="Vinella"
+      class="current">
     Vinella
   </a>
 
   
   
+    
+    
+      
+  
+  
+  
+  <ul class="current subnav">
+    
+      
+
+  
+  
+  
+
+
+  <li class="current toctree-l2">
+    
+      <a href="#the-tidbits-and-strange" title="Vinella"
+          class="current">
+        The tidbits and strange
+      </a>
+    
+    <ul class="current subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#truthy-and-falsy" title="Vinella">Truthy and Falsy</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#creating-a-function" title="Vinella"
+          class="">
+        Creating a function
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#function-declaration" title="Vinella">Function declaration</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#function-expression" title="Vinella">Function expression</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+  </ul>
+
+    
+  
 </li>
     
       
-<li class="current toctree-l1">
-  <a href="./" title="DOM"
-      class="current">
+<li class=" toctree-l1">
+  <a href="../dom/" title="DOM"
+      class="">
     DOM
   </a>
 
   
-  
-    
-    
-      
-    
   
 </li>
     
@@ -366,7 +445,7 @@
         
       
     
-    <li>DOM</li>
+    <li>Vinella</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -376,7 +455,63 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="the-tidbits-and-strange">The tidbits and strange</h1>
+<h2 id="truthy-and-falsy">Truthy and Falsy</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>undefined</td>
+<td>false</td>
+</tr>
+<tr>
+<td>null</td>
+<td>false</td>
+</tr>
+<tr>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>''</td>
+<td>false</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Everything else</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">var height; // undefined
+
+if(height) {
+    console.log(&quot;Height is defined&quot;);
+} else {
+    console.log(&quot;Height is undefined&quot;); // result
+}
+</code></pre>
+
+<h1 id="creating-a-function">Creating a function</h1>
+<h2 id="function-declaration">Function declaration</h2>
+<pre><code class="javascript">
+</code></pre>
+
+<h2 id="function-expression">Function expression</h2>
+<pre><code class="javascript">var doSomething = function(value) {
+    return (&quot;The given info is of type &quot; + (typeof value));
+}
+
+var str = doSomething(12);
+</code></pre>
               
             </div>
           </div>
@@ -384,10 +519,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../jquery/" class="btn btn-neutral float-right" title="jQuery">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../dom/" class="btn btn-neutral float-right" title="DOM">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../vinella/" class="btn btn-neutral" title="Vinella"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../css/bootstrap/" class="btn btn-neutral" title="Bootstrap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -413,10 +548,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../vinella/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../css/bootstrap/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../jquery/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../dom/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

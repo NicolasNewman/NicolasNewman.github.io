@@ -26,6 +26,36 @@
             "title": "Navbar"
         },
         {
+            "location": "/js/vinella/",
+            "text": "The tidbits and strange\n\n\nTruthy and Falsy\n\n\n\n\n\n\n\n\nValue\n\n\nResult\n\n\n\n\n\n\n\n\n\n\nundefined\n\n\nfalse\n\n\n\n\n\n\nnull\n\n\nfalse\n\n\n\n\n\n\n0\n\n\nfalse\n\n\n\n\n\n\n''\n\n\nfalse\n\n\n\n\n\n\nNaN\n\n\nfalse\n\n\n\n\n\n\nEverything else\n\n\ntrue\n\n\n\n\n\n\n\n\nvar height; // undefined\n\nif(height) {\n    console.log(\"Height is defined\");\n} else {\n    console.log(\"Height is undefined\"); // result\n}\n\n\n\n\nCreating a function\n\n\nFunction declaration\n\n\n\n\n\n\n\nFunction expression\n\n\nvar doSomething = function(value) {\n    return (\"The given info is of type \" + (typeof value));\n}\n\nvar str = doSomething(12);",
+            "title": "Vinella"
+        },
+        {
+            "location": "/js/vinella/#the-tidbits-and-strange",
+            "text": "",
+            "title": "The tidbits and strange"
+        },
+        {
+            "location": "/js/vinella/#truthy-and-falsy",
+            "text": "Value  Result      undefined  false    null  false    0  false    ''  false    NaN  false    Everything else  true     var height; // undefined\n\nif(height) {\n    console.log(\"Height is defined\");\n} else {\n    console.log(\"Height is undefined\"); // result\n}",
+            "title": "Truthy and Falsy"
+        },
+        {
+            "location": "/js/vinella/#creating-a-function",
+            "text": "",
+            "title": "Creating a function"
+        },
+        {
+            "location": "/js/vinella/#function-declaration",
+            "text": "",
+            "title": "Function declaration"
+        },
+        {
+            "location": "/js/vinella/#function-expression",
+            "text": "var doSomething = function(value) {\n    return (\"The given info is of type \" + (typeof value));\n}\n\nvar str = doSomething(12);",
+            "title": "Function expression"
+        },
+        {
             "location": "/js/dom/",
             "text": "",
             "title": "DOM"

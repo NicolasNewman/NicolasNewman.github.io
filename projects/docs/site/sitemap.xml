@@ -11,6 +11,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>/js/vinella/</loc>
+     <lastmod>2018-07-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>/js/dom/</loc>
      <lastmod>2018-07-19</lastmod>
      <changefreq>daily</changefreq>

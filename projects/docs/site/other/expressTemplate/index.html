@@ -363,6 +363,17 @@
   </li>
 
       
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#middleware" title="Express Template">Middleware</a>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -492,6 +503,22 @@ router.get(&quot;/&quot;, function(req, res) {
 });
 
 module.exports = router;
+</code></pre>
+
+<h2 id="middleware">Middleware</h2>
+<pre><code class="javascript">middleware = require(&quot;../middleware&quot;);
+
+var middlewareObj = {};
+
+middlewareObj.isLoggedIn = function(req, res, next) {
+    if(req.isAuthenticated()) {
+        return next();
+    }
+    req.flash(&quot;error&quot;, &quot;You need to be logged in to do that&quot;);
+    res.redirect(&quot;/login&quot;);
+}
+
+module.exports = middlewareObj
 </code></pre>
               
             </div>

@@ -113,11 +113,11 @@ Each execution content **contains an object**. The object contains the Variable 
 1. Creation phase
     1. Creation of the VO
 		* The argument object is created, containing all the arguments that were passed into the function.
-		* Code is scanned for **function declarations:** for each function, a property is create4d in the VO, **pointing to the function**.
+		* Code is scanned for **function declarations:** for each function, a property is created in the VO, **pointing to the function**.
 		* Code is scanned for **variable declarations:** for each variable, a property is created in the VO, and set to undefined.
 		* These last two points are what is known as hoisting. Functions are already defined when the execution phase starts, variables are not
 	2. Creation of the scope chain
-		* **Each new fgunction creates a scope:** the space/environment, in which the variables it defines are accessible. Scopes are not created though if statements, while loops, or for loops.
+		* **Each new function creates a scope:** the space/environment in which the variables it defines are accessible. Scopes are not created though if statements, while loops, or for loops.
 		* **Lexical scoping:** a function that is lexically within another function gets access to the scope of the outer function.
 	3. Determine value of the 'this' variable
 2. Execution phase

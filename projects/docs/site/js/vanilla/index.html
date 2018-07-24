@@ -744,13 +744,13 @@ var retirementIceland = retirement(67);
 <li>Creation phase<ol>
 <li>Creation of the VO<ul>
 <li>The argument object is created, containing all the arguments that were passed into the function.</li>
-<li>Code is scanned for <strong>function declarations:</strong> for each function, a property is create4d in the VO, <strong>pointing to the function</strong>.</li>
+<li>Code is scanned for <strong>function declarations:</strong> for each function, a property is created in the VO, <strong>pointing to the function</strong>.</li>
 <li>Code is scanned for <strong>variable declarations:</strong> for each variable, a property is created in the VO, and set to undefined.</li>
 <li>These last two points are what is known as hoisting. Functions are already defined when the execution phase starts, variables are not</li>
 </ul>
 </li>
 <li>Creation of the scope chain<ul>
-<li><strong>Each new fgunction creates a scope:</strong> the space/environment, in which the variables it defines are accessible. Scopes are not created though if statements, while loops, or for loops.</li>
+<li><strong>Each new function creates a scope:</strong> the space/environment in which the variables it defines are accessible. Scopes are not created though if statements, while loops, or for loops.</li>
 <li><strong>Lexical scoping:</strong> a function that is lexically within another function gets access to the scope of the outer function.</li>
 </ul>
 </li>

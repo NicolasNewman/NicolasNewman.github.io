@@ -4,7 +4,7 @@ pages:
   - CSS:
       - Bootstrap: css/bootstrap.md
   - JavaScript: 
-      - Vinella: js/vinella.md
+      - Vanilla: js/vanilla.md
       - DOM: js/dom.md
       - jQuery: js/jquery.md
   - Node.js:

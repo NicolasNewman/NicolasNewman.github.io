@@ -119,14 +119,14 @@
   <p class="caption">JavaScript</p>
 
 
-<ul class="current" href="js\vinella">
+<ul class="current" href="js\vanilla">
   
     
       
 <li class=" toctree-l1">
-  <a href="../vinella/" title="Vinella"
+  <a href="../vanilla/" title="Vanilla"
       class="">
-    Vinella
+    Vanilla
   </a>
 
   
@@ -145,6 +145,119 @@
     
     
       
+  
+  
+  
+  
+  <ul class="current subnav">
+    
+      
+
+  
+  
+  
+
+
+  <li class="current toctree-l2">
+    
+      <a href="#accessing-elements" title="DOM"
+          class="current">
+        Accessing Elements
+      </a>
+    
+    <ul class="current subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#by-nameidclass" title="DOM">By name/id/class</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#by-relation" title="DOM">By relation</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#addingcreatingmodifying-elements" title="DOM"
+          class="">
+        Adding/Creating/Modifying Elements
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#creating-elements" title="DOM">Creating Elements</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#adding-elements" title="DOM">Adding Elements</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#modifying-elements" title="DOM">Modifying Elements</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#events" title="DOM">Events</a>
+  </li>
+
+    
+  </ul>
+
     
   
 </li>
@@ -376,7 +489,72 @@
           <div role="main">
             <div class="section">
               
-                
+                <ul>
+<li>The DOM is the document object model. </li>
+<li>It is a structured representation of an HTML document.</li>
+<li>It is used to connect webpages to scripts.</li>
+</ul>
+<h1 id="accessing-elements">Accessing Elements</h1>
+<h2 id="by-nameidclass">By name/id/class</h2>
+<pre><code class="javascript">
+// Old way
+document.getElementById('someId');
+document.getElementByClassName(&quot;someClass&quot;);
+document.getElementsByTagName(&quot;tag (without angle brackets)&quot;);
+
+// New way
+document.querySelector('.someClass');
+document.querySelector('div h1.title');
+
+document.querySelectorAll(&quot;div.note, div.alert&quot;);
+</code></pre>
+
+<h2 id="by-relation">By relation</h2>
+<pre><code class="javascript">var stored = document.getElementById(&quot;someId&quot;);
+
+var children = stored.childNodes;
+var parental = children.parentNode;
+</code></pre>
+
+<h1 id="addingcreatingmodifying-elements">Adding/Creating/Modifying Elements</h1>
+<h2 id="creating-elements">Creating Elements</h2>
+<pre><code class="javascript">var newP = document.createElement('p');
+var pText = document.createTextNode(&quot;This is the text that will be placed in newP&quot;);
+newP.appendChild(pText);
+</code></pre>
+
+<h2 id="adding-elements">Adding Elements</h2>
+<pre><code class="javascript">var div = document.querySelector(&quot;container&quot;);
+div.appendChild(newP);
+
+var parent = div.parentNode;
+
+// Insert newP before div
+parent.insertBefore(newP, div);
+</code></pre>
+
+<h2 id="modifying-elements">Modifying Elements</h2>
+<pre><code class="javascript">var element = document.querySelector(&quot;#result&quot;);
+
+element.classList.remove(&quot;wrong&quot;);
+element.classList.add(&quot;correct&quot;, &quot;txt-lg&quot;);
+element.classList.toggle(&quot;correct&quot;);
+element.classList.contains(&quot;foo&quot;);
+</code></pre>
+
+<h1 id="events">Events</h1>
+<pre><code class="javascript">var element = document.querySelectorAll(&quot;.button&quot;);
+
+element.onClick = function() {
+    console.log(&quot;clicked&quot;);
+};
+
+var logEventType = function(e) {
+    console.log(&quot;event type: &quot;, e.type);
+}
+element.addEventListener(&quot;focus&quot;, logEventType, false);
+element.removeEventListener(&quot;focus&quot;, logEventType, false);
+</code></pre>
               
             </div>
           </div>
@@ -387,7 +565,7 @@
         <a href="../jquery/" class="btn btn-neutral float-right" title="jQuery">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../vinella/" class="btn btn-neutral" title="Vinella"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../vanilla/" class="btn btn-neutral" title="Vanilla"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -413,7 +591,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../vinella/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../vanilla/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../jquery/" style="color: #fcfcfc">Next &raquo;</a></span>

@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Vanilla - Web Notes</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Vanilla";
+    var mkdocs_page_input_path = "js\\vanilla.md";
+    var mkdocs_page_url = "/js/vanilla/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Web Notes</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      
+
+
+  
+    
+
+
+<ul class="" href="/">
+  
+    
+    
+      <li class=" toctree-l1">
+        <a class="" href="/">Home</a>
+      </li>
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">CSS</p>
+
+
+<ul class="" href="css\bootstrap">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../css/bootstrap/" title="Bootstrap"
+      class="">
+    Bootstrap
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">JavaScript</p>
+
+
+<ul class="current" href="js\vanilla">
+  
+    
+      
+<li class="current toctree-l1">
+  <a href="./" title="Vanilla"
+      class="current">
+    Vanilla
+  </a>
+
+  
+  
+    
+    
+      
+  
+  
+  
+  
+  
+  <ul class="current subnav">
+    
+      
+
+  
+  
+  
+
+
+  <li class="current toctree-l2">
+    
+      <a href="#the-tidbits-and-strange" title="Vanilla"
+          class="current">
+        The tidbits and strange
+      </a>
+    
+    <ul class="current subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#truthy-and-falsy" title="Vanilla">Truthy and Falsy</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#creating-a-function" title="Vanilla"
+          class="">
+        Creating a function
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#function-declaration" title="Vanilla">Function declaration</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#function-expression" title="Vanilla">Function expression</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#self-invoking-anonymous-iife" title="Vanilla">Self-invoking (anonymous, IIFE)</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#first-class-functions-passing-functions-as-arguments" title="Vanilla">First Class Functions: Passing Functions as Arguments</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#first-class-functions-functions-returning-functions" title="Vanilla">First Class Functions: Functions Returning Functions</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#closures" title="Vanilla">Closures</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#execution-context" title="Vanilla"
+          class="">
+        Execution Context
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#execution-context_1" title="Vanilla">Execution Context</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#execution-context-object" title="Vanilla">Execution Context Object</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#11-creation-of-the-vo-hoisting" title="Vanilla">1.1 Creation of the VO (Hoisting)</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#12-creation-of-the-scope-chain" title="Vanilla">1.2 Creation of the Scope Chain</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#13-this" title="Vanilla">1.3 this</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#objects" title="Vanilla"
+          class="">
+        Objects
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#example-with-function-constructors" title="Vanilla">Example with Function Constructors</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#example-with-objectcreate" title="Vanilla">Example with Object.create</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+  </ul>
+
+    
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../dom/" title="DOM"
+      class="">
+    DOM
+  </a>
+
+  
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../jquery/" title="jQuery"
+      class="">
+    jQuery
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Node.js</p>
+
+
+<ul class="" href="nodejs\express">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../nodejs/express/" title="Express"
+      class="">
+    Express
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Mongodb</p>
+
+
+<ul class="" href="mongodb\mongo">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../mongodb/mongo/" title="Mongo"
+      class="">
+    Mongo
+  </a>
+
+  
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../../mongodb/mongoose/" title="Mongoose"
+      class="">
+    Mongoose
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Linux</p>
+
+
+<ul class="" href="linux\commands">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../linux/commands/" title="Commands"
+      class="">
+    Commands
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Other</p>
+
+
+<ul class="" href="other\rest">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../other/rest/" title="RESTful Routes"
+      class="">
+    RESTful Routes
+  </a>
+
+  
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../../other/expressTemplate/" title="Express Template"
+      class="">
+    Express Template
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Web Notes</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>JavaScript &raquo;</li>
+        
+      
+    
+    <li>Vanilla</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-tidbits-and-strange">The tidbits and strange</h1>
+<h2 id="truthy-and-falsy">Truthy and Falsy</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>undefined</td>
+<td>false</td>
+</tr>
+<tr>
+<td>null</td>
+<td>false</td>
+</tr>
+<tr>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>''</td>
+<td>false</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Everything else</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="javascript">var height; // undefined
+
+if(height) {
+    console.log(&quot;Height is defined&quot;);
+} else {
+    console.log(&quot;Height is undefined&quot;); // result
+}
+</code></pre>
+
+<h1 id="creating-a-function">Creating a function</h1>
+<h2 id="function-declaration">Function declaration</h2>
+<pre><code class="javascript">function doSomething(value) {
+    return (&quot;The given info is of type &quot; + (typeof value));
+}
+
+var str = doSomething(12);
+</code></pre>
+
+<h2 id="function-expression">Function expression</h2>
+<pre><code class="javascript">var doSomething = function(value) {
+    return (&quot;The given info is of type &quot; + (typeof value));
+}
+
+var str = doSomething(12);
+</code></pre>
+
+<h2 id="self-invoking-anonymous-iife">Self-invoking (anonymous, IIFE)</h2>
+<p>This is useful when you don't want to reuse the function and need it to be in its own scope (for privacy)</p>
+<pre><code class="javascript">(function() {
+    alert(&quot;I run when the script is executed&quot;);
+})();
+</code></pre>
+
+<h2 id="first-class-functions-passing-functions-as-arguments">First Class Functions: Passing Functions as Arguments</h2>
+<pre><code class="javascript">function arrayCalc(arr, fn) {
+    var arrRes = [];
+    for(var i = 0; i &lt; arr.length; i++) {
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
+
+arrayCalc([1990, 2001, 1995, 1950, 1999], function(el) {
+    return 2018 - el;
+});
+</code></pre>
+
+<h2 id="first-class-functions-functions-returning-functions">First Class Functions: Functions Returning Functions</h2>
+<pre><code class="javascript">// This is just an example, closures should be used for this scenario.
+function interviewQuestion(job) {
+    if(job === &quot;designer&quot;) {
+        return function(name) { console.log(name + &quot;, can you explain what UX design is?&quot;) }
+    } else if(job === &quot;teacher&quot;) {
+        return function(name) { console.log(&quot;What subject do you teach, &quot; + name + &quot;?&quot;) }
+    } else {
+        return function(name) { console.log(&quot;Hello &quot; + name + &quot; what do you do?&quot;)}
+    }
+}
+
+var teacherQuestion = interviewQuestion('teacher');
+teacherQuestion(&quot;John&quot;);
+
+question(&quot;designer&quot;)(&quot;Mark&quot;);
+</code></pre>
+
+<h2 id="closures">Closures</h2>
+<pre><code class="javascript">function retirement(retirementAge) {
+    var str = ' years left until retirement';
+    return function(dob) {
+        var age = 2018 - dob;
+        console.log((retirementAge - age) + a);
+    }
+}
+
+var retirementUS = retirement(66);
+retirementUS(1990);
+
+retirement(66)(1940);
+
+var retirementIceland = retirement(67);
+</code></pre>
+
+<p>While the execution stack goes away once the outer function returns, its scope chain still sits in memory. When the inner function is called, its context is added to the execution stack. The new scope created for the inner function still has access to the outer scope.</p>
+<h1 id="execution-context">Execution Context</h1>
+<h2 id="execution-context_1">Execution Context</h2>
+<p>A container that stores a section of code along with variables. The default is the global execution context. It contains code that is <strong>not inside any functions</strong> and is associated with the <strong>global object (window in browsers)</strong> (lastName === window.lastName). When a function is called, <strong>a new execution context is created</strong> and goes on top of the execution stack. If a function is called within a function, it will jump to execute second function's code and return back to the first function when it is done executing the new stack.</p>
+<h2 id="execution-context-object">Execution Context Object</h2>
+<p>Each execution content <strong>contains an object</strong>. The object contains the Variable Object (VO), scope chain, and "this". The execution context is created in two stages</p>
+<ol>
+<li>Creation phase<ol>
+<li>Creation of the VO<ul>
+<li>The argument object is created, containing all the arguments that were passed into the function.</li>
+<li>Code is scanned for <strong>function declarations:</strong> for each function, a property is create4d in the VO, <strong>pointing to the function</strong>.</li>
+<li>Code is scanned for <strong>variable declarations:</strong> for each variable, a property is created in the VO, and set to undefined.</li>
+<li>These last two points are what is known as hoisting. Functions are already defined when the execution phase starts, variables are not</li>
+</ul>
+</li>
+<li>Creation of the scope chain<ul>
+<li><strong>Each new fgunction creates a scope:</strong> the space/environment, in which the variables it defines are accessible. Scopes are not created though if statements, while loops, or for loops.</li>
+<li><strong>Lexical scoping:</strong> a function that is lexically within another function gets access to the scope of the outer function.</li>
+</ul>
+</li>
+<li>Determine value of the 'this' variable</li>
+</ol>
+</li>
+<li>Execution phase<ol>
+<li>The code of the function that generated the current execution context is ran line by line</li>
+</ol>
+</li>
+</ol>
+<h2 id="11-creation-of-the-vo-hoisting">1.1 Creation of the VO (Hoisting)</h2>
+<pre><code class="javascript">// Executes
+doSomething();
+function doSomething() {
+    console.log(&quot;foo&quot;);
+}
+
+// TypeError
+doSomething2();
+var doSomething2 = function() {
+    console.log(&quot;foo&quot;);
+}
+
+// Undefined
+console.log(a);
+var a = 5;
+
+// ReferenceError
+console.log(b);
+</code></pre>
+
+<h2 id="12-creation-of-the-scope-chain">1.2 Creation of the Scope Chain</h2>
+<h3 id="execution-stack">Execution Stack</h3>
+<pre><code class="javascript">var a = &quot;Hello&quot;; // Global scope
+first();
+
+function first() { // first() scope, has access to parent scope (global and a)
+    var b = &quot;Hi!&quot;;
+    second();
+
+    function second() { // second() scope, has access to parent scope (first and global)
+        var c = &quot;Hey!&quot;;
+        console.log(a + b + c);
+    }
+}
+</code></pre>
+
+<h3 id="scope-chain">Scope Chain</h3>
+<pre><code class="javascript">var a = &quot;Hello&quot;; // Global scope
+first();
+
+function first() { // first() scope, has access to parent scope (global and a)
+    var b = &quot;Hi!&quot;;
+    second();
+
+    function second() { // second() scope, has access to parent scope (first and global)
+        var c = &quot;Hey!&quot;;
+        third();
+    }
+}
+
+function third() { // Can only access a, not b and c
+    var d = &quot;John&quot;;
+    console.log(a + b + c + d);
+}
+</code></pre>
+
+<h2 id="13-this">1.3 this</h2>
+<ul>
+<li><strong>Regular function call:</strong> the this keyword points at the global object (the window object in the browser)</li>
+<li><strong>Method call:</strong> the this variable points to the object that is calling the method</li>
+<li>The this keyword is not assigned a value until a function where it is defined is actually called</li>
+</ul>
+<pre><code class="javascript">
+function printThis() {
+    console.log(this);
+} // returns the global object
+
+var john = {
+    name: 'John',
+    dob: '1990',
+    printThis: function() {
+        console.log(this);
+
+        function innerFunc() {
+            console.log(this);
+        } // returns the global object (regular function call)
+        innerFunc();
+    } // returns the object john (method call)
+}
+</code></pre>
+
+<h1 id="objects">Objects</h1>
+<p>(almost) everything is an object</p>
+<table>
+<thead>
+<tr>
+<th>Primitives</th>
+<th>Everything Else</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Numbers</td>
+<td>Arrays</td>
+</tr>
+<tr>
+<td>Strings</td>
+<td>Functions</td>
+</tr>
+<tr>
+<td>Booleans</td>
+<td>Objects</td>
+</tr>
+<tr>
+<td>Undefined</td>
+<td>Dates</td>
+</tr>
+<tr>
+<td>Null</td>
+<td>Wrappers for Numbers, Strings, Booleans</td>
+</tr>
+<tr>
+<td></td>
+<td>And everything else is an object</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Every JavaScript object has a <strong>prototype property</strong>, which makes inheritance possible in JavaScript</li>
+<li>The prototype property of an object is where we put methods and properties that we want <strong>other objects to inherit</strong></li>
+<li>The Constructor's prototype property is <strong>NOT</strong> the prototype of the Constructor itself, it's the prototype of <strong>ALL</strong> instances that are created through it</li>
+<li>When a certain method (or property) is called, the search starts in the object itself, and if it cannot be found, the search moves on to the object's prototype. This continues until the method is found. This is the <strong>prototype chain</strong></li>
+</ul>
+<h2 id="example-with-function-constructors">Example with Function Constructors</h2>
+<pre><code class="javascript">var Person = function(name, dob, job) {
+    this.name = name;
+    this.dob = dob;
+    this.job = job;
+    this.calculateAge = function() {
+        console.log(2018 - this.dob);
+    }
+}
+
+Person.prototype.calculateAge2 = function() {
+    console.log(2018 - this.dob);
+}
+Person.prototype.lastName = 'Smith';
+
+var john = new Person(&quot;John&quot;, 1990, &quot;Teacher&quot;);
+</code></pre>
+
+<ul>
+<li>New creates a new empty object.</li>
+<li>The function is called<ul>
+<li>New Execution Environment is created along with its this variable.</li>
+<li>this points to the empty object due to the new keyword</li>
+</ul>
+</li>
+<li>this.name attaches the variables to the new object</li>
+</ul>
+<p>An array has the length property and its prototype contains functions such as slice, pop, push, and toString</p>
+<h2 id="example-with-objectcreate">Example with Object.create</h2>
+<pre><code class="javascript">var personProto = {
+    calculateAge: function() {
+        console.log(2018 - this.dob);
+    }
+}
+
+// first method of using create
+var john = Object.create(personProto);
+john.name = &quot;John&quot;;
+john.dob = 1990;
+john.job = &quot;Teacher&quot;;
+
+// second method of using create
+var jane = Object.create(personProto, {
+    name: { value: 'Jane' },
+    dob: { value: 1969},
+    job : { value: 'designer'}
+});
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../dom/" class="btn btn-neutral float-right" title="DOM">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../css/bootstrap/" class="btn btn-neutral" title="Bootstrap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../css/bootstrap/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../dom/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>

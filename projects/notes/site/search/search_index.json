@@ -1,0 +1,114 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "About\n\n\nThis site contains notes for what I am learning in my classes\n\n\nBelow are some references for using Latex\n\n\nCheatsheet\n\n\n\n\n\n\n\n\nTask\n\n\nInput\n\n\nOutput\n\n\n\n\n\n\n\n\n\n\nInline Equation\n\n\n\\(\\)\n\n\nN/A\n\n\n\n\n\n\nBlock Equation\n\n\n$$ $$\n\n\nN/A\n\n\n\n\n\n\nAlpha\n\n\n\\alpha\n\n\n\n\n\\alpha\n\n\n\n\n\n\n\n\nPi\n\n\n\\pi\n\n\n\n\n\\pi\n\n\n\n\n\n\n\n\nDegrees\n\n\n^\\circ\n\n\n\n\nx^\\circ\n\n\n\n\n\n\n\n\nTrig + Theta\n\n\n\\sin(\\theta)\n\n\n\n\n\\sin(\\theta)\n\n\n\n\n\n\n\n\nInverse Trig\n\n\n\\sin^{-1}()\n\n\n\n\n\\sin^{-1}()\n\n\n\n\n\n\n\n\nApproximate\n\n\n\\approx\n\n\n\n\n\\approx\n\n\n\n\n\n\n\n\nInfinity\n\n\n\\infty\n\n\n\n\n\\infty\n\n\n\n\n\n\n\n\nFraction\n\n\n\\frac{a}{b}\n\n\n\n\n\\frac{a}{b}\n\n\n\n\n\n\n\n\nf'(x)\n\n\nf'\n\n\n\n\nf'\n\n\n\n\n\n\n\n\nSquare Root\n\n\n\\sqrt{n}\n\n\n\n\n\\sqrt{n}\n\n\n\n\n\n\n\n\nnth Root\n\n\n\\sqrt[n]{x}\n\n\n\n\n\\sqrt[n]{x}\n\n\n\n\n\n\n\n\nExponent\n\n\nx^2\n\n\n\n\nx^2\n\n\n\n\n\n\n\n\nSubscript\n\n\nx_1\n\n\n\n\nx_1\n\n\n\n\n\n\n\n\nLimit\n\n\n\\lim_{x \\to +\\infty} f(x)\n\n\n\n\n\\lim_{x \\to +\\infty} f(x)\n\n\n\n\n\n\n\n\nSum\n\n\n\\sum_{k=1}^n k^2\n\n\n\n\n\\sum_{k=1}^n k^2 \n\n\n\n\n\n\n\n\nDerivative\n\n\n\\dfrac{dy}{dx} f(x)\n\n\n\n\n\\dfrac{dy}{dx} f(x)",
+            "title": "Home"
+        },
+        {
+            "location": "/#about",
+            "text": "This site contains notes for what I am learning in my classes  Below are some references for using Latex  Cheatsheet     Task  Input  Output      Inline Equation  \\(\\)  N/A    Block Equation  $$ $$  N/A    Alpha  \\alpha   \\alpha     Pi  \\pi   \\pi     Degrees  ^\\circ   x^\\circ     Trig + Theta  \\sin(\\theta)   \\sin(\\theta)     Inverse Trig  \\sin^{-1}()   \\sin^{-1}()     Approximate  \\approx   \\approx     Infinity  \\infty   \\infty     Fraction  \\frac{a}{b}   \\frac{a}{b}     f'(x)  f'   f'     Square Root  \\sqrt{n}   \\sqrt{n}     nth Root  \\sqrt[n]{x}   \\sqrt[n]{x}     Exponent  x^2   x^2     Subscript  x_1   x_1     Limit  \\lim_{x \\to +\\infty} f(x)   \\lim_{x \\to +\\infty} f(x)     Sum  \\sum_{k=1}^n k^2   \\sum_{k=1}^n k^2      Derivative  \\dfrac{dy}{dx} f(x)   \\dfrac{dy}{dx} f(x)",
+            "title": "About"
+        },
+        {
+            "location": "/precalc/atit/",
+            "text": "Solving triangles\n\n\nLaw of Sines\n\n\n\n\n\\frac{a}{\\sin(A)}=\\frac{b}{\\sin(B)}=\\frac{c}{\\sin(C)}\n\n\n\n\nAmbiguous Case (SSA)\n\n\n\n\n\n\nNo triangle\n: If a angle is solved for and the calculator responds with an error, no triangle exists.\n\n\nTwo triangles\n: \n\n\nOnce A and \nB_1\n are found, calculate \nB_2=180-B_1\n\n\n\n\nIf \nA+B_1<180^\\circ\n and \nA+B_2<180^\\circ\n is true, there are two triangles\n\n\nSolve the triangle using both \nB_1\n and \nB_2\n\n\n\n\n\n\n\n\n\n\nLaw of Cosines\n\n\n\n\na^2=b^2+c^2-2bc\\cos(A)\n\n\n\\cos(A)=\\frac{b^2+c^2-a^2}{2bc}\n\nThe law of cosines can be used to solve for SSS or SAS (with a included angle) triangles\n\n\nHeron's Area Formula\n\n\n\n\nA=\\sqrt{s(s-a)(s-b)(s-c)}\n\n\ns=\\frac{(a+b+c)}{2}\n\n\n\n\nVectors\n\n\nA \ntwo-dimensional vector v\n is an ordered pair of real numbers, denoted in component form as \n\\langle a,b \\rangle\n. The numbers \na\n and \nb\n are the \ncomponents\n of the vector \nv\n. The \nstandard representation\n of the vector \n\\langle a,b \\rangle\n is the arrow from the origin to the point (a, b). The \nmagnitude\n of \nv\n is the length of the arrow, and the \ndirection\n of \nv\n is the direction in which the arrow is pointing.\n\n\nMagnitude\n\n\n\n\n|v| = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\n\nif \nv = \\langle a,b \\rangle\\ \n then \n|v| = \\sqrt{a^2+b^2}\n\n\n\n\nUnit Vectors\n\n\nA vector \nu\n with the length \n|u| = 1\n is a \nunit vector\n. If \nv\n is not the zero vector \n\\langle 0,0 \\rangle\n, then the vector\n\n\n\n\nu=\\frac{v}{|v|}=\\frac{1}{|v|}v\n\n\n\n\nis a \nunit vector in the direction of v\n.\n\n\nExample\n\n\n\n\n|v|=|\\langle -3,2 \\rangle |=\\sqrt{(-3)^2+2^2}=\\sqrt{13}\n\n\n\\frac{v}{|v|}=\\frac{1}{\\sqrt{13}} \\langle -3,2 \\rangle = \\langle \\frac{-3}{\\sqrt{13}},\\frac{2}{\\sqrt{13}} \\rangle\n\n\n\n\nThe magnitude of this vector will equal 1\n\n\nDirection Angles\n\n\nUsing trigonometry, the horizontal component can be found using \n|v|\\cos(\\theta)\n and the vertical component is \n|v|=\\sin(\\theta)\n. Solving for these components is called \nresolving the vector\n\n\nExample\n\n\nFind the magnitude and direction of the given vector: \nu=\\langle3,2\\rangle\n\n\n\n\n\n\n|u|=\\sqrt{3^2+2^2}=\\sqrt{13}\n\nif \n\\alpha\n is the direction angle of u, then\n\nu=\\langle3,2\\rangle=\\langle|u|\\cos(\\alpha),|u|\\sin(\\alpha)\n\n\n3=|u|\\cos(\\alpha)\n\n\n3=\\sqrt{13}\\cos(\\alpha)\n\n\n\\alpha=\\cos^{-1}(\\frac{3}{\\sqrt{13}})\\approx33.69^\\circ\n\n\n\n\nAngle Between Vectors\n\n\n\n\n\\cos(\\theta)=\\frac{u \\centerdot v}{|u||v|}\n\n\n\n\nOrthogonal Vectors\n\n\nThe vectors \nu\n and \nv\n are \northogonal\n if and only if \nu \\centerdot v=0\n\n\n\n\nDeMoivre's Theorem and nth Roots\n\n\nAbsolute Value of a Complex Number\n\n\nThe \nabsolute value\n of the complex number \nz=a+bi\n is given by:\n\n|a+bi|=\\sqrt{a^2+b^2}\n\n\n\n\nTrigonometric Form of a Complex Number\n\n\n\n\na=r\\cos(\\theta)\n and \nb=r\\sin(\\theta)\n\n\na+bi=(r\\cos(\\theta))+(r\\sin(\\theta)i)=r(\\cos(\\theta)+i\\sin(\\theta))\n\n\n\\theta=\\tan^{-1}(\\frac{b}{a})\n\n\nr=\\sqrt{a^2+b^2}\n\n\n\n\nRaising a Complex Number to a Power\n\n\n\n\nz^n=r^n(\\cos(n\\theta)+i\\sin(n\\theta)\n\n\n\n\nDeMoivre's Theorem for Roots\n\n\nFor a positive integer n, the complex number \nz=r(\\cos(\\theta)+i\\sin(\\theta))\n has exactly \nn\n distinct \nn\nth roots given by\n\n\n\n\n\\sqrt[n]{r}(\\cos(\\frac{\\theta+2\\pi k}{n})+i\\sin(\\frac{\\theta+2\\pi k}{n}))\n\n\n\n\n\n\nk=0,1,2,...,n-1",
+            "title": "Additional Topics in Trigonometry"
+        },
+        {
+            "location": "/precalc/atit/#solving-triangles",
+            "text": "",
+            "title": "Solving triangles"
+        },
+        {
+            "location": "/precalc/atit/#law-of-sines",
+            "text": "\\frac{a}{\\sin(A)}=\\frac{b}{\\sin(B)}=\\frac{c}{\\sin(C)}",
+            "title": "Law of Sines"
+        },
+        {
+            "location": "/precalc/atit/#ambiguous-case-ssa",
+            "text": "No triangle : If a angle is solved for and the calculator responds with an error, no triangle exists.  Two triangles :   Once A and  B_1  are found, calculate  B_2=180-B_1   If  A+B_1<180^\\circ  and  A+B_2<180^\\circ  is true, there are two triangles  Solve the triangle using both  B_1  and  B_2",
+            "title": "Ambiguous Case (SSA)"
+        },
+        {
+            "location": "/precalc/atit/#law-of-cosines",
+            "text": "a^2=b^2+c^2-2bc\\cos(A)  \\cos(A)=\\frac{b^2+c^2-a^2}{2bc} \nThe law of cosines can be used to solve for SSS or SAS (with a included angle) triangles",
+            "title": "Law of Cosines"
+        },
+        {
+            "location": "/precalc/atit/#herons-area-formula",
+            "text": "A=\\sqrt{s(s-a)(s-b)(s-c)}  s=\\frac{(a+b+c)}{2}",
+            "title": "Heron's Area Formula"
+        },
+        {
+            "location": "/precalc/atit/#vectors",
+            "text": "A  two-dimensional vector v  is an ordered pair of real numbers, denoted in component form as  \\langle a,b \\rangle . The numbers  a  and  b  are the  components  of the vector  v . The  standard representation  of the vector  \\langle a,b \\rangle  is the arrow from the origin to the point (a, b). The  magnitude  of  v  is the length of the arrow, and the  direction  of  v  is the direction in which the arrow is pointing.",
+            "title": "Vectors"
+        },
+        {
+            "location": "/precalc/atit/#magnitude",
+            "text": "|v| = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \nif  v = \\langle a,b \\rangle\\   then  |v| = \\sqrt{a^2+b^2}",
+            "title": "Magnitude"
+        },
+        {
+            "location": "/precalc/atit/#unit-vectors",
+            "text": "A vector  u  with the length  |u| = 1  is a  unit vector . If  v  is not the zero vector  \\langle 0,0 \\rangle , then the vector   u=\\frac{v}{|v|}=\\frac{1}{|v|}v   is a  unit vector in the direction of v .",
+            "title": "Unit Vectors"
+        },
+        {
+            "location": "/precalc/atit/#example",
+            "text": "|v|=|\\langle -3,2 \\rangle |=\\sqrt{(-3)^2+2^2}=\\sqrt{13}  \\frac{v}{|v|}=\\frac{1}{\\sqrt{13}} \\langle -3,2 \\rangle = \\langle \\frac{-3}{\\sqrt{13}},\\frac{2}{\\sqrt{13}} \\rangle   The magnitude of this vector will equal 1",
+            "title": "Example"
+        },
+        {
+            "location": "/precalc/atit/#direction-angles",
+            "text": "Using trigonometry, the horizontal component can be found using  |v|\\cos(\\theta)  and the vertical component is  |v|=\\sin(\\theta) . Solving for these components is called  resolving the vector",
+            "title": "Direction Angles"
+        },
+        {
+            "location": "/precalc/atit/#example_1",
+            "text": "Find the magnitude and direction of the given vector:  u=\\langle3,2\\rangle    |u|=\\sqrt{3^2+2^2}=\\sqrt{13} \nif  \\alpha  is the direction angle of u, then u=\\langle3,2\\rangle=\\langle|u|\\cos(\\alpha),|u|\\sin(\\alpha)  3=|u|\\cos(\\alpha)  3=\\sqrt{13}\\cos(\\alpha)  \\alpha=\\cos^{-1}(\\frac{3}{\\sqrt{13}})\\approx33.69^\\circ",
+            "title": "Example"
+        },
+        {
+            "location": "/precalc/atit/#angle-between-vectors",
+            "text": "\\cos(\\theta)=\\frac{u \\centerdot v}{|u||v|}",
+            "title": "Angle Between Vectors"
+        },
+        {
+            "location": "/precalc/atit/#orthogonal-vectors",
+            "text": "The vectors  u  and  v  are  orthogonal  if and only if  u \\centerdot v=0",
+            "title": "Orthogonal Vectors"
+        },
+        {
+            "location": "/precalc/atit/#demoivres-theorem-and-nth-roots",
+            "text": "",
+            "title": "DeMoivre's Theorem and nth Roots"
+        },
+        {
+            "location": "/precalc/atit/#absolute-value-of-a-complex-number",
+            "text": "The  absolute value  of the complex number  z=a+bi  is given by: |a+bi|=\\sqrt{a^2+b^2}",
+            "title": "Absolute Value of a Complex Number"
+        },
+        {
+            "location": "/precalc/atit/#trigonometric-form-of-a-complex-number",
+            "text": "a=r\\cos(\\theta)  and  b=r\\sin(\\theta)  a+bi=(r\\cos(\\theta))+(r\\sin(\\theta)i)=r(\\cos(\\theta)+i\\sin(\\theta))  \\theta=\\tan^{-1}(\\frac{b}{a})  r=\\sqrt{a^2+b^2}",
+            "title": "Trigonometric Form of a Complex Number"
+        },
+        {
+            "location": "/precalc/atit/#raising-a-complex-number-to-a-power",
+            "text": "z^n=r^n(\\cos(n\\theta)+i\\sin(n\\theta)",
+            "title": "Raising a Complex Number to a Power"
+        },
+        {
+            "location": "/precalc/atit/#demoivres-theorem-for-roots",
+            "text": "For a positive integer n, the complex number  z=r(\\cos(\\theta)+i\\sin(\\theta))  has exactly  n  distinct  n th roots given by   \\sqrt[n]{r}(\\cos(\\frac{\\theta+2\\pi k}{n})+i\\sin(\\frac{\\theta+2\\pi k}{n}))    k=0,1,2,...,n-1",
+            "title": "DeMoivre's Theorem for Roots"
+        },
+        {
+            "location": "/precalc/ssid/",
+            "text": "",
+            "title": "Sequences, Series, and Proof by Induction"
+        }
+    ]
+}

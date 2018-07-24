@@ -1,0 +1,12 @@
+site_name: 'Web Notes'
+extra_javascript: 
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+markdown_extensions:
+    - mdx_math
+pages:
+  - Home: index.md
+  - Precalculus:
+      - Additional Topics in Trigonometry: precalc/atit.md
+      - Sequences, Series, and Proof by Induction: precalc/ssid.md
+theme:
+  name: 'rtd-dropdown'

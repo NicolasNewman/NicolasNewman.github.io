@@ -84,6 +84,7 @@ question("designer")("Mark");
 ```
 
 ## Closures
+A closure gives you access to an outer function's cope from an inner function
 ```javascript
 function retirement(retirementAge) {
 	var str = ' years left until retirement';
@@ -100,7 +101,72 @@ retirement(66)(1940);
 
 var retirementIceland = retirement(67);
 ```
+
+```javascript
+function score() {
+	var sc = 0;
+	return function(correct) {
+		if(correct) {
+			sc++;
+		}
+		return sc;
+	}
+}
+
+var scoreKeeper = score();
+var isCorrect = true;
+var sc = scoreKeeper(isCorrect);
+console.log(sc);
+```
 While the execution stack goes away once the outer function returns, its scope chain still sits in memory. When the inner function is called, its context is added to the execution stack. The new scope created for the inner function still has access to the outer scope.
+
+## Bind, call, and apply
+```javascript
+var john = {
+	name: "John",
+	age: 26,
+	job: '"teacher',
+	presentation: function(Style, timeOfDay) {
+		if(tyle === 'formal') {
+			console.log("Good " + timeOfDay + ", ladies and gentlement! I\'m " + this.name + ", I\'m a " + this.job);
+		} else if(style === 'friendly') {
+			console.log("Hey! What\'s up?");
+		}
+	}
+}
+
+var emily = {
+	name: 'Emily',
+	age: 35,
+	job: 'designer'
+}
+
+// These two methods set the this variable but imedietly call the function
+john.presentation.call(emily, 'friendly', 'afternoon'); // replaces this variable with emily. This is method borrowing.
+john.presentation.apply(emily, ['friendly', 'afternoon']); // won't work in this example since it doesn't take an array
+
+// Bind will set the this variable but returns a function that can be called at a later point. This is known as currying (creating a function based on another but with preset parameters)
+var johnFriendly = john.presentation.bind(john, 'friendly');
+johnFriendly("morning");
+
+var emilyFormal = john.presentation.bind(emily, "formal");
+```
+
+```javascript
+function arrayCalc(arr, fn) {
+	var arrRes = [];
+	for(var i = 0; i < arr.length; i++) {
+		arrRes.push(fn(arr[i]));
+	}
+}
+
+function isFullAge(limit, el) {
+	return el >= limit;
+}
+
+var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
+```
+
 # Execution Context
 
 ## Execution Context

@@ -108,7 +108,119 @@
     
     
       
+  
+  
+  
+  <ul class="current subnav">
     
+      
+
+  
+  
+  
+
+
+  <li class="current toctree-l2">
+    
+      <a href="#sequences" title="Sequences, Series, and Proof by Induction"
+          class="current">
+        Sequences
+      </a>
+    
+    <ul class="current subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#arithmetic-sequence" title="Sequences, Series, and Proof by Induction">Arithmetic Sequence</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#geometric-sequence" title="Sequences, Series, and Proof by Induction">Geometric Sequence</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#fibonacci-sequence" title="Sequences, Series, and Proof by Induction">Fibonacci Sequence</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#sums" title="Sequences, Series, and Proof by Induction">Sums</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#mathmatical-induction" title="Sequences, Series, and Proof by Induction"
+          class="">
+        Mathmatical Induction
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#examples" title="Sequences, Series, and Proof by Induction">Examples</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+  </ul>
+
+    
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../ag/" title="Topics in Analytical Gemometry"
+      class="">
+    Topics in Analytical Gemometry
+  </a>
+
+  
   
 </li>
     
@@ -158,13 +270,97 @@
           <div role="main">
             <div class="section">
               
-                
+                <h1 id="sequences">Sequences</h1>
+<h2 id="arithmetic-sequence">Arithmetic Sequence</h2>
+<p>An <strong>arithmetic seuqnces</strong> is a sequence in which each successive term has a common difference</p>
+<p>An arithmetic sequence can be defined explicity with the formula
+<script type="math/tex; mode=display">a_n=a_1+d(n-1)</script>
+</p>
+<p>Or recursively through the formula</p>
+<p>
+<script type="math/tex; mode=display">a_1=x</script>
+<script type="math/tex; mode=display">a_n=a_{n-1}+d</script>
+</p>
+<h2 id="geometric-sequence">Geometric Sequence</h2>
+<p>A <strong>geometric sequence</strong> is a sequence in which each successive term has a common ratio</p>
+<p>A geometric sequence can be defined explicity with the formula
+<script type="math/tex; mode=display">a_n=a_1+(r)^{n-1}</script>
+</p>
+<p>Or recursively though the formula</p>
+<p>
+<script type="math/tex; mode=display">a_1=x</script>
+<script type="math/tex; mode=display">a_n=a_{n-1}\times r</script>
+</p>
+<h2 id="fibonacci-sequence">Fibonacci Sequence</h2>
+<p>
+<script type="math/tex; mode=display">a_1=1</script>
+<script type="math/tex; mode=display">a_2=1</script>
+<script type="math/tex; mode=display">a_n=a_{n-2}+a_{n-1}</script>
+</p>
+<h2 id="sums">Sums</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Arithmetic</th>
+<th>Geometric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Finite</td>
+<td>
+<script type="math/tex">S_n=\frac{n}{2}(a_1+a_2)</script>
+</td>
+<td>
+<script type="math/tex">S_n=a_1(\frac{1-r^n}{1-r})</script>
+</td>
+</tr>
+<tr>
+<td>Infinite</td>
+<td>N/A</td>
+<td>
+<script type="math/tex">S=\frac{a_1}{1-r}</script>
+</td>
+</tr>
+</tbody>
+</table>
+<h1 id="mathmatical-induction">Mathmatical Induction</h1>
+<ol>
+<li>Show that the formula holds true for n=1</li>
+<li>Subsitute n with k</li>
+<li>Substitute k with k+1 and solve</li>
+</ol>
+<h2 id="examples">Examples</h2>
+<h3 id="example-one">Example One</h3>
+<p>Show that <script type="math/tex">n^2+n</script> is divisible by 2 for all natural numbers <script type="math/tex">n</script>
+</p>
+<ol>
+<li>Holds true for n=1
+    <script type="math/tex; mode=display">a_1=1^2+1</script>
+<script type="math/tex; mode=display">a_1=2</script>
+<script type="math/tex; mode=display">\frac{2}{2} = 1</script>
+</li>
+<li>Assume n=k
+    <script type="math/tex; mode=display">k^2+k</script>
+</li>
+<li>Solve for k+1
+    <script type="math/tex; mode=display">(k+1)^2+(k+1)</script>
+<script type="math/tex; mode=display">k^2+2k+1+k+1</script>
+<script type="math/tex; mode=display">k^2+k+2k+2</script>
+<script type="math/tex; mode=display">k^2+k+2(k+1)</script>
+<script type="math/tex; mode=display">\frac{k^2+k}{2} = 1</script>
+<script type="math/tex; mode=display">\frac{2(k+1)}{2} = k+1</script>
+</li>
+</ol>
               
             </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ag/" class="btn btn-neutral float-right" title="Topics in Analytical Gemometry">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../atit/" class="btn btn-neutral" title="Additional Topics in Trigonometry"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -195,6 +391,8 @@
       
         <span><a href="../atit/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../ag/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

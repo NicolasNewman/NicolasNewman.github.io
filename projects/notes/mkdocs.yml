@@ -8,5 +8,6 @@ pages:
   - Precalculus:
       - Additional Topics in Trigonometry: precalc/atit.md
       - Sequences, Series, and Proof by Induction: precalc/ssid.md
+      - Topics in Analytical Gemometry: precalc/ag.md
 theme:
   name: 'rtd-dropdown'

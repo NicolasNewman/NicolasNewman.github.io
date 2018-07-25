@@ -107,8 +107,143 @@
         },
         {
             "location": "/precalc/ssid/",
-            "text": "",
+            "text": "Sequences\n\n\nArithmetic Sequence\n\n\nAn \narithmetic seuqnces\n is a sequence in which each successive term has a common difference\n\n\nAn arithmetic sequence can be defined explicity with the formula\n\na_n=a_1+d(n-1)\n\n\n\n\nOr recursively through the formula\n\n\n\n\na_1=x\n\n\na_n=a_{n-1}+d\n\n\n\n\nGeometric Sequence\n\n\nA \ngeometric sequence\n is a sequence in which each successive term has a common ratio\n\n\nA geometric sequence can be defined explicity with the formula\n\na_n=a_1+(r)^{n-1}\n\n\n\n\nOr recursively though the formula\n\n\n\n\na_1=x\n\n\na_n=a_{n-1}\\times r\n\n\n\n\nFibonacci Sequence\n\n\n\n\na_1=1\n\n\na_2=1\n\n\na_n=a_{n-2}+a_{n-1}\n\n\n\n\nSums\n\n\n\n\n\n\n\n\n\n\nArithmetic\n\n\nGeometric\n\n\n\n\n\n\n\n\n\n\nFinite\n\n\n\n\nS_n=\\frac{n}{2}(a_1+a_2)\n\n\n\n\n\n\nS_n=a_1(\\frac{1-r^n}{1-r})\n\n\n\n\n\n\n\n\nInfinite\n\n\nN/A\n\n\n\n\nS=\\frac{a_1}{1-r}\n\n\n\n\n\n\n\n\n\n\nMathmatical Induction\n\n\n\n\nShow that the formula holds true for n=1\n\n\nSubsitute n with k\n\n\nSubstitute k with k+1 and solve\n\n\n\n\nExamples\n\n\nExample One\n\n\nShow that \nn^2+n\n is divisible by 2 for all natural numbers \nn\n\n\n\n\n\n\nHolds true for n=1\n    \na_1=1^2+1\n\n\na_1=2\n\n\n\\frac{2}{2} = 1\n\n\n\n\nAssume n=k\n    \nk^2+k\n\n\n\n\nSolve for k+1\n    \n(k+1)^2+(k+1)\n\n\nk^2+2k+1+k+1\n\n\nk^2+k+2k+2\n\n\nk^2+k+2(k+1)\n\n\n\\frac{k^2+k}{2} = 1\n\n\n\\frac{2(k+1)}{2} = k+1",
             "title": "Sequences, Series, and Proof by Induction"
+        },
+        {
+            "location": "/precalc/ssid/#sequences",
+            "text": "",
+            "title": "Sequences"
+        },
+        {
+            "location": "/precalc/ssid/#arithmetic-sequence",
+            "text": "An  arithmetic seuqnces  is a sequence in which each successive term has a common difference  An arithmetic sequence can be defined explicity with the formula a_n=a_1+d(n-1)   Or recursively through the formula   a_1=x  a_n=a_{n-1}+d",
+            "title": "Arithmetic Sequence"
+        },
+        {
+            "location": "/precalc/ssid/#geometric-sequence",
+            "text": "A  geometric sequence  is a sequence in which each successive term has a common ratio  A geometric sequence can be defined explicity with the formula a_n=a_1+(r)^{n-1}   Or recursively though the formula   a_1=x  a_n=a_{n-1}\\times r",
+            "title": "Geometric Sequence"
+        },
+        {
+            "location": "/precalc/ssid/#fibonacci-sequence",
+            "text": "a_1=1  a_2=1  a_n=a_{n-2}+a_{n-1}",
+            "title": "Fibonacci Sequence"
+        },
+        {
+            "location": "/precalc/ssid/#sums",
+            "text": "Arithmetic  Geometric      Finite   S_n=\\frac{n}{2}(a_1+a_2)    S_n=a_1(\\frac{1-r^n}{1-r})     Infinite  N/A   S=\\frac{a_1}{1-r}",
+            "title": "Sums"
+        },
+        {
+            "location": "/precalc/ssid/#mathmatical-induction",
+            "text": "Show that the formula holds true for n=1  Subsitute n with k  Substitute k with k+1 and solve",
+            "title": "Mathmatical Induction"
+        },
+        {
+            "location": "/precalc/ssid/#examples",
+            "text": "",
+            "title": "Examples"
+        },
+        {
+            "location": "/precalc/ssid/#example-one",
+            "text": "Show that  n^2+n  is divisible by 2 for all natural numbers  n    Holds true for n=1\n     a_1=1^2+1  a_1=2  \\frac{2}{2} = 1   Assume n=k\n     k^2+k   Solve for k+1\n     (k+1)^2+(k+1)  k^2+2k+1+k+1  k^2+k+2k+2  k^2+k+2(k+1)  \\frac{k^2+k}{2} = 1  \\frac{2(k+1)}{2} = k+1",
+            "title": "Example One"
+        },
+        {
+            "location": "/precalc/ag/",
+            "text": "Conics\n\n\n\n\nParabola\n\n\nA \nparabola\n is the set of all points (x, y) that are equidistant from a fixed line \n(directrix)\n and a fixed point \n(focus)\n not on the line.\n\n\nVertical Parabola\n\n\n\n\n(x-h)^2=4p(y-k), p \\neq 0\n\n\ny=\\frac{1}{4p}(x-h)^2+k,p \\neq 0\n\n\n\n\nHorizontal Parabola\n\n\n\n\n(y-k)^2=4p(x-h), p \\neq 0\n\n\nx=\\frac{1}{4p}(y-k)^2+h,p \\neq 0\n\n\n\n\nInfo\n\n\n\n\n\n\n\n\nValue of p\n\n\nFocus\n\n\nDirectrix\n\n\nEquation\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\np > 0\n\n\n(h+p,k)\n\n\nx = h-p\n\n\n\n\n(y-k)^2=4p(x-h)\n\n\n\n\nOpens to the right\n\n\n\n\n\n\np < 0\n\n\n(h+p,k)\n\n\nx = h-p\n\n\n\n\n(y-k)^2=4p(x-h)\n\n\n\n\nOpens to the left\n\n\n\n\n\n\np > 0\n\n\n(h,k+p)\n\n\ny = k-p\n\n\n\n\n(x-h)^2=4p(y-k)\n\n\n\n\nOpens up\n\n\n\n\n\n\np < 0\n\n\n(h,k+p)\n\n\ny = k-p\n\n\n\n\n(x-h)^2=4p(y-k)\n\n\n\n\nOpens down\n\n\n\n\n\n\n\n\nEllipse\n\n\nAn \nellipse\n is the set of all points (x, y), the \nsum\n of whose distances from two distinct fixed points \n(foci)\n is constant.\n\n\nHorizontal\n\n\n\n\n\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1\n\n\n\n\nVertical\n\n\n\n\n\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 1\n\n\n\n\nInfo\n\n\n\n\na^2 > b^2\n\n\nc^2=a^2-b^2\n\n\ne=\\frac{c}{a}\n\n\n\n\nHyperbola\n\n\nA \nhyperbola\n is the set of all points (x, y), the \ndifference\n of whose distances from two distinct fixed points \n(foci)\n is constant.\n\n\nHorizontal\n\n\n\n\n\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1\n\n\n\n\nVertical\n\n\n\n\n\\frac{(y-k)^2}{a^2} - \\frac{(x-h)^2}{b^2} = 1\n\n\n\n\nInfo\n\n\n\n\nc^2 = a^2+b^2\n\n\n\\mathrm{Horizontal:}y=k \\pm \\frac{b}{a}(x-h)\n\n\n\\mathrm{Vertical:}y=k \\pm \\frac{a}{b}(x-h)\n\n\n\n\nClassification by General Equation\n\n\n\n\nAx^2+Cy^2+Dx+Ey+F=0\n\n\n\n\n\n\nCircle if A=C\n\n\nParabola if AC = 0, A=0 or C=0, but not both\n\n\nEllipse if AC>0, A and C have like signs\n\n\nHyperbola AC<0, A and C have unlike signs\n\n\n\n\nParametric\n\n\nPolar\n\n\n \n\n\n\n\nr = \\mathrm{distance}\n and \n\\theta = \\mathrm{angle}\n to form the point \n(r, \\theta)\n\n\n\n\n\n\n(2,\\frac{\\pi}{3})\n graphed:\n\n\n\n\nMultiple Representations of Points\n\n\n\n\n(r,\\theta) = (r,\\theta \\pm 2n\\pi)\n\n\n(r, \\theta) = (-r,\\theta \\pm (2n+1)\\pi)\n\n\n\n\nConversion\n\n\n\n\nx=r\\cos(\\theta)\n\n\ny=r\\sin(\\theta)\n\n\n\\tan(\\theta)=\\frac{y}{x}\n\n\nr^2=x^2+y^2",
+            "title": "Topics in Analytical Gemometry"
+        },
+        {
+            "location": "/precalc/ag/#conics",
+            "text": "",
+            "title": "Conics"
+        },
+        {
+            "location": "/precalc/ag/#parabola",
+            "text": "A  parabola  is the set of all points (x, y) that are equidistant from a fixed line  (directrix)  and a fixed point  (focus)  not on the line.",
+            "title": "Parabola"
+        },
+        {
+            "location": "/precalc/ag/#vertical-parabola",
+            "text": "(x-h)^2=4p(y-k), p \\neq 0  y=\\frac{1}{4p}(x-h)^2+k,p \\neq 0",
+            "title": "Vertical Parabola"
+        },
+        {
+            "location": "/precalc/ag/#horizontal-parabola",
+            "text": "(y-k)^2=4p(x-h), p \\neq 0  x=\\frac{1}{4p}(y-k)^2+h,p \\neq 0",
+            "title": "Horizontal Parabola"
+        },
+        {
+            "location": "/precalc/ag/#info",
+            "text": "Value of p  Focus  Directrix  Equation  Description      p > 0  (h+p,k)  x = h-p   (y-k)^2=4p(x-h)   Opens to the right    p < 0  (h+p,k)  x = h-p   (y-k)^2=4p(x-h)   Opens to the left    p > 0  (h,k+p)  y = k-p   (x-h)^2=4p(y-k)   Opens up    p < 0  (h,k+p)  y = k-p   (x-h)^2=4p(y-k)   Opens down",
+            "title": "Info"
+        },
+        {
+            "location": "/precalc/ag/#ellipse",
+            "text": "An  ellipse  is the set of all points (x, y), the  sum  of whose distances from two distinct fixed points  (foci)  is constant.",
+            "title": "Ellipse"
+        },
+        {
+            "location": "/precalc/ag/#horizontal",
+            "text": "\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1",
+            "title": "Horizontal"
+        },
+        {
+            "location": "/precalc/ag/#vertical",
+            "text": "\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 1",
+            "title": "Vertical"
+        },
+        {
+            "location": "/precalc/ag/#info_1",
+            "text": "a^2 > b^2  c^2=a^2-b^2  e=\\frac{c}{a}",
+            "title": "Info"
+        },
+        {
+            "location": "/precalc/ag/#hyperbola",
+            "text": "A  hyperbola  is the set of all points (x, y), the  difference  of whose distances from two distinct fixed points  (foci)  is constant.",
+            "title": "Hyperbola"
+        },
+        {
+            "location": "/precalc/ag/#horizontal_1",
+            "text": "\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1",
+            "title": "Horizontal"
+        },
+        {
+            "location": "/precalc/ag/#vertical_1",
+            "text": "\\frac{(y-k)^2}{a^2} - \\frac{(x-h)^2}{b^2} = 1",
+            "title": "Vertical"
+        },
+        {
+            "location": "/precalc/ag/#info_2",
+            "text": "c^2 = a^2+b^2  \\mathrm{Horizontal:}y=k \\pm \\frac{b}{a}(x-h)  \\mathrm{Vertical:}y=k \\pm \\frac{a}{b}(x-h)",
+            "title": "Info"
+        },
+        {
+            "location": "/precalc/ag/#classification-by-general-equation",
+            "text": "Ax^2+Cy^2+Dx+Ey+F=0    Circle if A=C  Parabola if AC = 0, A=0 or C=0, but not both  Ellipse if AC>0, A and C have like signs  Hyperbola AC<0, A and C have unlike signs",
+            "title": "Classification by General Equation"
+        },
+        {
+            "location": "/precalc/ag/#parametric",
+            "text": "",
+            "title": "Parametric"
+        },
+        {
+            "location": "/precalc/ag/#polar",
+            "text": "r = \\mathrm{distance}  and  \\theta = \\mathrm{angle}  to form the point  (r, \\theta)    (2,\\frac{\\pi}{3})  graphed:",
+            "title": "Polar"
+        },
+        {
+            "location": "/precalc/ag/#multiple-representations-of-points",
+            "text": "(r,\\theta) = (r,\\theta \\pm 2n\\pi)  (r, \\theta) = (-r,\\theta \\pm (2n+1)\\pi)",
+            "title": "Multiple Representations of Points"
+        },
+        {
+            "location": "/precalc/ag/#conversion",
+            "text": "x=r\\cos(\\theta)  y=r\\sin(\\theta)  \\tan(\\theta)=\\frac{y}{x}  r^2=x^2+y^2",
+            "title": "Conversion"
         }
     ]
 }

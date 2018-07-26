@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>ES6 - Web Notes</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ES6";
+    var mkdocs_page_input_path = "js\\es6.md";
+    var mkdocs_page_url = "/js/es6/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Web Notes</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      
+
+
+  
+    
+
+
+<ul class="" href="/">
+  
+    
+    
+      <li class=" toctree-l1">
+        <a class="" href="/">Home</a>
+      </li>
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">CSS</p>
+
+
+<ul class="" href="css\bootstrap">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../css/bootstrap/" title="Bootstrap"
+      class="">
+    Bootstrap
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">JavaScript</p>
+
+
+<ul class="current" href="js\vanilla">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../vanilla/" title="Vanilla"
+      class="">
+    Vanilla
+  </a>
+
+  
+  
+</li>
+    
+      
+<li class="current toctree-l1">
+  <a href="./" title="ES6"
+      class="current">
+    ES6
+  </a>
+
+  
+  
+    
+    
+      
+  
+  
+  
+  <ul class="current subnav">
+    
+      
+
+  
+  
+  
+
+
+  <li class="current toctree-l2">
+    
+      <a href="#variables-and-data" title="ES6"
+          class="current">
+        Variables and Data
+      </a>
+    
+    <ul class="current subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#let-and-const" title="ES6">Let and Const</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#destructuring" title="ES6">Destructuring</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#strings" title="ES6">Strings</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#arrays" title="ES6">Arrays</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#functions" title="ES6"
+          class="">
+        Functions
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#blocks-and-iifes" title="ES6">Blocks and IIFEs</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#arrow-functions" title="ES6">Arrow Functions</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+  </ul>
+
+    
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../dom/" title="DOM"
+      class="">
+    DOM
+  </a>
+
+  
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../jquery/" title="jQuery"
+      class="">
+    jQuery
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Node.js</p>
+
+
+<ul class="" href="nodejs\express">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../nodejs/express/" title="Express"
+      class="">
+    Express
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Mongodb</p>
+
+
+<ul class="" href="mongodb\mongo">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../mongodb/mongo/" title="Mongo"
+      class="">
+    Mongo
+  </a>
+
+  
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../../mongodb/mongoose/" title="Mongoose"
+      class="">
+    Mongoose
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Linux</p>
+
+
+<ul class="" href="linux\commands">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../linux/commands/" title="Commands"
+      class="">
+    Commands
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+
+  
+    
+    
+    
+    
+    
+    
+
+  <p class="caption">Other</p>
+
+
+<ul class="" href="other\rest">
+  
+    
+      
+<li class=" toctree-l1">
+  <a href="../../other/rest/" title="RESTful Routes"
+      class="">
+    RESTful Routes
+  </a>
+
+  
+  
+</li>
+    
+      
+<li class=" toctree-l1">
+  <a href="../../other/expressTemplate/" title="Express Template"
+      class="">
+    Express Template
+  </a>
+
+  
+  
+</li>
+    
+</ul>
+
+<!--
+ | This is a hacky way to pass setting from the template generator to the
+ | javascript that drives the dropdown functionality
+-->
+<div style="width: 1px; height: 1px; visibility: none;">
+
+</div>
+
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Web Notes</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>JavaScript &raquo;</li>
+        
+      
+    
+    <li>ES6</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="variables-and-data">Variables and Data</h1>
+<h2 id="let-and-const">Let and Const</h2>
+<ul>
+<li><strong>const</strong> is <strong>imutable</strong> (unchangable)</li>
+<li><strong>let</strong> is <strong>mutable</strong> (changeable)</li>
+</ul>
+<pre><code class="javascript">// ES5
+var name5 = 'Jane Smith';
+var age5 = 23;
+name5 = 'Jane Miller';
+
+// ES6
+const name6 = &quot;Jane Smith&quot;; // Imutable (can't change)
+let age = 23; // Can mutate
+
+name6 = &quot;Jane Miller&quot; // TypeError
+</code></pre>
+
+<ul>
+<li>Variables declared with <strong>var</strong> are <strong>function scoped</strong></li>
+<li>Variables declared with <strong>let</strong> or <strong>const</strong> are <strong>block scoped</strong></li>
+</ul>
+<pre><code class="javascript">// ES5
+function driversLicence(passedTest) { // New function
+    if(passedTest) {
+        var firstName = 'John';
+        var dob = 1990;
+
+    }
+    console.log(firstName + &quot;, born in &quot; + dob + &quot; can now drive&quot;);
+}
+driversLicence(true);
+
+//ES6
+function driversLicence(passedTest) { // New block and function
+    if(passedTest) { // New block
+        let firstName = 'John';
+        const dob = 1990;
+    }
+    console.log(firstName + &quot;, born in &quot; + dob + &quot; can now drive&quot;);
+}
+driversLicence(true); // Failes, let and const are blocked scoped (created by {}) while var is created by new functions
+</code></pre>
+
+<pre><code class="javascript">let i = 23;
+
+for(let i = 0; i &lt; 5; i++) {
+    console.log(i);
+}
+console.log(i);
+
+// 0, 1, 2, 3, 4, 23
+// Both i's are different variables
+</code></pre>
+
+<ul>
+<li><strong>var</strong> is set to undefined during the creation of the variable object in the creation phase</li>
+<li><strong>let</strong> will not let you use a variable if it hasn't been created yet. (It will through a ReferenceError instead of being undefined)</li>
+</ul>
+<h2 id="destructuring">Destructuring</h2>
+<pre><code class="javascript">// ==========
+// Arrays
+// ==========
+var john = ['John', 26];
+var name5 = john[0];
+var age5 = john[1];
+
+const [name6, age6] = ['John', 26];
+
+// ==========
+// Objects
+// ==========
+const obj = {
+    firstName: 'John',
+    lastName: 'Smith'
+};
+// The keys must match
+const {firstName, lastName} = obj;
+
+// Keys don't have to match
+const {firstName: a, lastName: b} = obj;
+
+// ==============================
+// Functions returning objects
+// ==============================
+function calcAgeRetirement(year) {
+    const age = new Date().getFullYear() - year;
+    return [age, 65 - age];
+}
+const [age, retirement] = calcAgeRetirement(1990);
+
+</code></pre>
+
+<h2 id="strings">Strings</h2>
+<h3 id="template-literals">Template Literals</h3>
+<pre><code class="javascript">let firstName = &quot;john&quot;;
+let lastName = &quot;Smith&quot;;
+const dob = 1990;
+
+function calcAge(year) {
+    return 2018 - year;
+}
+
+//ES5
+var str = 'This is ' + firstName + ' ' + lastName + ' who was born in ' + dob + '. Today, he is ' + calcAge(dob) + ' years old';
+
+//ES6
+let str = `This is ${firstName} ${lastName} who was born in ${dob}. Today, he is ${calcAge(dob)} years old`; 
+</code></pre>
+
+<h3 id="string-methods">String Methods</h3>
+<pre><code class="javascript">const str = &quot;John Smith&quot;
+n.startsWith('J');
+n.endsWith('th');
+n.includes('oh');
+str.repeat(5);
+</code></pre>
+
+<h2 id="arrays">Arrays</h2>
+<h3 id="nodelist-to-array">Nodelist to Array</h3>
+<pre><code class="javascript">const boxes = document.querySelectorAll('.box');
+
+// ES5
+var boxesArr5 = Array.prototype.slice.call(boxes);
+boxesArr5.forEach(function(cur) {
+    cur.style.backgroundColor = 'dodgerblue';
+});
+
+//ES6
+const boxesArr6 = Array.from(boxes);
+boxesArr6.forEach(cur =&gt; cur.style.backgroundColor = 'dodgerblue');
+</code></pre>
+
+<h3 id="loops">Loops</h3>
+<pre><code class="javascript">
+// ES5
+var boxesArr5 = Array.prototype.slice.call(boxes);
+for(var i = 0; i &lt; boxesArr5.length; i++) {
+    if (boxesArr5[i].className === 'box blue') {
+        continue;
+    }
+    boxesArr5[i].textContent = 'I changed to blue';
+}
+
+// ES6
+const boxesArr6 = Array.from(boxes);
+for (const cur of boxesArr6) {
+    if (cur.className.includes('blue')) {
+        continue;
+    }
+    cur.textContent = 'I changes to blue';
+}
+// Allows us to use break or continue
+</code></pre>
+
+<h3 id="finding-items">Finding Items</h3>
+<pre><code class="javascript">var ages = [12, 17, 8, 21, 14, 11];
+
+// ES5
+var full = ages.map(function(cur) {
+    return cur &gt;= 18;
+});
+var age = ages[full.indexOf(true)];
+
+// ES6
+ages.findIndex(cur =&gt; cur &gt;= 18); // returns 3
+ages.find(cur =&gt; cur &gt;= 18); // returns 21
+</code></pre>
+
+<h1 id="functions">Functions</h1>
+<h2 id="blocks-and-iifes">Blocks and IIFEs</h2>
+<pre><code class="javascript">{
+    const a = 1;
+    let b = 2;
+    var c = 3;
+} // new block is created
+
+console.log(a + b); // ReferenceError
+console.log(c); // Success
+</code></pre>
+
+<h2 id="arrow-functions">Arrow Functions</h2>
+<p>The arrow function allows callback functions to be written with less code.</p>
+<pre><code class="javascript">const years = [1990, 1995, 1982, 1937];
+
+//ES5
+var ages5 = years.map(function(el) {
+    return 2018 - el;
+});
+
+//ES6
+let ages6 = years.map(el =&gt; 2018 - el);
+
+ages6 = years.map((el, indx) =&gt; `Age element ${indx+1}: ${2018-el}.`);
+
+ages6 = years.map((el, indx) =&gt; {
+    const now = new Date().getFullYear();
+    const age = now - el;
+});
+</code></pre>
+
+<p>Arrow functions do not have their own 'this' keyword. (methods have their own 'this' while function's 'this' refers to the global object)</p>
+<pre><code class="javascript">// ES5
+var box5 {
+    color: 'green',
+    position: 1,
+    clickMe: function() {
+        var self = this; // Fixes the problem
+        document.querySelector('.green').addEventListener('click', function() {
+            var str = 'This is box number ' + this.position + ' and it is ' + this.color;
+        });
+    }
+}
+box5.clickMe(); // Returns undeinfed undefined. The callback function is a regular function and so this points to the global object
+
+//ES6
+const box6 {
+    color: 'green',
+    position: 1,
+    clickMe: function() {
+        document.querySelector('.green').addEventListener('click', () =&gt; {
+            var str = `This is box number ${position} and it is ${green}`;
+        });
+    }
+}
+box6.clickMe(); // Returns 1 green. This works because the value of this is preserved.
+</code></pre>
+
+<pre><code class="javascript">function Person(name) {
+    this.name = name;
+}
+
+// ES5
+Person.prototype.myFriends5 = function(friends) {
+    var arr = friends.map(function(el) { // This changes this to point to the global object
+        return this.name + ' is friends with ' + el;
+    }.bind(this)); // bind fixes the problem
+}
+
+var friends = ['Bob', 'Jane', 'Mark'];
+new Person('John').myFriends5(friends);
+
+// ES6
+Person.prototype.myFriends6 = function(friends) {
+    let arr = friends.map(el =&gt; `${this.name} is friends with ${el}`);
+}
+
+var friends = ['Bob', 'Jane', 'Mark'];
+new Person('John').myFriends6(friends);
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../dom/" class="btn btn-neutral float-right" title="DOM">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../vanilla/" class="btn btn-neutral" title="Vanilla"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../vanilla/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../dom/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>

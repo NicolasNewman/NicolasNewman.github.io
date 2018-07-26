@@ -5,6 +5,7 @@ pages:
       - Bootstrap: css/bootstrap.md
   - JavaScript: 
       - Vanilla: js/vanilla.md
+      - ES6: js/es6.md
       - DOM: js/dom.md
       - jQuery: js/jquery.md
   - Node.js:

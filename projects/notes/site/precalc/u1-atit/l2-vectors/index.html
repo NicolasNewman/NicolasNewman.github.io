@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Vectors - Web Notes</title>
+    <link href="../../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.css">
+    <link href="../../../css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Vectors", url: "#_top", children: [
+              {title: "Magnitude", url: "#magnitude" },
+              {title: "Unit Vectors", url: "#unit-vectors" },
+              {title: "Direction Angles", url: "#direction-angles" },
+              {title: "Angle Between Vectors", url: "#angle-between-vectors" },
+              {title: "Orthogonal Vectors", url: "#orthogonal-vectors" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../../js/base.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../l3-roots/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../l3-roots/" class="btn btn-xs btn-link">
+        DeMoivre's Theorem and nth Roots
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../l1-triangles/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../l1-triangles/" class="btn btn-xs btn-link">
+        Solving Triangles
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="vectors">Vectors</h1>
+<p>A <strong>two-dimensional vector v</strong> is an ordered pair of real numbers, denoted in component form as <script type="math/tex">\langle a,b \rangle</script>. The numbers <script type="math/tex">a</script> and <script type="math/tex">b</script> are the <strong>components</strong> of the vector <strong>v</strong>. The <strong>standard representation</strong> of the vector <script type="math/tex">\langle a,b \rangle</script> is the arrow from the origin to the point (a, b). The <strong>magnitude</strong> of <strong>v</strong> is the length of the arrow, and the <strong>direction</strong> of <strong>v</strong> is the direction in which the arrow is pointing.</p>
+<h2 id="magnitude">Magnitude</h2>
+<p>
+<script type="math/tex; mode=display">|v| = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</script>
+if <script type="math/tex">v = \langle a,b \rangle\ </script> then <script type="math/tex">|v| = \sqrt{a^2+b^2}</script>
+</p>
+<h2 id="unit-vectors">Unit Vectors</h2>
+<p>A vector <strong>u</strong> with the length <script type="math/tex">|u| = 1</script> is a <strong>unit vector</strong>. If <strong>v</strong> is not the zero vector <script type="math/tex">\langle 0,0 \rangle</script>, then the vector</p>
+<p>
+<script type="math/tex; mode=display">u=\frac{v}{|v|}=\frac{1}{|v|}v</script>
+</p>
+<p>is a <strong>unit vector in the direction of v</strong>.</p>
+<h3 id="example">Example</h3>
+<p>
+<script type="math/tex; mode=display">|v|=|\langle -3,2 \rangle |=\sqrt{(-3)^2+2^2}=\sqrt{13}</script>
+<script type="math/tex; mode=display">\frac{v}{|v|}=\frac{1}{\sqrt{13}} \langle -3,2 \rangle = \langle \frac{-3}{\sqrt{13}},\frac{2}{\sqrt{13}} \rangle</script>
+</p>
+<p>The magnitude of this vector will equal 1</p>
+<h2 id="direction-angles">Direction Angles</h2>
+<p>Using trigonometry, the horizontal component can be found using <script type="math/tex">|v|\cos(\theta)</script> and the vertical component is <script type="math/tex">|v|=\sin(\theta)</script>. Solving for these components is called <strong>resolving the vector</strong></p>
+<h3 id="example_1">Example</h3>
+<p>Find the magnitude and direction of the given vector: <script type="math/tex">u=\langle3,2\rangle</script>
+</p>
+<p>
+<script type="math/tex; mode=display">|u|=\sqrt{3^2+2^2}=\sqrt{13}</script>
+if <script type="math/tex">\alpha</script> is the direction angle of u, then
+<script type="math/tex; mode=display">u=\langle3,2\rangle=\langle|u|\cos(\alpha),|u|\sin(\alpha)</script>
+<script type="math/tex; mode=display">3=|u|\cos(\alpha)</script>
+<script type="math/tex; mode=display">3=\sqrt{13}\cos(\alpha)</script>
+<script type="math/tex; mode=display">\alpha=\cos^{-1}(\frac{3}{\sqrt{13}})\approx33.69^\circ</script>
+</p>
+<h2 id="angle-between-vectors">Angle Between Vectors</h2>
+<p>
+<script type="math/tex; mode=display">\cos(\theta)=\frac{u \centerdot v}{|u||v|}</script>
+</p>
+<h2 id="orthogonal-vectors">Orthogonal Vectors</h2>
+<p>The vectors <strong>u</strong> and <strong>v</strong> are <strong>orthogonal</strong> if and only if <script type="math/tex">u \centerdot v=0</script>
+</p>
+
+  <br>
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../l3-roots/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../l3-roots/" class="btn btn-xs btn-link">
+        DeMoivre's Theorem and nth Roots
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../l1-triangles/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../l1-triangles/" class="btn btn-xs btn-link">
+        Solving Triangles
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

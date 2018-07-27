@@ -11,237 +11,262 @@
             "title": "About"
         },
         {
-            "location": "/precalc/atit/",
-            "text": "Solving triangles\n\n\nLaw of Sines\n\n\n\n\n\\frac{a}{\\sin(A)}=\\frac{b}{\\sin(B)}=\\frac{c}{\\sin(C)}\n\n\n\n\nAmbiguous Case (SSA)\n\n\n\n\n\n\nNo triangle\n: If a angle is solved for and the calculator responds with an error, no triangle exists.\n\n\nTwo triangles\n: \n\n\nOnce A and \nB_1\n are found, calculate \nB_2=180-B_1\n\n\n\n\nIf \nA+B_1<180^\\circ\n and \nA+B_2<180^\\circ\n is true, there are two triangles\n\n\nSolve the triangle using both \nB_1\n and \nB_2\n\n\n\n\n\n\n\n\n\n\nLaw of Cosines\n\n\n\n\na^2=b^2+c^2-2bc\\cos(A)\n\n\n\\cos(A)=\\frac{b^2+c^2-a^2}{2bc}\n\nThe law of cosines can be used to solve for SSS or SAS (with a included angle) triangles\n\n\nHeron's Area Formula\n\n\n\n\nA=\\sqrt{s(s-a)(s-b)(s-c)}\n\n\ns=\\frac{(a+b+c)}{2}\n\n\n\n\nVectors\n\n\nA \ntwo-dimensional vector v\n is an ordered pair of real numbers, denoted in component form as \n\\langle a,b \\rangle\n. The numbers \na\n and \nb\n are the \ncomponents\n of the vector \nv\n. The \nstandard representation\n of the vector \n\\langle a,b \\rangle\n is the arrow from the origin to the point (a, b). The \nmagnitude\n of \nv\n is the length of the arrow, and the \ndirection\n of \nv\n is the direction in which the arrow is pointing.\n\n\nMagnitude\n\n\n\n\n|v| = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\n\nif \nv = \\langle a,b \\rangle\\ \n then \n|v| = \\sqrt{a^2+b^2}\n\n\n\n\nUnit Vectors\n\n\nA vector \nu\n with the length \n|u| = 1\n is a \nunit vector\n. If \nv\n is not the zero vector \n\\langle 0,0 \\rangle\n, then the vector\n\n\n\n\nu=\\frac{v}{|v|}=\\frac{1}{|v|}v\n\n\n\n\nis a \nunit vector in the direction of v\n.\n\n\nExample\n\n\n\n\n|v|=|\\langle -3,2 \\rangle |=\\sqrt{(-3)^2+2^2}=\\sqrt{13}\n\n\n\\frac{v}{|v|}=\\frac{1}{\\sqrt{13}} \\langle -3,2 \\rangle = \\langle \\frac{-3}{\\sqrt{13}},\\frac{2}{\\sqrt{13}} \\rangle\n\n\n\n\nThe magnitude of this vector will equal 1\n\n\nDirection Angles\n\n\nUsing trigonometry, the horizontal component can be found using \n|v|\\cos(\\theta)\n and the vertical component is \n|v|=\\sin(\\theta)\n. Solving for these components is called \nresolving the vector\n\n\nExample\n\n\nFind the magnitude and direction of the given vector: \nu=\\langle3,2\\rangle\n\n\n\n\n\n\n|u|=\\sqrt{3^2+2^2}=\\sqrt{13}\n\nif \n\\alpha\n is the direction angle of u, then\n\nu=\\langle3,2\\rangle=\\langle|u|\\cos(\\alpha),|u|\\sin(\\alpha)\n\n\n3=|u|\\cos(\\alpha)\n\n\n3=\\sqrt{13}\\cos(\\alpha)\n\n\n\\alpha=\\cos^{-1}(\\frac{3}{\\sqrt{13}})\\approx33.69^\\circ\n\n\n\n\nAngle Between Vectors\n\n\n\n\n\\cos(\\theta)=\\frac{u \\centerdot v}{|u||v|}\n\n\n\n\nOrthogonal Vectors\n\n\nThe vectors \nu\n and \nv\n are \northogonal\n if and only if \nu \\centerdot v=0\n\n\n\n\nDeMoivre's Theorem and nth Roots\n\n\nAbsolute Value of a Complex Number\n\n\nThe \nabsolute value\n of the complex number \nz=a+bi\n is given by:\n\n|a+bi|=\\sqrt{a^2+b^2}\n\n\n\n\nTrigonometric Form of a Complex Number\n\n\n\n\na=r\\cos(\\theta)\n and \nb=r\\sin(\\theta)\n\n\na+bi=(r\\cos(\\theta))+(r\\sin(\\theta)i)=r(\\cos(\\theta)+i\\sin(\\theta))\n\n\n\\theta=\\tan^{-1}(\\frac{b}{a})\n\n\nr=\\sqrt{a^2+b^2}\n\n\n\n\nRaising a Complex Number to a Power\n\n\n\n\nz^n=r^n(\\cos(n\\theta)+i\\sin(n\\theta)\n\n\n\n\nDeMoivre's Theorem for Roots\n\n\nFor a positive integer n, the complex number \nz=r(\\cos(\\theta)+i\\sin(\\theta))\n has exactly \nn\n distinct \nn\nth roots given by\n\n\n\n\n\\sqrt[n]{r}(\\cos(\\frac{\\theta+2\\pi k}{n})+i\\sin(\\frac{\\theta+2\\pi k}{n}))\n\n\n\n\n\n\nk=0,1,2,...,n-1",
-            "title": "Additional Topics in Trigonometry"
+            "location": "/precalc/u1-atit/l1-triangles/",
+            "text": "Solving triangles\n\n\nLaw of Sines\n\n\n\n\n\\frac{a}{\\sin(A)}=\\frac{b}{\\sin(B)}=\\frac{c}{\\sin(C)}\n\n\n\n\nAmbiguous Case (SSA)\n\n\n\n\n\n\nNo triangle\n: If a angle is solved for and the calculator responds with an error, no triangle exists.\n\n\nTwo triangles\n: \n\n\nOnce A and \nB_1\n are found, calculate \nB_2=180-B_1\n\n\n\n\nIf \nA+B_1<180^\\circ\n and \nA+B_2<180^\\circ\n is true, there are two triangles\n\n\nSolve the triangle using both \nB_1\n and \nB_2\n\n\n\n\n\n\n\n\n\n\nLaw of Cosines\n\n\n\n\na^2=b^2+c^2-2bc\\cos(A)\n\n\n\\cos(A)=\\frac{b^2+c^2-a^2}{2bc}\n\nThe law of cosines can be used to solve for SSS or SAS (with a included angle) triangles\n\n\nHeron's Area Formula\n\n\n\n\nA=\\sqrt{s(s-a)(s-b)(s-c)}\n\n\ns=\\frac{(a+b+c)}{2}",
+            "title": "Solving Triangles"
         },
         {
-            "location": "/precalc/atit/#solving-triangles",
+            "location": "/precalc/u1-atit/l1-triangles/#solving-triangles",
             "text": "",
             "title": "Solving triangles"
         },
         {
-            "location": "/precalc/atit/#law-of-sines",
+            "location": "/precalc/u1-atit/l1-triangles/#law-of-sines",
             "text": "\\frac{a}{\\sin(A)}=\\frac{b}{\\sin(B)}=\\frac{c}{\\sin(C)}",
             "title": "Law of Sines"
         },
         {
-            "location": "/precalc/atit/#ambiguous-case-ssa",
+            "location": "/precalc/u1-atit/l1-triangles/#ambiguous-case-ssa",
             "text": "No triangle : If a angle is solved for and the calculator responds with an error, no triangle exists.  Two triangles :   Once A and  B_1  are found, calculate  B_2=180-B_1   If  A+B_1<180^\\circ  and  A+B_2<180^\\circ  is true, there are two triangles  Solve the triangle using both  B_1  and  B_2",
             "title": "Ambiguous Case (SSA)"
         },
         {
-            "location": "/precalc/atit/#law-of-cosines",
+            "location": "/precalc/u1-atit/l1-triangles/#law-of-cosines",
             "text": "a^2=b^2+c^2-2bc\\cos(A)  \\cos(A)=\\frac{b^2+c^2-a^2}{2bc} \nThe law of cosines can be used to solve for SSS or SAS (with a included angle) triangles",
             "title": "Law of Cosines"
         },
         {
-            "location": "/precalc/atit/#herons-area-formula",
+            "location": "/precalc/u1-atit/l1-triangles/#herons-area-formula",
             "text": "A=\\sqrt{s(s-a)(s-b)(s-c)}  s=\\frac{(a+b+c)}{2}",
             "title": "Heron's Area Formula"
         },
         {
-            "location": "/precalc/atit/#vectors",
+            "location": "/precalc/u1-atit/l2-vectors/",
+            "text": "Vectors\n\n\nA \ntwo-dimensional vector v\n is an ordered pair of real numbers, denoted in component form as \n\\langle a,b \\rangle\n. The numbers \na\n and \nb\n are the \ncomponents\n of the vector \nv\n. The \nstandard representation\n of the vector \n\\langle a,b \\rangle\n is the arrow from the origin to the point (a, b). The \nmagnitude\n of \nv\n is the length of the arrow, and the \ndirection\n of \nv\n is the direction in which the arrow is pointing.\n\n\nMagnitude\n\n\n\n\n|v| = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\n\nif \nv = \\langle a,b \\rangle\\ \n then \n|v| = \\sqrt{a^2+b^2}\n\n\n\n\nUnit Vectors\n\n\nA vector \nu\n with the length \n|u| = 1\n is a \nunit vector\n. If \nv\n is not the zero vector \n\\langle 0,0 \\rangle\n, then the vector\n\n\n\n\nu=\\frac{v}{|v|}=\\frac{1}{|v|}v\n\n\n\n\nis a \nunit vector in the direction of v\n.\n\n\nExample\n\n\n\n\n|v|=|\\langle -3,2 \\rangle |=\\sqrt{(-3)^2+2^2}=\\sqrt{13}\n\n\n\\frac{v}{|v|}=\\frac{1}{\\sqrt{13}} \\langle -3,2 \\rangle = \\langle \\frac{-3}{\\sqrt{13}},\\frac{2}{\\sqrt{13}} \\rangle\n\n\n\n\nThe magnitude of this vector will equal 1\n\n\nDirection Angles\n\n\nUsing trigonometry, the horizontal component can be found using \n|v|\\cos(\\theta)\n and the vertical component is \n|v|=\\sin(\\theta)\n. Solving for these components is called \nresolving the vector\n\n\nExample\n\n\nFind the magnitude and direction of the given vector: \nu=\\langle3,2\\rangle\n\n\n\n\n\n\n|u|=\\sqrt{3^2+2^2}=\\sqrt{13}\n\nif \n\\alpha\n is the direction angle of u, then\n\nu=\\langle3,2\\rangle=\\langle|u|\\cos(\\alpha),|u|\\sin(\\alpha)\n\n\n3=|u|\\cos(\\alpha)\n\n\n3=\\sqrt{13}\\cos(\\alpha)\n\n\n\\alpha=\\cos^{-1}(\\frac{3}{\\sqrt{13}})\\approx33.69^\\circ\n\n\n\n\nAngle Between Vectors\n\n\n\n\n\\cos(\\theta)=\\frac{u \\centerdot v}{|u||v|}\n\n\n\n\nOrthogonal Vectors\n\n\nThe vectors \nu\n and \nv\n are \northogonal\n if and only if \nu \\centerdot v=0",
+            "title": "Vectors"
+        },
+        {
+            "location": "/precalc/u1-atit/l2-vectors/#vectors",
             "text": "A  two-dimensional vector v  is an ordered pair of real numbers, denoted in component form as  \\langle a,b \\rangle . The numbers  a  and  b  are the  components  of the vector  v . The  standard representation  of the vector  \\langle a,b \\rangle  is the arrow from the origin to the point (a, b). The  magnitude  of  v  is the length of the arrow, and the  direction  of  v  is the direction in which the arrow is pointing.",
             "title": "Vectors"
         },
         {
-            "location": "/precalc/atit/#magnitude",
+            "location": "/precalc/u1-atit/l2-vectors/#magnitude",
             "text": "|v| = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \nif  v = \\langle a,b \\rangle\\   then  |v| = \\sqrt{a^2+b^2}",
             "title": "Magnitude"
         },
         {
-            "location": "/precalc/atit/#unit-vectors",
+            "location": "/precalc/u1-atit/l2-vectors/#unit-vectors",
             "text": "A vector  u  with the length  |u| = 1  is a  unit vector . If  v  is not the zero vector  \\langle 0,0 \\rangle , then the vector   u=\\frac{v}{|v|}=\\frac{1}{|v|}v   is a  unit vector in the direction of v .",
             "title": "Unit Vectors"
         },
         {
-            "location": "/precalc/atit/#example",
+            "location": "/precalc/u1-atit/l2-vectors/#example",
             "text": "|v|=|\\langle -3,2 \\rangle |=\\sqrt{(-3)^2+2^2}=\\sqrt{13}  \\frac{v}{|v|}=\\frac{1}{\\sqrt{13}} \\langle -3,2 \\rangle = \\langle \\frac{-3}{\\sqrt{13}},\\frac{2}{\\sqrt{13}} \\rangle   The magnitude of this vector will equal 1",
             "title": "Example"
         },
         {
-            "location": "/precalc/atit/#direction-angles",
+            "location": "/precalc/u1-atit/l2-vectors/#direction-angles",
             "text": "Using trigonometry, the horizontal component can be found using  |v|\\cos(\\theta)  and the vertical component is  |v|=\\sin(\\theta) . Solving for these components is called  resolving the vector",
             "title": "Direction Angles"
         },
         {
-            "location": "/precalc/atit/#example_1",
+            "location": "/precalc/u1-atit/l2-vectors/#example_1",
             "text": "Find the magnitude and direction of the given vector:  u=\\langle3,2\\rangle    |u|=\\sqrt{3^2+2^2}=\\sqrt{13} \nif  \\alpha  is the direction angle of u, then u=\\langle3,2\\rangle=\\langle|u|\\cos(\\alpha),|u|\\sin(\\alpha)  3=|u|\\cos(\\alpha)  3=\\sqrt{13}\\cos(\\alpha)  \\alpha=\\cos^{-1}(\\frac{3}{\\sqrt{13}})\\approx33.69^\\circ",
             "title": "Example"
         },
         {
-            "location": "/precalc/atit/#angle-between-vectors",
+            "location": "/precalc/u1-atit/l2-vectors/#angle-between-vectors",
             "text": "\\cos(\\theta)=\\frac{u \\centerdot v}{|u||v|}",
             "title": "Angle Between Vectors"
         },
         {
-            "location": "/precalc/atit/#orthogonal-vectors",
+            "location": "/precalc/u1-atit/l2-vectors/#orthogonal-vectors",
             "text": "The vectors  u  and  v  are  orthogonal  if and only if  u \\centerdot v=0",
             "title": "Orthogonal Vectors"
         },
         {
-            "location": "/precalc/atit/#demoivres-theorem-and-nth-roots",
+            "location": "/precalc/u1-atit/l3-roots/",
+            "text": "DeMoivre's Theorem and nth Roots\n\n\nAbsolute Value of a Complex Number\n\n\nThe \nabsolute value\n of the complex number \nz=a+bi\n is given by:\n\n|a+bi|=\\sqrt{a^2+b^2}\n\n\n\n\nTrigonometric Form of a Complex Number\n\n\n\n\na=r\\cos(\\theta)\n and \nb=r\\sin(\\theta)\n\n\na+bi=(r\\cos(\\theta))+(r\\sin(\\theta)i)=r(\\cos(\\theta)+i\\sin(\\theta))\n\n\n\\theta=\\tan^{-1}(\\frac{b}{a})\n\n\nr=\\sqrt{a^2+b^2}\n\n\n\n\nRaising a Complex Number to a Power\n\n\n\n\nz^n=r^n(\\cos(n\\theta)+i\\sin(n\\theta)\n\n\n\n\nDeMoivre's Theorem for Roots\n\n\nFor a positive integer n, the complex number \nz=r(\\cos(\\theta)+i\\sin(\\theta))\n has exactly \nn\n distinct \nn\nth roots given by\n\n\n\n\n\\sqrt[n]{r}(\\cos(\\frac{\\theta+2\\pi k}{n})+i\\sin(\\frac{\\theta+2\\pi k}{n}))\n\n\n\n\n\n\nk=0,1,2,...,n-1",
+            "title": "DeMoivre's Theorem and nth Roots"
+        },
+        {
+            "location": "/precalc/u1-atit/l3-roots/#demoivres-theorem-and-nth-roots",
             "text": "",
             "title": "DeMoivre's Theorem and nth Roots"
         },
         {
-            "location": "/precalc/atit/#absolute-value-of-a-complex-number",
+            "location": "/precalc/u1-atit/l3-roots/#absolute-value-of-a-complex-number",
             "text": "The  absolute value  of the complex number  z=a+bi  is given by: |a+bi|=\\sqrt{a^2+b^2}",
             "title": "Absolute Value of a Complex Number"
         },
         {
-            "location": "/precalc/atit/#trigonometric-form-of-a-complex-number",
+            "location": "/precalc/u1-atit/l3-roots/#trigonometric-form-of-a-complex-number",
             "text": "a=r\\cos(\\theta)  and  b=r\\sin(\\theta)  a+bi=(r\\cos(\\theta))+(r\\sin(\\theta)i)=r(\\cos(\\theta)+i\\sin(\\theta))  \\theta=\\tan^{-1}(\\frac{b}{a})  r=\\sqrt{a^2+b^2}",
             "title": "Trigonometric Form of a Complex Number"
         },
         {
-            "location": "/precalc/atit/#raising-a-complex-number-to-a-power",
+            "location": "/precalc/u1-atit/l3-roots/#raising-a-complex-number-to-a-power",
             "text": "z^n=r^n(\\cos(n\\theta)+i\\sin(n\\theta)",
             "title": "Raising a Complex Number to a Power"
         },
         {
-            "location": "/precalc/atit/#demoivres-theorem-for-roots",
+            "location": "/precalc/u1-atit/l3-roots/#demoivres-theorem-for-roots",
             "text": "For a positive integer n, the complex number  z=r(\\cos(\\theta)+i\\sin(\\theta))  has exactly  n  distinct  n th roots given by   \\sqrt[n]{r}(\\cos(\\frac{\\theta+2\\pi k}{n})+i\\sin(\\frac{\\theta+2\\pi k}{n}))    k=0,1,2,...,n-1",
             "title": "DeMoivre's Theorem for Roots"
         },
         {
-            "location": "/precalc/ssid/",
-            "text": "Sequences\n\n\nArithmetic Sequence\n\n\nAn \narithmetic seuqnces\n is a sequence in which each successive term has a common difference\n\n\nAn arithmetic sequence can be defined explicity with the formula\n\na_n=a_1+d(n-1)\n\n\n\n\nOr recursively through the formula\n\n\n\n\na_1=x\n\n\na_n=a_{n-1}+d\n\n\n\n\nGeometric Sequence\n\n\nA \ngeometric sequence\n is a sequence in which each successive term has a common ratio\n\n\nA geometric sequence can be defined explicity with the formula\n\na_n=a_1+(r)^{n-1}\n\n\n\n\nOr recursively though the formula\n\n\n\n\na_1=x\n\n\na_n=a_{n-1}\\times r\n\n\n\n\nFibonacci Sequence\n\n\n\n\na_1=1\n\n\na_2=1\n\n\na_n=a_{n-2}+a_{n-1}\n\n\n\n\nSums\n\n\n\n\n\n\n\n\n\n\nArithmetic\n\n\nGeometric\n\n\n\n\n\n\n\n\n\n\nFinite\n\n\n\n\nS_n=\\frac{n}{2}(a_1+a_2)\n\n\n\n\n\n\nS_n=a_1(\\frac{1-r^n}{1-r})\n\n\n\n\n\n\n\n\nInfinite\n\n\nN/A\n\n\n\n\nS=\\frac{a_1}{1-r}\n\n\n\n\n\n\n\n\n\n\nMathmatical Induction\n\n\n\n\nShow that the formula holds true for n=1\n\n\nSubsitute n with k\n\n\nSubstitute k with k+1 and solve\n\n\n\n\nExamples\n\n\nExample One\n\n\nShow that \nn^2+n\n is divisible by 2 for all natural numbers \nn\n\n\n\n\n\n\nHolds true for n=1\n    \na_1=1^2+1\n\n\na_1=2\n\n\n\\frac{2}{2} = 1\n\n\n\n\nAssume n=k\n    \nk^2+k\n\n\n\n\nSolve for k+1\n    \n(k+1)^2+(k+1)\n\n\nk^2+2k+1+k+1\n\n\nk^2+k+2k+2\n\n\nk^2+k+2(k+1)\n\n\n\\frac{k^2+k}{2} = 1\n\n\n\\frac{2(k+1)}{2} = k+1",
-            "title": "Sequences, Series, and Proof by Induction"
+            "location": "/precalc/u2-series/l1-sequences/",
+            "text": "Sequences\n\n\nArithmetic Sequence\n\n\nAn \narithmetic seuqnces\n is a sequence in which each successive term has a common difference\n\n\nAn arithmetic sequence can be defined explicity with the formula\n\na_n=a_1+d(n-1)\n\n\n\n\nOr recursively through the formula\n\n\n\n\na_1=x\n\n\na_n=a_{n-1}+d\n\n\n\n\nGeometric Sequence\n\n\nA \ngeometric sequence\n is a sequence in which each successive term has a common ratio\n\n\nA geometric sequence can be defined explicity with the formula\n\na_n=a_1+(r)^{n-1}\n\n\n\n\nOr recursively though the formula\n\n\n\n\na_1=x\n\n\na_n=a_{n-1}\\times r\n\n\n\n\nFibonacci Sequence\n\n\n\n\na_1=1\n\n\na_2=1\n\n\na_n=a_{n-2}+a_{n-1}\n\n\n\n\nSums\n\n\n\n\n\n\n\n\n\n\nArithmetic\n\n\nGeometric\n\n\n\n\n\n\n\n\n\n\nFinite\n\n\n\n\nS_n=\\frac{n}{2}(a_1+a_2)\n\n\n\n\n\n\nS_n=a_1(\\frac{1-r^n}{1-r})\n\n\n\n\n\n\n\n\nInfinite\n\n\nN/A\n\n\n\n\nS=\\frac{a_1}{1-r}",
+            "title": "Sequences"
         },
         {
-            "location": "/precalc/ssid/#sequences",
+            "location": "/precalc/u2-series/l1-sequences/#sequences",
             "text": "",
             "title": "Sequences"
         },
         {
-            "location": "/precalc/ssid/#arithmetic-sequence",
+            "location": "/precalc/u2-series/l1-sequences/#arithmetic-sequence",
             "text": "An  arithmetic seuqnces  is a sequence in which each successive term has a common difference  An arithmetic sequence can be defined explicity with the formula a_n=a_1+d(n-1)   Or recursively through the formula   a_1=x  a_n=a_{n-1}+d",
             "title": "Arithmetic Sequence"
         },
         {
-            "location": "/precalc/ssid/#geometric-sequence",
+            "location": "/precalc/u2-series/l1-sequences/#geometric-sequence",
             "text": "A  geometric sequence  is a sequence in which each successive term has a common ratio  A geometric sequence can be defined explicity with the formula a_n=a_1+(r)^{n-1}   Or recursively though the formula   a_1=x  a_n=a_{n-1}\\times r",
             "title": "Geometric Sequence"
         },
         {
-            "location": "/precalc/ssid/#fibonacci-sequence",
+            "location": "/precalc/u2-series/l1-sequences/#fibonacci-sequence",
             "text": "a_1=1  a_2=1  a_n=a_{n-2}+a_{n-1}",
             "title": "Fibonacci Sequence"
         },
         {
-            "location": "/precalc/ssid/#sums",
+            "location": "/precalc/u2-series/l1-sequences/#sums",
             "text": "Arithmetic  Geometric      Finite   S_n=\\frac{n}{2}(a_1+a_2)    S_n=a_1(\\frac{1-r^n}{1-r})     Infinite  N/A   S=\\frac{a_1}{1-r}",
             "title": "Sums"
         },
         {
-            "location": "/precalc/ssid/#mathmatical-induction",
+            "location": "/precalc/u2-series/l2-induction/",
+            "text": "Mathmatical Induction\n\n\n\n\nShow that the formula holds true for n=1\n\n\nSubsitute n with k\n\n\nSubstitute k with k+1 and solve\n\n\n\n\nExamples\n\n\nExample One\n\n\nShow that \nn^2+n\n is divisible by 2 for all natural numbers \nn\n\n\n\n\n\n\nHolds true for n=1\n    \na_1=1^2+1\n\n\na_1=2\n\n\n\\frac{2}{2} = 1\n\n\n\n\nAssume n=k\n    \nk^2+k\n\n\n\n\nSolve for k+1\n    \n(k+1)^2+(k+1)\n\n\nk^2+2k+1+k+1\n\n\nk^2+k+2k+2\n\n\nk^2+k+2(k+1)\n\n\n\\frac{k^2+k}{2} = 1\n\n\n\\frac{2(k+1)}{2} = k+1",
+            "title": "Mathmatical Induction"
+        },
+        {
+            "location": "/precalc/u2-series/l2-induction/#mathmatical-induction",
             "text": "Show that the formula holds true for n=1  Subsitute n with k  Substitute k with k+1 and solve",
             "title": "Mathmatical Induction"
         },
         {
-            "location": "/precalc/ssid/#examples",
+            "location": "/precalc/u2-series/l2-induction/#examples",
             "text": "",
             "title": "Examples"
         },
         {
-            "location": "/precalc/ssid/#example-one",
+            "location": "/precalc/u2-series/l2-induction/#example-one",
             "text": "Show that  n^2+n  is divisible by 2 for all natural numbers  n    Holds true for n=1\n     a_1=1^2+1  a_1=2  \\frac{2}{2} = 1   Assume n=k\n     k^2+k   Solve for k+1\n     (k+1)^2+(k+1)  k^2+2k+1+k+1  k^2+k+2k+2  k^2+k+2(k+1)  \\frac{k^2+k}{2} = 1  \\frac{2(k+1)}{2} = k+1",
             "title": "Example One"
         },
         {
-            "location": "/precalc/ag/",
-            "text": "Conics\n\n\n\n\nParabola\n\n\nA \nparabola\n is the set of all points (x, y) that are equidistant from a fixed line \n(directrix)\n and a fixed point \n(focus)\n not on the line.\n\n\nVertical Parabola\n\n\n\n\n(x-h)^2=4p(y-k), p \\neq 0\n\n\ny=\\frac{1}{4p}(x-h)^2+k,p \\neq 0\n\n\n\n\nHorizontal Parabola\n\n\n\n\n(y-k)^2=4p(x-h), p \\neq 0\n\n\nx=\\frac{1}{4p}(y-k)^2+h,p \\neq 0\n\n\n\n\nInfo\n\n\n\n\n\n\n\n\nValue of p\n\n\nFocus\n\n\nDirectrix\n\n\nEquation\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\np > 0\n\n\n(h+p,k)\n\n\nx = h-p\n\n\n\n\n(y-k)^2=4p(x-h)\n\n\n\n\nOpens to the right\n\n\n\n\n\n\np < 0\n\n\n(h+p,k)\n\n\nx = h-p\n\n\n\n\n(y-k)^2=4p(x-h)\n\n\n\n\nOpens to the left\n\n\n\n\n\n\np > 0\n\n\n(h,k+p)\n\n\ny = k-p\n\n\n\n\n(x-h)^2=4p(y-k)\n\n\n\n\nOpens up\n\n\n\n\n\n\np < 0\n\n\n(h,k+p)\n\n\ny = k-p\n\n\n\n\n(x-h)^2=4p(y-k)\n\n\n\n\nOpens down\n\n\n\n\n\n\n\n\nEllipse\n\n\nAn \nellipse\n is the set of all points (x, y), the \nsum\n of whose distances from two distinct fixed points \n(foci)\n is constant.\n\n\nHorizontal\n\n\n\n\n\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1\n\n\n\n\nVertical\n\n\n\n\n\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 1\n\n\n\n\nInfo\n\n\n\n\na^2 > b^2\n\n\nc^2=a^2-b^2\n\n\ne=\\frac{c}{a}\n\n\n\n\nHyperbola\n\n\nA \nhyperbola\n is the set of all points (x, y), the \ndifference\n of whose distances from two distinct fixed points \n(foci)\n is constant.\n\n\nHorizontal\n\n\n\n\n\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1\n\n\n\n\nVertical\n\n\n\n\n\\frac{(y-k)^2}{a^2} - \\frac{(x-h)^2}{b^2} = 1\n\n\n\n\nInfo\n\n\n\n\nc^2 = a^2+b^2\n\n\n\\mathrm{Horizontal:}y=k \\pm \\frac{b}{a}(x-h)\n\n\n\\mathrm{Vertical:}y=k \\pm \\frac{a}{b}(x-h)\n\n\n\n\nClassification by General Equation\n\n\n\n\nAx^2+Cy^2+Dx+Ey+F=0\n\n\n\n\n\n\nCircle if A=C\n\n\nParabola if AC = 0, A=0 or C=0, but not both\n\n\nEllipse if AC>0, A and C have like signs\n\n\nHyperbola AC<0, A and C have unlike signs\n\n\n\n\nParametric\n\n\nPolar\n\n\n \n\n\n\n\nr = \\mathrm{distance}\n and \n\\theta = \\mathrm{angle}\n to form the point \n(r, \\theta)\n\n\n\n\n\n\n(2,\\frac{\\pi}{3})\n graphed:\n\n\n\n\nMultiple Representations of Points\n\n\n\n\n(r,\\theta) = (r,\\theta \\pm 2n\\pi)\n\n\n(r, \\theta) = (-r,\\theta \\pm (2n+1)\\pi)\n\n\n\n\nConversion\n\n\n\n\nx=r\\cos(\\theta)\n\n\ny=r\\sin(\\theta)\n\n\n\\tan(\\theta)=\\frac{y}{x}\n\n\nr^2=x^2+y^2",
-            "title": "Topics in Analytical Gemometry"
+            "location": "/precalc/u3-ag/l1-conics/",
+            "text": "Conics\n\n\n\n\nParabola\n\n\nA \nparabola\n is the set of all points (x, y) that are equidistant from a fixed line \n(directrix)\n and a fixed point \n(focus)\n not on the line.\n\n\nVertical Parabola\n\n\n\n\n(x-h)^2=4p(y-k), p \\neq 0\n\n\ny=\\frac{1}{4p}(x-h)^2+k,p \\neq 0\n\n\n\n\nHorizontal Parabola\n\n\n\n\n(y-k)^2=4p(x-h), p \\neq 0\n\n\nx=\\frac{1}{4p}(y-k)^2+h,p \\neq 0\n\n\n\n\nInfo\n\n\n\n\n\n\n\n\nValue of p\n\n\nFocus\n\n\nDirectrix\n\n\nEquation\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\np > 0\n\n\n(h+p,k)\n\n\nx = h-p\n\n\n\n\n(y-k)^2=4p(x-h)\n\n\n\n\nOpens to the right\n\n\n\n\n\n\np < 0\n\n\n(h+p,k)\n\n\nx = h-p\n\n\n\n\n(y-k)^2=4p(x-h)\n\n\n\n\nOpens to the left\n\n\n\n\n\n\np > 0\n\n\n(h,k+p)\n\n\ny = k-p\n\n\n\n\n(x-h)^2=4p(y-k)\n\n\n\n\nOpens up\n\n\n\n\n\n\np < 0\n\n\n(h,k+p)\n\n\ny = k-p\n\n\n\n\n(x-h)^2=4p(y-k)\n\n\n\n\nOpens down\n\n\n\n\n\n\n\n\nEllipse\n\n\nAn \nellipse\n is the set of all points (x, y), the \nsum\n of whose distances from two distinct fixed points \n(foci)\n is constant.\n\n\nHorizontal\n\n\n\n\n\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1\n\n\n\n\nVertical\n\n\n\n\n\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 1\n\n\n\n\nInfo\n\n\n\n\na^2 > b^2\n\n\nc^2=a^2-b^2\n\n\ne=\\frac{c}{a}\n\n\n\n\nHyperbola\n\n\nA \nhyperbola\n is the set of all points (x, y), the \ndifference\n of whose distances from two distinct fixed points \n(foci)\n is constant.\n\n\nHorizontal\n\n\n\n\n\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1\n\n\n\n\nVertical\n\n\n\n\n\\frac{(y-k)^2}{a^2} - \\frac{(x-h)^2}{b^2} = 1\n\n\n\n\nInfo\n\n\n\n\nc^2 = a^2+b^2\n\n\n\\mathrm{Horizontal:}y=k \\pm \\frac{b}{a}(x-h)\n\n\n\\mathrm{Vertical:}y=k \\pm \\frac{a}{b}(x-h)\n\n\n\n\nClassification by General Equation\n\n\n\n\nAx^2+Cy^2+Dx+Ey+F=0\n\n\n\n\n\n\nCircle if A=C\n\n\nParabola if AC = 0, A=0 or C=0, but not both\n\n\nEllipse if AC>0, A and C have like signs\n\n\nHyperbola AC<0, A and C have unlike signs",
+            "title": "Conics"
         },
         {
-            "location": "/precalc/ag/#conics",
+            "location": "/precalc/u3-ag/l1-conics/#conics",
             "text": "",
             "title": "Conics"
         },
         {
-            "location": "/precalc/ag/#parabola",
+            "location": "/precalc/u3-ag/l1-conics/#parabola",
             "text": "A  parabola  is the set of all points (x, y) that are equidistant from a fixed line  (directrix)  and a fixed point  (focus)  not on the line.",
             "title": "Parabola"
         },
         {
-            "location": "/precalc/ag/#vertical-parabola",
+            "location": "/precalc/u3-ag/l1-conics/#vertical-parabola",
             "text": "(x-h)^2=4p(y-k), p \\neq 0  y=\\frac{1}{4p}(x-h)^2+k,p \\neq 0",
             "title": "Vertical Parabola"
         },
         {
-            "location": "/precalc/ag/#horizontal-parabola",
+            "location": "/precalc/u3-ag/l1-conics/#horizontal-parabola",
             "text": "(y-k)^2=4p(x-h), p \\neq 0  x=\\frac{1}{4p}(y-k)^2+h,p \\neq 0",
             "title": "Horizontal Parabola"
         },
         {
-            "location": "/precalc/ag/#info",
+            "location": "/precalc/u3-ag/l1-conics/#info",
             "text": "Value of p  Focus  Directrix  Equation  Description      p > 0  (h+p,k)  x = h-p   (y-k)^2=4p(x-h)   Opens to the right    p < 0  (h+p,k)  x = h-p   (y-k)^2=4p(x-h)   Opens to the left    p > 0  (h,k+p)  y = k-p   (x-h)^2=4p(y-k)   Opens up    p < 0  (h,k+p)  y = k-p   (x-h)^2=4p(y-k)   Opens down",
             "title": "Info"
         },
         {
-            "location": "/precalc/ag/#ellipse",
+            "location": "/precalc/u3-ag/l1-conics/#ellipse",
             "text": "An  ellipse  is the set of all points (x, y), the  sum  of whose distances from two distinct fixed points  (foci)  is constant.",
             "title": "Ellipse"
         },
         {
-            "location": "/precalc/ag/#horizontal",
+            "location": "/precalc/u3-ag/l1-conics/#horizontal",
             "text": "\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1",
             "title": "Horizontal"
         },
         {
-            "location": "/precalc/ag/#vertical",
+            "location": "/precalc/u3-ag/l1-conics/#vertical",
             "text": "\\frac{(x-h)^2}{b^2} + \\frac{(y-k)^2}{a^2} = 1",
             "title": "Vertical"
         },
         {
-            "location": "/precalc/ag/#info_1",
+            "location": "/precalc/u3-ag/l1-conics/#info_1",
             "text": "a^2 > b^2  c^2=a^2-b^2  e=\\frac{c}{a}",
             "title": "Info"
         },
         {
-            "location": "/precalc/ag/#hyperbola",
+            "location": "/precalc/u3-ag/l1-conics/#hyperbola",
             "text": "A  hyperbola  is the set of all points (x, y), the  difference  of whose distances from two distinct fixed points  (foci)  is constant.",
             "title": "Hyperbola"
         },
         {
-            "location": "/precalc/ag/#horizontal_1",
+            "location": "/precalc/u3-ag/l1-conics/#horizontal_1",
             "text": "\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1",
             "title": "Horizontal"
         },
         {
-            "location": "/precalc/ag/#vertical_1",
+            "location": "/precalc/u3-ag/l1-conics/#vertical_1",
             "text": "\\frac{(y-k)^2}{a^2} - \\frac{(x-h)^2}{b^2} = 1",
             "title": "Vertical"
         },
         {
-            "location": "/precalc/ag/#info_2",
+            "location": "/precalc/u3-ag/l1-conics/#info_2",
             "text": "c^2 = a^2+b^2  \\mathrm{Horizontal:}y=k \\pm \\frac{b}{a}(x-h)  \\mathrm{Vertical:}y=k \\pm \\frac{a}{b}(x-h)",
             "title": "Info"
         },
         {
-            "location": "/precalc/ag/#classification-by-general-equation",
+            "location": "/precalc/u3-ag/l1-conics/#classification-by-general-equation",
             "text": "Ax^2+Cy^2+Dx+Ey+F=0    Circle if A=C  Parabola if AC = 0, A=0 or C=0, but not both  Ellipse if AC>0, A and C have like signs  Hyperbola AC<0, A and C have unlike signs",
             "title": "Classification by General Equation"
         },
         {
-            "location": "/precalc/ag/#parametric",
+            "location": "/precalc/u3-ag/l2-parametric/",
+            "text": "Parametric",
+            "title": "Parametric Equations"
+        },
+        {
+            "location": "/precalc/u3-ag/l2-parametric/#parametric",
             "text": "",
             "title": "Parametric"
         },
         {
-            "location": "/precalc/ag/#polar",
+            "location": "/precalc/u3-ag/l3-polar/",
+            "text": "Polar\n\n\n \n\n\n\n\nr = \\mathrm{distance}\n and \n\\theta = \\mathrm{angle}\n to form the point \n(r, \\theta)\n\n\n\n\n\n\n(2,\\frac{\\pi}{3})\n graphed:\n\n\n\n\nMultiple Representations of Points\n\n\n\n\n(r,\\theta) = (r,\\theta \\pm 2n\\pi)\n\n\n(r, \\theta) = (-r,\\theta \\pm (2n+1)\\pi)\n\n\n\n\nConversion\n\n\n\n\nx=r\\cos(\\theta)\n\n\ny=r\\sin(\\theta)\n\n\n\\tan(\\theta)=\\frac{y}{x}\n\n\nr^2=x^2+y^2",
+            "title": "Polar Coordinates"
+        },
+        {
+            "location": "/precalc/u3-ag/l3-polar/#polar",
             "text": "r = \\mathrm{distance}  and  \\theta = \\mathrm{angle}  to form the point  (r, \\theta)    (2,\\frac{\\pi}{3})  graphed:",
             "title": "Polar"
         },
         {
-            "location": "/precalc/ag/#multiple-representations-of-points",
+            "location": "/precalc/u3-ag/l3-polar/#multiple-representations-of-points",
             "text": "(r,\\theta) = (r,\\theta \\pm 2n\\pi)  (r, \\theta) = (-r,\\theta \\pm (2n+1)\\pi)",
             "title": "Multiple Representations of Points"
         },
         {
-            "location": "/precalc/ag/#conversion",
+            "location": "/precalc/u3-ag/l3-polar/#conversion",
             "text": "x=r\\cos(\\theta)  y=r\\sin(\\theta)  \\tan(\\theta)=\\frac{y}{x}  r^2=x^2+y^2",
             "title": "Conversion"
         }

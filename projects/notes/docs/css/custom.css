@@ -1,0 +1,16 @@
+.wm-page-content {
+	font-size: 1.6rem;
+}
+
+.wm-page-content img {
+	margin: 0 auto;
+	display: block;
+}
+
+.wm-toc-li-nested.wm-page-toc {
+	font-size: 1.35rem;
+}
+
+h3 {
+	font-style: italic;
+}

@@ -6,8 +6,17 @@ markdown_extensions:
 pages:
   - Home: index.md
   - Precalculus:
-      - Additional Topics in Trigonometry: precalc/atit.md
-      - Sequences, Series, and Proof by Induction: precalc/ssid.md
-      - Topics in Analytical Gemometry: precalc/ag.md
-theme:
-  name: 'rtd-dropdown'
+      - Additional Topics in Trigonometry:
+          - Solving Triangles: precalc/u1-atit/l1-triangles.md
+          - Vectors: precalc/u1-atit/l2-vectors.md
+          - DeMoivre's Theorem and nth Roots: precalc/u1-atit/l3-roots.md
+      - Sequences, Series, and Proof by Induction:
+          - Sequences: precalc/u2-series/l1-sequences.md
+          - Mathmatical Induction: precalc/u2-series/l2-induction.md
+      - Topics in Analytical Gemometry:
+          - Conics: precalc/u3-ag/l1-conics.md
+          - Parametric Equations: precalc/u3-ag/l2-parametric.md
+          - Polar Coordinates: precalc/u3-ag/l3-polar.md
+extra_css:
+    - css/custom.css
+theme: windmill

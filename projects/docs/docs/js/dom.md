@@ -19,6 +19,7 @@ document.querySelectorAll("div.note, div.alert");
 ```
 
 ## By relation
+![img](https://javascript.info/article/dom-navigation/dom-links@2x.png)
 ```javascript
 var stored = document.getElementById("someId");
 

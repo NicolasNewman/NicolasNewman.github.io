@@ -2,7 +2,7 @@ site_name: 'Web Notes'
 pages:
   - Home: index.md
   - CSS:
-      - Bootstrap: css/bootstrap.md
+      - Bootstrap: css-docs/bootstrap.md
   - JavaScript: 
       - Vanilla: js/vanilla.md
       - ES6: js/es6.md
@@ -18,5 +18,7 @@ pages:
   - Other:
       - RESTful Routes: other/rest.md
       - Express Template: other/expressTemplate.md
+extra_css:
+    - css/custom.css
 theme:
-  name: 'rtd-dropdown'
+    name: 'rtd-dropdown'

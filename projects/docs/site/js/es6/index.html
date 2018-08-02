@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../css/custom.css" rel="stylesheet">
   
   <script>
     // Current page data
@@ -82,12 +83,12 @@
   <p class="caption">CSS</p>
 
 
-<ul class="" href="css\bootstrap">
+<ul class="" href="css-docs\bootstrap">
   
     
       
 <li class=" toctree-l1">
-  <a href="../../css/bootstrap/" title="Bootstrap"
+  <a href="../../css-docs/bootstrap/" title="Bootstrap"
       class="">
     Bootstrap
   </a>
@@ -145,6 +146,7 @@
     
     
       
+  
   
   
   
@@ -248,6 +250,69 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#arrow-functions" title="ES6">Arrow Functions</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#rest-parameters" title="ES6">Rest Parameters</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#default-parameters" title="ES6">Default Parameters</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#promises-and-ajax" title="ES6"
+          class="">
+        Promises and AJAX
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#asyncawait" title="ES6">Async/Await</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#ajax" title="ES6">AJAX</a>
   </li>
 
       
@@ -632,6 +697,25 @@ const boxesArr6 = Array.from(boxes);
 boxesArr6.forEach(cur =&gt; cur.style.backgroundColor = 'dodgerblue');
 </code></pre>
 
+<h3 id="spread">Spread</h3>
+<pre><code class="javascript">function addFourAges(a, b, c, d) {
+    return a + b + c + d;
+}
+
+var ages = [18, 30, 12, 21];
+
+// ES5
+var sum5 = addFourAges.apply(null, ages);
+
+// ES6
+var sum6 = addFourAges(...ages);
+</code></pre>
+
+<pre><code class="javascript">const familySmith = ['John', 'Jane', 'Mark'];
+const familyMiller = ['Mary', 'Bob', 'Ann'];
+const bigFamily = [...familySmith, ...familyMiller];
+</code></pre>
+
 <h3 id="loops">Loops</h3>
 <pre><code class="javascript">
 // ES5
@@ -748,6 +832,97 @@ Person.prototype.myFriends6 = function(friends) {
 
 var friends = ['Bob', 'Jane', 'Mark'];
 new Person('John').myFriends6(friends);
+</code></pre>
+
+<h2 id="rest-parameters">Rest Parameters</h2>
+<pre><code class="javascript">// ES5
+function isFullAge5() {
+    var argsArr = Array.prototype.slice.call(arguments);
+    argsArr.forEach(function(age) {
+        console.log((2018 - age) &gt;= 18);
+    });
+}
+isFullAge5(1990, 1999, 1965);
+
+// ES6
+function isFullAge6(limit, ...years) {
+    years.forEach(age =&gt; console.log((2018 - age) &gt;= limit));
+}
+isFullAge6(25, 1990, 1999, 1965);
+</code></pre>
+
+<h2 id="default-parameters">Default Parameters</h2>
+<pre><code class="javascript">function SmithPerson(firstName, dob, lastName='Smith') {
+    this.firstName = firstName;
+    this.dob = dob;
+    this.lastName = lastName;
+}
+</code></pre>
+
+<h1 id="promises-and-ajax">Promises and AJAX</h1>
+<pre><code class="javascript">const getIDs = new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+        resolve([523, 883, 432, 974]); // Promise successful, return list
+    }, 1500);
+});
+
+const getRecipe = recID =&gt; {
+    return new Promise((resolve, reject) =&gt; {
+        setTimeout(ID =&gt; {
+            const recipe = {title: 'Pasta', author: 'Bob'}  
+            resolve(`${ID}: ${recipe.title}`);
+        }, 1500, recID);
+    });
+}
+
+getIDs.then(IDs =&gt; {
+    console.log(IDs);
+}).catch(err =&gt; {
+    console.log(err);   
+});
+
+// Chain two promises
+getIDs.then(IDs =&gt; {
+    return getRecipie(IDs[2]);
+}).then(recipe =&gt; {
+    console.log(recipe);    
+}).catch(err =&gt; {
+    console.log(err);   
+});
+</code></pre>
+
+<h2 id="asyncawait">Async/Await</h2>
+<pre><code class="javascript">// getIDs and getRecipe from previous block
+async function getRecipiesAW() {
+    const IDs = await getIDs;
+    const recipe = await getRecipe(IDs[2]);
+
+    return recipe;
+}
+
+getRecipiesAW().then(result =&gt; console.log(result));
+</code></pre>
+
+<h2 id="ajax">AJAX</h2>
+<h3 id="with-promises">With Promises</h3>
+<pre><code class="javascript">fetch('https://crossorigin.me/https://www.metaweather.com/api/location/44418/').then(result =&gt; {
+    return result.json();   
+}).then(data =&gt; {
+    console.log(data);  
+}).catch(err =&gt; console.log(err));
+</code></pre>
+
+<h3 id="with-asyncawait">With Async/Await</h3>
+<pre><code class="javascript">async function getWeatherAW(woeid) {
+    try {
+        fetch(`https://crossorigin.me/https://www.metaweather.com/api/location/${woeid}/`);
+        const data = await result.json();
+        return data;        
+    } catch(err) {
+        console.log(err);
+    }
+}
+getWeatherAW(44418).then(result =&gt; console.log(result));
 </code></pre>
               
             </div>

@@ -133,6 +133,27 @@ const boxesArr6 = Array.from(boxes);
 boxesArr6.forEach(cur => cur.style.backgroundColor = 'dodgerblue');
 ```
 
+### Spread
+```javascript
+function addFourAges(a, b, c, d) {
+	return a + b + c + d;
+}
+
+var ages = [18, 30, 12, 21];
+
+// ES5
+var sum5 = addFourAges.apply(null, ages);
+
+// ES6
+var sum6 = addFourAges(...ages);
+```
+
+```javascript
+const familySmith = ['John', 'Jane', 'Mark'];
+const familyMiller = ['Mary', 'Bob', 'Ann'];
+const bigFamily = [...familySmith, ...familyMiller];
+```
+
 ### Loops
 ```javascript
 
@@ -256,4 +277,106 @@ Person.prototype.myFriends6 = function(friends) {
 
 var friends = ['Bob', 'Jane', 'Mark'];
 new Person('John').myFriends6(friends);
+```
+
+## Rest Parameters
+
+```javascript
+// ES5
+function isFullAge5() {
+	var argsArr = Array.prototype.slice.call(arguments);
+	argsArr.forEach(function(age) {
+		console.log((2018 - age) >= 18);
+	});
+}
+isFullAge5(1990, 1999, 1965);
+
+// ES6
+function isFullAge6(limit, ...years) {
+	years.forEach(age => console.log((2018 - age) >= limit));
+}
+isFullAge6(25, 1990, 1999, 1965);
+```
+
+## Default Parameters
+
+```javascript
+function SmithPerson(firstName, dob, lastName='Smith') {
+	this.firstName = firstName;
+	this.dob = dob;
+	this.lastName = lastName;
+}
+```
+
+# Promises and AJAX
+
+```javascript
+const getIDs = new Promise((resolve, reject) => {
+	setTimeout(() => {
+		resolve([523, 883, 432, 974]); // Promise successful, return list
+	}, 1500);
+});
+
+const getRecipe = recID => {
+	return new Promise((resolve, reject) => {
+		setTimeout(ID => {
+			const recipe = {title: 'Pasta', author: 'Bob'}	
+			resolve(`${ID}: ${recipe.title}`);
+		}, 1500, recID);
+	});
+}
+
+getIDs.then(IDs => {
+	console.log(IDs);
+}).catch(err => {
+	console.log(err);	
+});
+
+// Chain two promises
+getIDs.then(IDs => {
+	return getRecipie(IDs[2]);
+}).then(recipe => {
+	console.log(recipe);	
+}).catch(err => {
+	console.log(err);	
+});
+```
+
+## Async/Await
+
+```javascript
+// getIDs and getRecipe from previous block
+async function getRecipiesAW() {
+	const IDs = await getIDs;
+	const recipe = await getRecipe(IDs[2]);
+
+	return recipe;
+}
+
+getRecipiesAW().then(result => console.log(result));
+```
+
+## AJAX
+
+### With Promises
+```javascript
+fetch('https://crossorigin.me/https://www.metaweather.com/api/location/44418/').then(result => {
+	return result.json();	
+}).then(data => {
+	console.log(data);	
+}).catch(err => console.log(err));
+```
+
+### With Async/Await
+```javascript
+async function getWeatherAW(woeid) {
+	try {
+		fetch(`https://crossorigin.me/https://www.metaweather.com/api/location/${woeid}/`);
+		const data = await result.json();
+		return data;		
+	} catch(err) {
+		console.log(err);
+	}
+}
+getWeatherAW(44418).then(result => console.log(result));
 ```

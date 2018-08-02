@@ -308,37 +308,22 @@ function SmithPerson(firstName, dob, lastName='Smith') {
 }
 ```
 
-# Promises and AJAX
+# Promises
 
 ```javascript
-const getIDs = new Promise((resolve, reject) => {
-	setTimeout(() => {
-		resolve([523, 883, 432, 974]); // Promise successful, return list
-	}, 1500);
+var p1 = new Promise((resolve, reject) => {
+	const num = Math.random();
+	if (num < 0.5) {
+		resolve(num);
+	} else {
+		reject(num);
+	}
 });
 
-const getRecipe = recID => {
-	return new Promise((resolve, reject) => {
-		setTimeout(ID => {
-			const recipe = {title: 'Pasta', author: 'Bob'}	
-			resolve(`${ID}: ${recipe.title}`);
-		}, 1500, recID);
-	});
-}
-
-getIDs.then(IDs => {
-	console.log(IDs);
+p1.then(result => {
+	console.log(`Success: ${result}`);
 }).catch(err => {
-	console.log(err);	
-});
-
-// Chain two promises
-getIDs.then(IDs => {
-	return getRecipie(IDs[2]);
-}).then(recipe => {
-	console.log(recipe);	
-}).catch(err => {
-	console.log(err);	
+	console.log(`Error: ${err}`);	
 });
 ```
 
@@ -356,9 +341,36 @@ async function getRecipiesAW() {
 getRecipiesAW().then(result => console.log(result));
 ```
 
-## AJAX
+# AJAX
 
-### With Promises
+## With XMLHTTPRequest
+### readyState
+| Value | State            | Description                                                  |
+|-------|------------------|--------------------------------------------------------------|
+| 0     | UNSENT           | Client has been created. open() not called yet. 			  |
+| 1     | OPENED           | open() has been called										  |
+| 2     | HEADERS_RECEIVED | send() has been called, and headers and status are available |
+| 3     | LOADING          | Downloading; responseText holds partial data.                |
+| 4     | DONE             | The operation is complete                                    |
+
+### Example
+```javascript
+var XHR = new XMLHttpRequest();
+XHR.onreadystatechange = () => {
+	console.log(`readyState: ${XHR.readyState}`);
+	if (XHR.readyState === 4) {
+		if (XHR.status == 200) {
+			console.log(XHR.responseText);
+		} else {
+			console.log("There was a problem")
+		}
+	}
+};
+XHR.open('GET', 'https://api.github.com/zen');
+XHR.send();
+```
+
+## With Promises
 ```javascript
 fetch('https://crossorigin.me/https://www.metaweather.com/api/location/44418/').then(result => {
 	return result.json();	
@@ -367,7 +379,7 @@ fetch('https://crossorigin.me/https://www.metaweather.com/api/location/44418/').
 }).catch(err => console.log(err));
 ```
 
-### With Async/Await
+## With Async/Await
 ```javascript
 async function getWeatherAW(woeid) {
 	try {

@@ -150,6 +150,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -287,9 +288,9 @@
 
   <li class=" toctree-l2">
     
-      <a href="#promises-and-ajax" title="ES6"
+      <a href="#promises" title="ES6"
           class="">
-        Promises and AJAX
+        Promises
       </a>
     
     <ul class=" subnav">
@@ -305,6 +306,25 @@
   </li>
 
       
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#ajax" title="ES6"
+          class="">
+        AJAX
+      </a>
+    
+    <ul class=" subnav">
+      
         
 
   
@@ -312,7 +332,29 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#ajax" title="ES6">AJAX</a>
+    <a href="#with-xmlhttprequest" title="ES6">With XMLHTTPRequest</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#with-promises" title="ES6">With Promises</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#with-asyncawait" title="ES6">With Async/Await</a>
   </li>
 
       
@@ -859,35 +901,20 @@ isFullAge6(25, 1990, 1999, 1965);
 }
 </code></pre>
 
-<h1 id="promises-and-ajax">Promises and AJAX</h1>
-<pre><code class="javascript">const getIDs = new Promise((resolve, reject) =&gt; {
-    setTimeout(() =&gt; {
-        resolve([523, 883, 432, 974]); // Promise successful, return list
-    }, 1500);
+<h1 id="promises">Promises</h1>
+<pre><code class="javascript">var p1 = new Promise((resolve, reject) =&gt; {
+    const num = Math.random();
+    if (num &lt; 0.5) {
+        resolve(num);
+    } else {
+        reject(num);
+    }
 });
 
-const getRecipe = recID =&gt; {
-    return new Promise((resolve, reject) =&gt; {
-        setTimeout(ID =&gt; {
-            const recipe = {title: 'Pasta', author: 'Bob'}  
-            resolve(`${ID}: ${recipe.title}`);
-        }, 1500, recID);
-    });
-}
-
-getIDs.then(IDs =&gt; {
-    console.log(IDs);
+p1.then(result =&gt; {
+    console.log(`Success: ${result}`);
 }).catch(err =&gt; {
-    console.log(err);   
-});
-
-// Chain two promises
-getIDs.then(IDs =&gt; {
-    return getRecipie(IDs[2]);
-}).then(recipe =&gt; {
-    console.log(recipe);    
-}).catch(err =&gt; {
-    console.log(err);   
+    console.log(`Error: ${err}`);   
 });
 </code></pre>
 
@@ -903,8 +930,62 @@ async function getRecipiesAW() {
 getRecipiesAW().then(result =&gt; console.log(result));
 </code></pre>
 
-<h2 id="ajax">AJAX</h2>
-<h3 id="with-promises">With Promises</h3>
+<h1 id="ajax">AJAX</h1>
+<h2 id="with-xmlhttprequest">With XMLHTTPRequest</h2>
+<h3 id="readystate">readyState</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>UNSENT</td>
+<td>Client has been created. open() not called yet.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>OPENED</td>
+<td>open() has been called</td>
+</tr>
+<tr>
+<td>2</td>
+<td>HEADERS_RECEIVED</td>
+<td>send() has been called, and headers and status are available</td>
+</tr>
+<tr>
+<td>3</td>
+<td>LOADING</td>
+<td>Downloading; responseText holds partial data.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>DONE</td>
+<td>The operation is complete</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<pre><code class="javascript">var XHR = new XMLHttpRequest();
+XHR.onreadystatechange = () =&gt; {
+    console.log(`readyState: ${XHR.readyState}`);
+    if (XHR.readyState === 4) {
+        if (XHR.status == 200) {
+            console.log(XHR.responseText);
+        } else {
+            console.log(&quot;There was a problem&quot;)
+        }
+    }
+};
+XHR.open('GET', 'https://api.github.com/zen');
+XHR.send();
+</code></pre>
+
+<h2 id="with-promises">With Promises</h2>
 <pre><code class="javascript">fetch('https://crossorigin.me/https://www.metaweather.com/api/location/44418/').then(result =&gt; {
     return result.json();   
 }).then(data =&gt; {
@@ -912,7 +993,7 @@ getRecipiesAW().then(result =&gt; console.log(result));
 }).catch(err =&gt; console.log(err));
 </code></pre>
 
-<h3 id="with-asyncawait">With Async/Await</h3>
+<h2 id="with-asyncawait">With Async/Await</h2>
 <pre><code class="javascript">async function getWeatherAW(woeid) {
     try {
         fetch(`https://crossorigin.me/https://www.metaweather.com/api/location/${woeid}/`);

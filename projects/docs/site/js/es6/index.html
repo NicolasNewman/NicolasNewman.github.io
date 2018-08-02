@@ -970,18 +970,19 @@ getRecipiesAW().then(result =&gt; console.log(result));
 </tbody>
 </table>
 <h3 id="example">Example</h3>
-<pre><code class="javascript">var XHR = new XMLHttpRequest();
+<pre><code class="javascript">const XHR = new XMLHttpRequest();
 XHR.onreadystatechange = () =&gt; {
-    console.log(`readyState: ${XHR.readyState}`);
     if (XHR.readyState === 4) {
-        if (XHR.status == 200) {
-            console.log(XHR.responseText);
+        console.log(`readyState: ${XHR.readyState}`);
+        if(XHR.status === 200) {
+            const url = JSON.parse(XHR.responseText).message;
+            console.log(url);
         } else {
             console.log(&quot;There was a problem&quot;)
         }
     }
 };
-XHR.open('GET', 'https://api.github.com/zen');
+XHR.open(&quot;GET&quot;, &quot;https://dog.ceo/api/breeds/image/random&quot;);
 XHR.send();
 </code></pre>
 

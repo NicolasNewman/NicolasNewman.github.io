@@ -355,18 +355,19 @@ getRecipiesAW().then(result => console.log(result));
 
 ### Example
 ```javascript
-var XHR = new XMLHttpRequest();
+const XHR = new XMLHttpRequest();
 XHR.onreadystatechange = () => {
-	console.log(`readyState: ${XHR.readyState}`);
-	if (XHR.readyState === 4) {
-		if (XHR.status == 200) {
-			console.log(XHR.responseText);
-		} else {
+    if (XHR.readyState === 4) {
+    	console.log(`readyState: ${XHR.readyState}`);
+        if(XHR.status === 200) {
+            const url = JSON.parse(XHR.responseText).message;
+            console.log(url);
+        } else {
 			console.log("There was a problem")
-		}
-	}
+        }
+    }
 };
-XHR.open('GET', 'https://api.github.com/zen');
+XHR.open("GET", "https://dog.ceo/api/breeds/image/random");
 XHR.send();
 ```
 

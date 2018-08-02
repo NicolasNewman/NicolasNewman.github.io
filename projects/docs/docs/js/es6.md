@@ -371,25 +371,58 @@ XHR.open("GET", "https://dog.ceo/api/breeds/image/random");
 XHR.send();
 ```
 
-## With Promises
+## With Fetch (updated XHR)
+
 ```javascript
-fetch('https://crossorigin.me/https://www.metaweather.com/api/location/44418/').then(result => {
-	return result.json();	
+// .json() will return a promise that can be chained
+fetch('https://api.coindesk.com/v1/bpi/currentprice.json').then(response => {
+	console.log(`Response: ${response}`);
+	return response.json();
 }).then(data => {
-	console.log(data);	
-}).catch(err => console.log(err));
+	console.log(data);
+}).catch(err => {
+	console.log(err);
+});
 ```
 
-## With Async/Await
+### Options
 ```javascript
-async function getWeatherAW(woeid) {
-	try {
-		fetch(`https://crossorigin.me/https://www.metaweather.com/api/location/${woeid}/`);
-		const data = await result.json();
-		return data;		
-	} catch(err) {
-		console.log(err);
+fetch(url, {
+	method: 'POST',
+	body: JSON.stringify({
+		name: 'blue',
+		login: 'bluecat'	
+	})
+}).then(response => {
+
+}).catch(err => {
+
+});
+```
+
+### Error Handling
+```javascript
+fetch(url).then(response => {
+	if(!response.ok) {
+		throw Error("Custom error");
 	}
-}
-getWeatherAW(44418).then(result => console.log(result));
+	return response;
+}).then(goodResponse => {
+	console.log("ok");	
+}).catch(err => {
+	console.log(err);
+});
+```
+
+## With Axios
+```html
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+```
+
+```javascript
+axios.get(url).then(res => {
+	console.log(res);
+}).catch(err => {
+	console.log(err);
+});
 ```

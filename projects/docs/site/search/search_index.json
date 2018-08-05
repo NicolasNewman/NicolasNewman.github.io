@@ -11,6 +11,106 @@
             "title": "About"
         },
         {
+            "location": "/css-docs/web-design/",
+            "text": "Typography\n\n\n\n\n\"Typography is the art and technique of arranging type to make written language readable and beautiful\"\n\n\n\n\n\n\nUse a font size between 15 and 25 pixels\n\n\nUse (really) big font sizes for headlines\n\n\nUse line spacing between 120 and 150%\n\n\n45 to 90 characters per line\n\n\nChoose good fonts\n\n\nSans-serif have a cleaner and simpler look\n\n\nMore neutral\n\n\nClean\n\n\nSimple\n\n\nModern websites\n\n\n\n\n\n\nSerif has small extensions on each letter\n\n\nTraditional purposes\n\n\nStorytelling\n\n\nLong reading\n\n\n\n\n\n\n\n\n\n\n\n\nColor\n\n\n\n\nUse a single base color\n\n\nUse color to draw attention (to elements of importance like a button)\n\n\nNever use black as part of your design\n\n\nChoose colors wisely\n\n\nRed: power, passion, strength\n\n\nOrange: attention, cherful, creativity, friendlyness\n\n\nGreen: nature, life, money\n\n\nBlue: patience, peace, trust, stability, honor\n\n\nPurple: Power, royalty, mystery, wisdom\n\n\n\n\n\n\n\n\nImages\n\n\nPutting text on an image\n\n\n\n\nPut text directly on an image\n\n\nOnly works if image is dark and text is light\n\n\n\n\n\n\nOverlay image with a color (to make it darker)\n\n\nCould use gradients\n\n\n\n\n\n\nPut text in a caption box\n\n\nBox should be opaque\n\n\n\n\n\n\nBlur image\n\n\nFloor fade\n\n\nImage fades to black from top to bottom\n\n\nText is on bottom\n\n\n\n\n\n\n\n\nIcons\n\n\n\n\nUse icons to list features/steps\n\n\nUse icons for actions and links\n\n\nIcons should be recognizable\n\n\nLabel the icons\n\n\n\n\n\n\nShouldn't take center stage\n\n\n\n\nFormats\n\n\n\n\nStatic\n images\n\n\nCan become blury with larger resolutions\n\n\n\n\n\n\nVector\n icon fonts\n\n\nscalable for any resolution and won't get blury\n\n\n\n\n\n\n\n\nSpacing and Layout\n\n\n\n\nUse whitespace\n\n\nPut between elements\n\n\nPut between groups of elements\n\n\nPut between website's sections\n\n\nDon't exaggerate\n\n\n\n\n\n\nDefine hierarchy\n\n\nWhitespace describes invisible relationships between the elements of a website\n\n\nDefine where you want audience to look first\n\n\nEstablish a flow that corresponds to your content's message\n\n\nUse whitespace to build that flow\n\n\n\n\n\n\n\n\nUser Experience",
+            "title": "Web Design"
+        },
+        {
+            "location": "/css-docs/web-design/#typography",
+            "text": "\"Typography is the art and technique of arranging type to make written language readable and beautiful\"    Use a font size between 15 and 25 pixels  Use (really) big font sizes for headlines  Use line spacing between 120 and 150%  45 to 90 characters per line  Choose good fonts  Sans-serif have a cleaner and simpler look  More neutral  Clean  Simple  Modern websites    Serif has small extensions on each letter  Traditional purposes  Storytelling  Long reading",
+            "title": "Typography"
+        },
+        {
+            "location": "/css-docs/web-design/#color",
+            "text": "Use a single base color  Use color to draw attention (to elements of importance like a button)  Never use black as part of your design  Choose colors wisely  Red: power, passion, strength  Orange: attention, cherful, creativity, friendlyness  Green: nature, life, money  Blue: patience, peace, trust, stability, honor  Purple: Power, royalty, mystery, wisdom",
+            "title": "Color"
+        },
+        {
+            "location": "/css-docs/web-design/#images",
+            "text": "",
+            "title": "Images"
+        },
+        {
+            "location": "/css-docs/web-design/#putting-text-on-an-image",
+            "text": "Put text directly on an image  Only works if image is dark and text is light    Overlay image with a color (to make it darker)  Could use gradients    Put text in a caption box  Box should be opaque    Blur image  Floor fade  Image fades to black from top to bottom  Text is on bottom",
+            "title": "Putting text on an image"
+        },
+        {
+            "location": "/css-docs/web-design/#icons",
+            "text": "Use icons to list features/steps  Use icons for actions and links  Icons should be recognizable  Label the icons    Shouldn't take center stage",
+            "title": "Icons"
+        },
+        {
+            "location": "/css-docs/web-design/#formats",
+            "text": "Static  images  Can become blury with larger resolutions    Vector  icon fonts  scalable for any resolution and won't get blury",
+            "title": "Formats"
+        },
+        {
+            "location": "/css-docs/web-design/#spacing-and-layout",
+            "text": "Use whitespace  Put between elements  Put between groups of elements  Put between website's sections  Don't exaggerate    Define hierarchy  Whitespace describes invisible relationships between the elements of a website  Define where you want audience to look first  Establish a flow that corresponds to your content's message  Use whitespace to build that flow",
+            "title": "Spacing and Layout"
+        },
+        {
+            "location": "/css-docs/web-design/#user-experience",
+            "text": "",
+            "title": "User Experience"
+        },
+        {
+            "location": "/css-docs/tags/",
+            "text": "Background Images\n\n\nbackground-image\n\n\nbackground-image: url(path/to/img.jpg);\nbackground-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(path/to/img.jpg);\n\n\n\n\nbackground-size\n\n\nbackground-size: contain;\nbackground-size: cover;\nbackground-size: 30%;\n\n\n\n\n\n\ncontain\n: Scales the image as large as possible without cropping or stretching the image.\n\n\ncover\n: Scales the image as large as possible without stretching the image. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.\n\n\n\n\nbackground-position\n\n\nbackground-position: top;\nbackground-position: left;\nbackground-position: center;\nbackground-position: right 35% bottom 45%;\n\n## [background-attatchment](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)\n```css\n// parallax effect\nbackground-attachment: fixed;\n\n\n\n\nposition\n\n\nAbsolute\n\n\nAn absolutely positioned element is an element whose computed position value is absolute or fixed. The top, right, bottom, and left properties specify offsets from the edges of the element's containing block.\n\n\nposition: absolute;\ntop: 0px; left: 0px;\n\n\n\n\ntransform\n\n\ntransform: translate(-50%, -50%);\ntransform: scale(2, 0.5);\ntransform: rotate(180deg);\ntransform: skew(30deg, 20deg);\n\n\n\n\nCentering with transform\n\n\n.container {\n    position: relative;\n}\n\n.box {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\n\n\n\ntransition\n\n\n.button {\n    width: 100px;\n    transition: width 1s;\n}\n\n.button: hover {\n    width: 200px;\n}\n\n\n\n\n.button {\n    background: white;\n    color: blue;\n\n    transition-property: background, color;\n    transition-duration: 1s, 1s;\n}\n\n.button:hover {\n    background: blue;\n    color: white;\n}\n\n\n\n\n@media\n\n\n@media only screen and (max-width: 1200px) {\n    p {\n        color: #fff;\n    }\n}",
+            "title": "Tags"
+        },
+        {
+            "location": "/css-docs/tags/#background-images",
+            "text": "",
+            "title": "Background Images"
+        },
+        {
+            "location": "/css-docs/tags/#background-image",
+            "text": "background-image: url(path/to/img.jpg);\nbackground-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(path/to/img.jpg);",
+            "title": "background-image"
+        },
+        {
+            "location": "/css-docs/tags/#background-size",
+            "text": "background-size: contain;\nbackground-size: cover;\nbackground-size: 30%;   contain : Scales the image as large as possible without cropping or stretching the image.  cover : Scales the image as large as possible without stretching the image. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.",
+            "title": "background-size"
+        },
+        {
+            "location": "/css-docs/tags/#background-position",
+            "text": "background-position: top;\nbackground-position: left;\nbackground-position: center;\nbackground-position: right 35% bottom 45%;\n\n## [background-attatchment](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)\n```css\n// parallax effect\nbackground-attachment: fixed;",
+            "title": "background-position"
+        },
+        {
+            "location": "/css-docs/tags/#position",
+            "text": "",
+            "title": "position"
+        },
+        {
+            "location": "/css-docs/tags/#absolute",
+            "text": "An absolutely positioned element is an element whose computed position value is absolute or fixed. The top, right, bottom, and left properties specify offsets from the edges of the element's containing block.  position: absolute;\ntop: 0px; left: 0px;",
+            "title": "Absolute"
+        },
+        {
+            "location": "/css-docs/tags/#transform",
+            "text": "transform: translate(-50%, -50%);\ntransform: scale(2, 0.5);\ntransform: rotate(180deg);\ntransform: skew(30deg, 20deg);",
+            "title": "transform"
+        },
+        {
+            "location": "/css-docs/tags/#centering-with-transform",
+            "text": ".container {\n    position: relative;\n}\n\n.box {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}",
+            "title": "Centering with transform"
+        },
+        {
+            "location": "/css-docs/tags/#transition",
+            "text": ".button {\n    width: 100px;\n    transition: width 1s;\n}\n\n.button: hover {\n    width: 200px;\n}  .button {\n    background: white;\n    color: blue;\n\n    transition-property: background, color;\n    transition-duration: 1s, 1s;\n}\n\n.button:hover {\n    background: blue;\n    color: white;\n}",
+            "title": "transition"
+        },
+        {
+            "location": "/css-docs/tags/#media",
+            "text": "@media only screen and (max-width: 1200px) {\n    p {\n        color: #fff;\n    }\n}",
+            "title": "@media"
+        },
+        {
             "location": "/css-docs/bootstrap/",
             "text": "Elements\n\n\nNavbar\n\n\nhere",
             "title": "Bootstrap"

@@ -2,6 +2,8 @@ site_name: 'Web Notes'
 pages:
   - Home: index.md
   - CSS:
+      - Web Design: css-docs/web-design.md
+      - Tags: css-docs/tags.md
       - Bootstrap: css-docs/bootstrap.md
   - JavaScript: 
       - Vanilla: js/vanilla.md

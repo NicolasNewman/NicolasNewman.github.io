@@ -2,62 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/css-docs/web-design/</loc>
+     <lastmod>2018-08-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>/css-docs/tags/</loc>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/css-docs/bootstrap/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/js/vanilla/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/js/es6/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/js/dom/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/js/jquery/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/nodejs/express/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/mongodb/mongo/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/mongodb/mongoose/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/linux/commands/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/other/rest/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>/other/expressTemplate/</loc>
-     <lastmod>2018-08-02</lastmod>
+     <lastmod>2018-08-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

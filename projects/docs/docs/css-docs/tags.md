@@ -86,6 +86,13 @@ transform: skew(30deg, 20deg);
 }
 ```
 
+
+# [clip-path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
+[Generator](https://bennettfeely.com/clippy/)
+```css
+clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+```
+
 # [@media](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 ```css
 @media only screen and (max-width: 1200px) {
@@ -95,8 +102,32 @@ transform: skew(30deg, 20deg);
 }
 ```
 
-# [clip-path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
-[Generator](https://bennettfeely.com/clippy/)
+# [@keyframe and animations](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
 ```css
-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+div {
+	animation-name: moveInLeft;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+
+	animation: moveInRight 1s ease-out;
+
+	animation-delay: 3s;
+	animation-iteration-count: 3;
+}
+
+@keyframes moveInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	80% {
+		transform: translateX(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
 ```

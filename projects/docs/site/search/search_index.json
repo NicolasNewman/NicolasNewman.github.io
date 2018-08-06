@@ -57,7 +57,7 @@
         },
         {
             "location": "/css-docs/tags/",
-            "text": "Background Images\n\n\nbackground-image\n\n\nbackground-image: url(path/to/img.jpg);\nbackground-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(path/to/img.jpg);\n\n\n\n\nbackground-size\n\n\nbackground-size: contain;\nbackground-size: cover;\nbackground-size: 30%;\n\n\n\n\n\n\ncontain\n: Scales the image as large as possible without cropping or stretching the image.\n\n\ncover\n: Scales the image as large as possible without stretching the image. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.\n\n\n\n\nbackground-position\n\n\nbackground-position: top;\nbackground-position: left;\nbackground-position: center;\nbackground-position: right 35% bottom 45%;\n\n\n\n\nbackground-attatchment\n\n\n// parallax effect\nbackground-attachment: fixed;\n\n\n\n\nposition\n\n\nAbsolute\n\n\nAn absolutely positioned element is an element whose computed position value is absolute or fixed. The top, right, bottom, and left properties specify offsets from the edges of the element's containing block.\n\n\nposition: absolute;\ntop: 0px; left: 0px;\n\n\n\n\ntransform\n\n\ntransform: translate(-50%, -50%);\ntransform: scale(2, 0.5);\ntransform: rotate(180deg);\ntransform: skew(30deg, 20deg);\n\n\n\n\nCentering with transform\n\n\n.container {\n    position: relative;\n}\n\n.box {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\n\n\n\ntransition\n\n\n.button {\n    width: 100px;\n    transition: width 1s;\n}\n\n.button: hover {\n    width: 200px;\n}\n\n\n\n\n.button {\n    background: white;\n    color: blue;\n\n    transition-property: background, color;\n    transition-duration: 1s, 1s;\n}\n\n.button:hover {\n    background: blue;\n    color: white;\n}\n\n\n\n\n@media\n\n\n@media only screen and (max-width: 1200px) {\n    p {\n        color: #fff;\n    }\n}\n\n\n\n\nclip-path\n\n\nGenerator\n\n\nclip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);",
+            "text": "Background Images\n\n\nbackground-image\n\n\nbackground-image: url(path/to/img.jpg);\nbackground-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(path/to/img.jpg);\n\n\n\n\nbackground-size\n\n\nbackground-size: contain;\nbackground-size: cover;\nbackground-size: 30%;\n\n\n\n\n\n\ncontain\n: Scales the image as large as possible without cropping or stretching the image.\n\n\ncover\n: Scales the image as large as possible without stretching the image. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains.\n\n\n\n\nbackground-position\n\n\nbackground-position: top;\nbackground-position: left;\nbackground-position: center;\nbackground-position: right 35% bottom 45%;\n\n\n\n\nbackground-attatchment\n\n\n// parallax effect\nbackground-attachment: fixed;\n\n\n\n\nposition\n\n\nAbsolute\n\n\nAn absolutely positioned element is an element whose computed position value is absolute or fixed. The top, right, bottom, and left properties specify offsets from the edges of the element's containing block.\n\n\nposition: absolute;\ntop: 0px; left: 0px;\n\n\n\n\ntransform\n\n\ntransform: translate(-50%, -50%);\ntransform: scale(2, 0.5);\ntransform: rotate(180deg);\ntransform: skew(30deg, 20deg);\n\n\n\n\nCentering with transform\n\n\n.container {\n    position: relative;\n}\n\n.box {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\n\n\n\ntransition\n\n\n.button {\n    width: 100px;\n    transition: width 1s;\n}\n\n.button: hover {\n    width: 200px;\n}\n\n\n\n\n.button {\n    background: white;\n    color: blue;\n\n    transition-property: background, color;\n    transition-duration: 1s, 1s;\n}\n\n.button:hover {\n    background: blue;\n    color: white;\n}\n\n\n\n\nclip-path\n\n\nGenerator\n\n\nclip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);\n\n\n\n\n@media\n\n\n@media only screen and (max-width: 1200px) {\n    p {\n        color: #fff;\n    }\n}\n\n\n\n\n@keyframe and animations\n\n\ndiv {\n    animation-name: moveInLeft;\n    animation-duration: 1s;\n    animation-timing-function: ease-out;\n\n    animation: moveInRight 1s ease-out;\n\n    animation-delay: 3s;\n    animation-iteration-count: 3;\n}\n\n@keyframes moveInLeft {\n    0% {\n        opacity: 0;\n        transform: translateX(-100px);\n    }\n\n    80% {\n        transform: translateX(10px);\n    }\n\n    100% {\n        opacity: 1;\n        transform: translate(0);\n    }\n}",
             "title": "Tags"
         },
         {
@@ -111,14 +111,19 @@
             "title": "transition"
         },
         {
+            "location": "/css-docs/tags/#clip-path",
+            "text": "Generator  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);",
+            "title": "clip-path"
+        },
+        {
             "location": "/css-docs/tags/#media",
             "text": "@media only screen and (max-width: 1200px) {\n    p {\n        color: #fff;\n    }\n}",
             "title": "@media"
         },
         {
-            "location": "/css-docs/tags/#clip-path",
-            "text": "Generator  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);",
-            "title": "clip-path"
+            "location": "/css-docs/tags/#keyframe-and-animations",
+            "text": "div {\n    animation-name: moveInLeft;\n    animation-duration: 1s;\n    animation-timing-function: ease-out;\n\n    animation: moveInRight 1s ease-out;\n\n    animation-delay: 3s;\n    animation-iteration-count: 3;\n}\n\n@keyframes moveInLeft {\n    0% {\n        opacity: 0;\n        transform: translateX(-100px);\n    }\n\n    80% {\n        transform: translateX(10px);\n    }\n\n    100% {\n        opacity: 1;\n        transform: translate(0);\n    }\n}",
+            "title": "@keyframe and animations"
         },
         {
             "location": "/css-docs/bootstrap/",

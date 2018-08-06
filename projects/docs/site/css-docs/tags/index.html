@@ -116,6 +116,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -260,6 +261,17 @@
 
 
   <li class="toctree-l2 toc-item">
+    <a href="#clip-path" title="Tags">clip-path</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
     <a href="#media" title="Tags">@media</a>
   </li>
 
@@ -271,7 +283,7 @@
 
 
   <li class="toctree-l2 toc-item">
-    <a href="#clip-path" title="Tags">clip-path</a>
+    <a href="#keyframe-and-animations" title="Tags">@keyframe and animations</a>
   </li>
 
     
@@ -658,6 +670,11 @@ transform: skew(30deg, 20deg);
 }
 </code></pre>
 
+<h1 id="clip-path"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path">clip-path</a></h1>
+<p><a href="https://bennettfeely.com/clippy/">Generator</a></p>
+<pre><code class="css">clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+</code></pre>
+
 <h1 id="media"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">@media</a></h1>
 <pre><code class="css">@media only screen and (max-width: 1200px) {
     p {
@@ -666,9 +683,33 @@ transform: skew(30deg, 20deg);
 }
 </code></pre>
 
-<h1 id="clip-path"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path">clip-path</a></h1>
-<p><a href="https://bennettfeely.com/clippy/">Generator</a></p>
-<pre><code class="css">clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+<h1 id="keyframe-and-animations"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">@keyframe and animations</a></h1>
+<pre><code class="css">div {
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    animation: moveInRight 1s ease-out;
+
+    animation-delay: 3s;
+    animation-iteration-count: 3;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
 </code></pre>
               
             </div>

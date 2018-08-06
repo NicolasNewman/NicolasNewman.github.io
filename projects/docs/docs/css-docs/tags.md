@@ -21,6 +21,7 @@ background-position: top;
 background-position: left;
 background-position: center;
 background-position: right 35% bottom 45%;
+```
 
 ## [background-attatchment](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)
 ```css
@@ -92,4 +93,10 @@ transform: skew(30deg, 20deg);
     	color: #fff;
     }
 }
+```
+
+# [clip-path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
+[Generator](https://bennettfeely.com/clippy/)
+```css
+clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 ```

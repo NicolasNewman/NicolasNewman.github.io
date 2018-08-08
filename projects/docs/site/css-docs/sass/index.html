@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Commands - Web Notes</title>
+  <title>Sass - Web Notes</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -19,9 +19,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Commands";
-    var mkdocs_page_input_path = "linux\\commands.md";
-    var mkdocs_page_url = "/linux/commands/";
+    var mkdocs_page_name = "Sass";
+    var mkdocs_page_input_path = "css-docs\\sass.md";
+    var mkdocs_page_url = "/css-docs/sass/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -83,12 +83,12 @@
   <p class="caption">CSS</p>
 
 
-<ul class="" href="css-docs\web-design">
+<ul class="current" href="css-docs\web-design">
   
     
       
 <li class=" toctree-l1">
-  <a href="../../css-docs/web-design/" title="Web Design"
+  <a href="../web-design/" title="Web Design"
       class="">
     Web Design
   </a>
@@ -99,7 +99,7 @@
     
       
 <li class=" toctree-l1">
-  <a href="../../css-docs/tags/" title="Tags"
+  <a href="../tags/" title="Tags"
       class="">
     Tags
   </a>
@@ -109,19 +109,150 @@
 </li>
     
       
-<li class=" toctree-l1">
-  <a href="../../css-docs/sass/" title="Sass"
-      class="">
+<li class="current toctree-l1">
+  <a href="./" title="Sass"
+      class="current">
     Sass
   </a>
 
   
   
+    
+    
+      
+  
+  
+  
+  
+  
+  
+  <ul class="current subnav">
+    
+      
+
+  
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#variables" title="Sass">Variables</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#nesting" title="Sass"
+          class="">
+        Nesting
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#example-1" title="Sass">Example 1</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#example-2" title="Sass">Example 2</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class=" toctree-l2">
+    
+      <a href="#mixins" title="Sass"
+          class="">
+        Mixins
+      </a>
+    
+    <ul class=" subnav">
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#basic-use" title="Sass">Basic use</a>
+  </li>
+
+      
+        
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#with-arguments" title="Sass">With arguments</a>
+  </li>
+
+      
+    </ul>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#functions" title="Sass">Functions</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#extend-placeholder" title="Sass">Extend &amp; Placeholder</a>
+  </li>
+
+    
+  </ul>
+
+    
+  
 </li>
     
       
 <li class=" toctree-l1">
-  <a href="../../css-docs/bootstrap/" title="Bootstrap"
+  <a href="../bootstrap/" title="Bootstrap"
       class="">
     Bootstrap
   </a>
@@ -308,76 +439,17 @@
   <p class="caption">Linux</p>
 
 
-<ul class="current" href="linux\commands">
+<ul class="" href="linux\commands">
   
     
       
-<li class="current toctree-l1">
-  <a href="./" title="Commands"
-      class="current">
+<li class=" toctree-l1">
+  <a href="../../linux/commands/" title="Commands"
+      class="">
     Commands
   </a>
 
   
-  
-    
-    
-      
-  
-  
-  
-  
-  
-  <ul class="current subnav">
-    
-      
-
-  
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#chmod" title="Commands">chmod</a>
-  </li>
-
-    
-      
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#shutdown" title="Commands">shutdown</a>
-  </li>
-
-    
-      
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#nginx" title="Commands">nginx</a>
-  </li>
-
-    
-      
-
-  
-  
-
-
-  <li class="toctree-l2 toc-item">
-    <a href="#pm2" title="Commands">pm2</a>
-  </li>
-
-    
-  </ul>
-
-    
   
 </li>
     
@@ -461,11 +533,11 @@
     
       
         
-          <li>Linux &raquo;</li>
+          <li>CSS &raquo;</li>
         
       
     
-    <li>Commands</li>
+    <li>Sass</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -475,59 +547,113 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="chmod">chmod</h1>
-<p><a href="http://www.thinkplexx.com/learn/article/unix/command/chmod-permissions-flags-explained-600-0600-700-777-100-etc">Explination of numbers</a></p>
-<p>Permission:
-1 - can execute
-2 - can write
-4 - can read</p>
-<p>3 (1+2) - can execute and write
-6 (2+4) - can write and read</p>
-<p>Position of the digit:
-1 - what owner can
-2 - what users in the file group can
-3 - what users not in the file group can</p>
-<p>chmod 700 - owner can read, write, and execute
-chmod 777 - everyone can read, write, and execute</p>
-<h1 id="shutdown">shutdown</h1>
-<p><a href="https://www.computerhope.com/unix/ushutdow.htm">Explination</a>
-shutdown [-akrhPHfFnc] [-t sec] time [message]</p>
-<table>
-<thead>
-<tr>
-<th>Flag</th>
-<th>Result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-r</td>
-<td>Reboot after shutdown</td>
-</tr>
-<tr>
-<td>-P</td>
-<td>Shutdown and then power down</td>
-</tr>
-<tr>
-<td>now</td>
-<td>Shutdown right after execution</td>
-</tr>
-</tbody>
-</table>
-<p>sudo shutdown -r now</p>
-<h1 id="nginx">nginx</h1>
-<pre><code class="sh">sudo systemctl stop nginx
-sudo systemctl start nginx
-sudo systemctl restart nginx
+                <h1 id="variables">Variables</h1>
+<pre><code class="scss">$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$button-width: 150px;
 
-sudo systemctl reload nginx
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
 </code></pre>
 
-<h1 id="pm2">pm2</h1>
-<pre><code class="sh">pm2 start script.js
-pm2 stop app_name_or_id
-pm2 restart app_name_or_id
-pm2 list
+<h1 id="nesting">Nesting</h1>
+<h2 id="example-1">Example 1</h2>
+<pre><code class="scss">.navigation {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin-left: 30px;
+
+        &amp;:first-child { // .navigation li:first-child, &amp; means parent element
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
+</code></pre>
+
+<h2 id="example-2">Example 2</h2>
+<pre><code class="scss">.btn-main {
+    &amp;:link {
+        background-color: $color-primary;
+    }
+
+    &amp;:hover {
+        background-color: darken($color-primary, 15%); // darken is a built-in function
+    }
+}
+</code></pre>
+
+<h1 id="mixins">Mixins</h1>
+<h2 id="basic-use">Basic use</h2>
+<pre><code class="scss">@mixin clearfix {
+    &amp;::after {
+        content: &quot;&quot;;
+        clear: both;
+        display: table;
+    }
+}
+
+nav {
+    @include clearfix;
+}
+</code></pre>
+
+<h2 id="with-arguments">With arguments</h2>
+<pre><code class="scss">@mixin style-link-text($color: #fff) {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color;
+}
+
+.btn-main {
+    @include style-link-text($text-color-dark);
+}
+
+.btn-secondary {
+    @include style-link-text($text-color-light);
+}
+</code></pre>
+
+<h1 id="functions">Functions</h1>
+<pre><code class="scss">@function divide($a, $b) {
+    @return $a / $b;
+}
+
+nav {
+    margin: divide(60, 2) * 1px;
+}
+</code></pre>
+
+<h1 id="extend-placeholder">Extend &amp; Placeholder</h1>
+<pre><code class="scss">%btn-placeholder {
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    width: 150px;
+}
+
+.btn-main {
+    &amp;:link {
+        @extend %btn-placeholder;
+        background-color: $color-secondary;
+    }
+}
+
+.btn-outline {
+    &amp;link {
+        @extend %btn-placeholder;
+        background-color: $color-outline;
+    }
+}
 </code></pre>
               
             </div>
@@ -536,10 +662,10 @@ pm2 list
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../other/rest/" class="btn btn-neutral float-right" title="RESTful Routes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../bootstrap/" class="btn btn-neutral float-right" title="Bootstrap">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../mongodb/mongoose/" class="btn btn-neutral" title="Mongoose"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tags/" class="btn btn-neutral" title="Tags"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -565,10 +691,10 @@ pm2 list
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../mongodb/mongoose/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../tags/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../other/rest/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../bootstrap/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

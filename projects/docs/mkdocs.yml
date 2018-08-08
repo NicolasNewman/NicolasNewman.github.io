@@ -4,6 +4,7 @@ pages:
   - CSS:
       - Web Design: css-docs/web-design.md
       - Tags: css-docs/tags.md
+      - Sass: css-docs/sass.md
       - Bootstrap: css-docs/bootstrap.md
   - JavaScript: 
       - Vanilla: js/vanilla.md

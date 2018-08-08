@@ -126,6 +126,56 @@
             "title": "@keyframe and animations"
         },
         {
+            "location": "/css-docs/sass/",
+            "text": "Variables\n\n\n$font-stack: Helvetica, sans-serif;\n$primary-color: #333;\n$button-width: 150px;\n\nbody {\n    font: 100% $font-stack;\n    color: $primary-color;\n}\n\n\n\n\nNesting\n\n\nExample 1\n\n\n.navigation {\n    list-style: none;\n\n    li {\n        display: inline-block;\n        margin-left: 30px;\n\n        &:first-child { // .navigation li:first-child, & means parent element\n            margin: 0;\n        }\n\n        a {\n            text-decoration: none;\n            text-transform: uppercase;\n        }\n    }\n}\n\n\n\n\nExample 2\n\n\n.btn-main {\n    &:link {\n        background-color: $color-primary;\n    }\n\n    &:hover {\n        background-color: darken($color-primary, 15%); // darken is a built-in function\n    }\n}\n\n\n\n\nMixins\n\n\nBasic use\n\n\n@mixin clearfix {\n    &::after {\n        content: \"\";\n        clear: both;\n        display: table;\n    }\n}\n\nnav {\n    @include clearfix;\n}\n\n\n\n\nWith arguments\n\n\n@mixin style-link-text($color: #fff) {\n    text-decoration: none;\n    text-transform: uppercase;\n    color: $color;\n}\n\n.btn-main {\n    @include style-link-text($text-color-dark);\n}\n\n.btn-secondary {\n    @include style-link-text($text-color-light);\n}\n\n\n\n\nFunctions\n\n\n@function divide($a, $b) {\n    @return $a / $b;\n}\n\nnav {\n    margin: divide(60, 2) * 1px;\n}\n\n\n\n\nExtend & Placeholder\n\n\n%btn-placeholder {\n    padding: 10px;\n    display: inline-block;\n    text-align: center;\n    border-radius: 100px;\n    width: 150px;\n}\n\n.btn-main {\n    &:link {\n        @extend %btn-placeholder;\n        background-color: $color-secondary;\n    }\n}\n\n.btn-outline {\n    &link {\n        @extend %btn-placeholder;\n        background-color: $color-outline;\n    }\n}",
+            "title": "Sass"
+        },
+        {
+            "location": "/css-docs/sass/#variables",
+            "text": "$font-stack: Helvetica, sans-serif;\n$primary-color: #333;\n$button-width: 150px;\n\nbody {\n    font: 100% $font-stack;\n    color: $primary-color;\n}",
+            "title": "Variables"
+        },
+        {
+            "location": "/css-docs/sass/#nesting",
+            "text": "",
+            "title": "Nesting"
+        },
+        {
+            "location": "/css-docs/sass/#example-1",
+            "text": ".navigation {\n    list-style: none;\n\n    li {\n        display: inline-block;\n        margin-left: 30px;\n\n        &:first-child { // .navigation li:first-child, & means parent element\n            margin: 0;\n        }\n\n        a {\n            text-decoration: none;\n            text-transform: uppercase;\n        }\n    }\n}",
+            "title": "Example 1"
+        },
+        {
+            "location": "/css-docs/sass/#example-2",
+            "text": ".btn-main {\n    &:link {\n        background-color: $color-primary;\n    }\n\n    &:hover {\n        background-color: darken($color-primary, 15%); // darken is a built-in function\n    }\n}",
+            "title": "Example 2"
+        },
+        {
+            "location": "/css-docs/sass/#mixins",
+            "text": "",
+            "title": "Mixins"
+        },
+        {
+            "location": "/css-docs/sass/#basic-use",
+            "text": "@mixin clearfix {\n    &::after {\n        content: \"\";\n        clear: both;\n        display: table;\n    }\n}\n\nnav {\n    @include clearfix;\n}",
+            "title": "Basic use"
+        },
+        {
+            "location": "/css-docs/sass/#with-arguments",
+            "text": "@mixin style-link-text($color: #fff) {\n    text-decoration: none;\n    text-transform: uppercase;\n    color: $color;\n}\n\n.btn-main {\n    @include style-link-text($text-color-dark);\n}\n\n.btn-secondary {\n    @include style-link-text($text-color-light);\n}",
+            "title": "With arguments"
+        },
+        {
+            "location": "/css-docs/sass/#functions",
+            "text": "@function divide($a, $b) {\n    @return $a / $b;\n}\n\nnav {\n    margin: divide(60, 2) * 1px;\n}",
+            "title": "Functions"
+        },
+        {
+            "location": "/css-docs/sass/#extend-placeholder",
+            "text": "%btn-placeholder {\n    padding: 10px;\n    display: inline-block;\n    text-align: center;\n    border-radius: 100px;\n    width: 150px;\n}\n\n.btn-main {\n    &:link {\n        @extend %btn-placeholder;\n        background-color: $color-secondary;\n    }\n}\n\n.btn-outline {\n    &link {\n        @extend %btn-placeholder;\n        background-color: $color-outline;\n    }\n}",
+            "title": "Extend &amp; Placeholder"
+        },
+        {
             "location": "/css-docs/bootstrap/",
             "text": "Elements\n\n\nNavbar\n\n\nhere",
             "title": "Bootstrap"

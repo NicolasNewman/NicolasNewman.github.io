@@ -1,0 +1,154 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "",
+            "title": "Home"
+        },
+        {
+            "location": "/c1/",
+            "text": "Topcis\n\n\n\n\nExploring Data\n\n\nData sets contain information about \nindividuals\n (such as people, animals, or things)\n\n\nEach individual contains \nvariables\n that describe them (height, gender, eye color)\n\n\nVariables are \ncategorical\n if it has a label (gender, hair color, age range)\n\n\nVariables are \nquantitative\n if it has a numerical value (weight, age, height)\n\n\n\n\n\n\nAnalyzing Categorical Data\n\n\nA distribution of a categorical variable can tell you the \nfrequency\n (100/500 people have brown hair) or the \nrelative frequency\n (20% of people have brown hair)\n\n\nPie charts\n and \nbar graphs\n can display the distribution of a categorical variable.\n\n\nA \ntwo way table\n organizes data about two categorical variables for the same individuals.\n\n\nThe \nmarginal distribution\n is one of the categorical variables over the total number of individuals. It looks at a single variable\n\n\nThe \nconditional distribution\n compares the value of one variable to the value of another\n\n\n\n\n\n\nA \nsegmented bar graph\n or a \nside by side bar graph\n can be used to display conditional distributions\n\n\n\n\n\n\nDisplaying Quantitative Data with Graphs\n\n\ndotplots\n, \nstemplots\n, and \nhistograms\n show the distribution of a quantitative variable\n\n\nShape\n, \ncenter\n, and \nspread\n describes the overall pattern.\n\n\nOutliers\n shows departures from the pattern.\n\n\n\n\n\n\nSome distributions are \nsymmetric\n, \nleft-skewed\n, or \nright-skewed\n\n\n\n\n\n\nDescribing Quantitative Data with Numbers\n\n\nThe \nmean\n and \nmedian\n describe the center of a distribution.\n\n\nThe \nstandard deviation\n and \nIQR\n are measures of spread\n\n\nThe mean and standard deviation should only be used with roughly symmetric distributions \n\n\n\n\n\n\n\n\nFormulas\n\n\n\n\n\n\\LARGE\n\\bar{x}=\\frac{\\sum x_i}{n}\n\\\\[20pt]\n\\LARGE\nS_x=\\sqrt{\\frac{\\sum (x_i-\\bar{x})^2}{n-1}}\n\\\\[35pt]\n\\LARGE\nIQR = Q_3 - Q_1\n\\\\[20pt]\n\\LARGE\n\\text{outlier} = Q_{-1/+3} \\pm (1.5*IQR)\n\n\n\n\n\\LARGE\n\\bar{x}=\\frac{\\sum x_i}{n}\n\\\\[20pt]\n\\LARGE\nS_x=\\sqrt{\\frac{\\sum (x_i-\\bar{x})^2}{n-1}}\n\\\\[35pt]\n\\LARGE\nIQR = Q_3 - Q_1\n\\\\[20pt]\n\\LARGE\n\\text{outlier} = Q_{-1/+3} \\pm (1.5*IQR)\n\n\n\n\n\nTerms",
+            "title": "Chapter 1 - Exploring Data"
+        },
+        {
+            "location": "/c1/#topcis",
+            "text": "Exploring Data  Data sets contain information about  individuals  (such as people, animals, or things)  Each individual contains  variables  that describe them (height, gender, eye color)  Variables are  categorical  if it has a label (gender, hair color, age range)  Variables are  quantitative  if it has a numerical value (weight, age, height)    Analyzing Categorical Data  A distribution of a categorical variable can tell you the  frequency  (100/500 people have brown hair) or the  relative frequency  (20% of people have brown hair)  Pie charts  and  bar graphs  can display the distribution of a categorical variable.  A  two way table  organizes data about two categorical variables for the same individuals.  The  marginal distribution  is one of the categorical variables over the total number of individuals. It looks at a single variable  The  conditional distribution  compares the value of one variable to the value of another    A  segmented bar graph  or a  side by side bar graph  can be used to display conditional distributions    Displaying Quantitative Data with Graphs  dotplots ,  stemplots , and  histograms  show the distribution of a quantitative variable  Shape ,  center , and  spread  describes the overall pattern.  Outliers  shows departures from the pattern.    Some distributions are  symmetric ,  left-skewed , or  right-skewed    Describing Quantitative Data with Numbers  The  mean  and  median  describe the center of a distribution.  The  standard deviation  and  IQR  are measures of spread  The mean and standard deviation should only be used with roughly symmetric distributions",
+            "title": "Topcis"
+        },
+        {
+            "location": "/c1/#formulas",
+            "text": "\\LARGE\n\\bar{x}=\\frac{\\sum x_i}{n}\n\\\\[20pt]\n\\LARGE\nS_x=\\sqrt{\\frac{\\sum (x_i-\\bar{x})^2}{n-1}}\n\\\\[35pt]\n\\LARGE\nIQR = Q_3 - Q_1\n\\\\[20pt]\n\\LARGE\n\\text{outlier} = Q_{-1/+3} \\pm (1.5*IQR)  \n\\LARGE\n\\bar{x}=\\frac{\\sum x_i}{n}\n\\\\[20pt]\n\\LARGE\nS_x=\\sqrt{\\frac{\\sum (x_i-\\bar{x})^2}{n-1}}\n\\\\[35pt]\n\\LARGE\nIQR = Q_3 - Q_1\n\\\\[20pt]\n\\LARGE\n\\text{outlier} = Q_{-1/+3} \\pm (1.5*IQR)",
+            "title": "Formulas"
+        },
+        {
+            "location": "/c1/#terms",
+            "text": "",
+            "title": "Terms"
+        },
+        {
+            "location": "/c2/",
+            "text": "Topcis\n\n\n\n\nDescribing Location in a Distribution\n\n\nPercentiles\n and \nz-scores\n can be used to measure an individual's location\n\n\nThe percentile is the percent of the distribution that is at or below the value of that observation\n\n\nThe z-score is how many standard deviations x is from the mean\n\n\n\n\n\n\nA \ncumulative relative frequency graph\n shows the accumulating percent of observations as you move through the classes.\n\n\nData can be \ntransformed\n* by adding/subtracting and multiplying/dividing\n\n\n(+) and (-) by b \n\n\nCenter (mean and median) and location (quartiles and percentiles) changes by b\n\n\nMeasures of spread and shape do not change\n\n\n\n\n\n\n(x) or (/) by b\n\n\nCenter, location, and spread change by a factor of b\n\n\nShape does not change\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDensity Curves and Normal Distributions\n\n\ndensity curves\n can describe the overall pattern of a distribution.\n\n\nAlways is on or above the horizontal axis\n\n\nAlways has an area of one\n\n\nThe \n\\mu\n\\mu\n of a density curve is the balancing point\n\n\nThe median divides the area under the curve in half\n\n\nThe \n\\sigma\n\\sigma\n is at the POI\n\n\n\n\n\n\nA \nnormal distribution\n is described by a symmetric density curve called the \nnormal curve\n\n\nIt is described by N(\n\\mu\n\\mu\n,\n\\sigma\n\\sigma\n)\n\n\nA normal distribution obey's the \n68-95-99.7\n rule\n\n\n\n\n\n\nA \nstandard normal distribution\n has a \n\\mu\n\\mu\n of 0 and a \n\\sigma\n\\sigma\n of 1\n\n\nA \nnormal probability plot\n can tell you if a distribution is normal\n\n\n\n\n\n\n\n\nFormulas\n\n\n\n\n\n\\LARGE\nz=\\frac{x_i-\\mu}{\\sigma}\n\\\\[20pt]\n\\LARGE\ny=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}\n\\\\[20pt]\n\n\n\n\n\\LARGE\nz=\\frac{x_i-\\mu}{\\sigma}\n\\\\[20pt]\n\\LARGE\ny=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}\n\\\\[20pt]\n\n\n\n\n\nCalculator Functions\n\n\nnormCdf(lower bound, upper bound, \n\\mu\n\\mu\n, \n\\sigma\n\\sigma\n)\n tells you the area under a normal curve (in other words the probability from [a,b])\n\n\ninvNorm(area to the left, \n\\mu\n\\mu\n, \n\\sigma\n\\sigma\n)\n tells you the value for a given area\n\n\nnormPdf(x value, \n\\mu\n\\mu\n, \n\\sigma\n\\sigma\n)\n tells you the probability at a given point \n\\text{normCdf(a,b)}=\\int_{a}^{b} \\text{normPdf(x) } dx\n\\text{normCdf(a,b)}=\\int_{a}^{b} \\text{normPdf(x) } dx\n\n\nTerms",
+            "title": "Chapter 2 - Modeling Distributions of Data"
+        },
+        {
+            "location": "/c2/#topcis",
+            "text": "Describing Location in a Distribution  Percentiles  and  z-scores  can be used to measure an individual's location  The percentile is the percent of the distribution that is at or below the value of that observation  The z-score is how many standard deviations x is from the mean    A  cumulative relative frequency graph  shows the accumulating percent of observations as you move through the classes.  Data can be  transformed * by adding/subtracting and multiplying/dividing  (+) and (-) by b   Center (mean and median) and location (quartiles and percentiles) changes by b  Measures of spread and shape do not change    (x) or (/) by b  Center, location, and spread change by a factor of b  Shape does not change        Density Curves and Normal Distributions  density curves  can describe the overall pattern of a distribution.  Always is on or above the horizontal axis  Always has an area of one  The  \\mu \\mu  of a density curve is the balancing point  The median divides the area under the curve in half  The  \\sigma \\sigma  is at the POI    A  normal distribution  is described by a symmetric density curve called the  normal curve  It is described by N( \\mu \\mu , \\sigma \\sigma )  A normal distribution obey's the  68-95-99.7  rule    A  standard normal distribution  has a  \\mu \\mu  of 0 and a  \\sigma \\sigma  of 1  A  normal probability plot  can tell you if a distribution is normal",
+            "title": "Topcis"
+        },
+        {
+            "location": "/c2/#formulas",
+            "text": "\\LARGE\nz=\\frac{x_i-\\mu}{\\sigma}\n\\\\[20pt]\n\\LARGE\ny=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}\n\\\\[20pt]  \n\\LARGE\nz=\\frac{x_i-\\mu}{\\sigma}\n\\\\[20pt]\n\\LARGE\ny=\\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}\n\\\\[20pt]",
+            "title": "Formulas"
+        },
+        {
+            "location": "/c2/#calculator-functions",
+            "text": "normCdf(lower bound, upper bound,  \\mu \\mu ,  \\sigma \\sigma )  tells you the area under a normal curve (in other words the probability from [a,b])  invNorm(area to the left,  \\mu \\mu ,  \\sigma \\sigma )  tells you the value for a given area  normPdf(x value,  \\mu \\mu ,  \\sigma \\sigma )  tells you the probability at a given point  \\text{normCdf(a,b)}=\\int_{a}^{b} \\text{normPdf(x) } dx \\text{normCdf(a,b)}=\\int_{a}^{b} \\text{normPdf(x) } dx",
+            "title": "Calculator Functions"
+        },
+        {
+            "location": "/c2/#terms",
+            "text": "",
+            "title": "Terms"
+        },
+        {
+            "location": "/c3/",
+            "text": "Topcis\n\n\n\n\nScatterplots and Correlation\n\n\nScatterplots\n display the relation between two quantitative variables measured on the same individuals\n\n\nx is the \nexpalatory variable\n while y is the \nresponse variable\n\n\nWhen describing scatterplots, mention the \ndirection\n, \nform\n, \nstrength\n, and \noutliers\n\n\nDirection: If there is a clear direction, it either has a \npositive association\n or a \nnegative association\n\n\nForm: Are the points in a straight pattern or do they curve?\n\n\nStrength: how close the points lie in a straight line\n\n\n\n\n\n\nThe \ncorrelation coefficient r\n measures the strength and direction between two variables\n\n\n\n\n\n\n\n\n\n\nLeast-Squares Regression\n\n\nA \nregression line\n describes how y changes with respect to x. This line can be used to predict the value of y given an x value\n\n\nExtrapolation\n is when x values outside the range of the data is used. This should be avoided since it can provide inaccurate results\n\n\nLeast-squares regression lines\n are the most common method of fitting a line to a scatterplot\n\n\nThis line minimizes the sum of the residuals squared\n\n\n\n\n\n\nResiduals\n are the difference between the observed and predicted values of y (\ny-\\hat{y}\ny-\\hat{y}\n)\n\n\nA \nresidual plot\n can be used to indicate if a linear model is appropriate if there is no pattern in the graph\n\n\n\n\n\n\nThe \nstandard deviation of residuals s\n measures the typical size of the prediction errors\n\n\nThe \ncoefficient of determination \nr^2\nr^2\n is the fraction of the variation in y that is accounted for by the line\n\n\n\n\n\n\n\n\nFormulas\n\n\n\n\n\n\\LARGE\n\\hat{y}=a+bx\n\\\\[20pt]\n\\LARGE\na=\\bar{y}-b\\bar{x}\n\\\\[20pt]\n\\LARGE\nb=r\\frac{s_y}{s_x}\n\\\\[20pt]\n\\LARGE\n\\text{residual}=y-\\hat{y}\n\\\\[20pt]\n\\LARGE\ns=\\sqrt{\\frac{\\sum{\\text{residuals}^2}}{n-2}}=\\sqrt{\\frac{\\sum{(y_i-\\hat{y})^2}}{n-2}}\n\\\\[20pt]\n\\LARGE\nr=\\frac{1}{n-1}\\sum{z_xz_y}=\\frac{1}{n-1}\\sum{\\frac{x_i-\\bar{x}}{s_x}\\frac{y_i-\\bar{y}}{s_y}}\n\\\\[30pt]\n\\LARGE\nr^2=1-\\frac{\\sum{\\text{residuals}^2}}{\\sum{(y_i-\\bar{y})^2}}\n\\\\[20pt]\n\n\n\n\n\\LARGE\n\\hat{y}=a+bx\n\\\\[20pt]\n\\LARGE\na=\\bar{y}-b\\bar{x}\n\\\\[20pt]\n\\LARGE\nb=r\\frac{s_y}{s_x}\n\\\\[20pt]\n\\LARGE\n\\text{residual}=y-\\hat{y}\n\\\\[20pt]\n\\LARGE\ns=\\sqrt{\\frac{\\sum{\\text{residuals}^2}}{n-2}}=\\sqrt{\\frac{\\sum{(y_i-\\hat{y})^2}}{n-2}}\n\\\\[20pt]\n\\LARGE\nr=\\frac{1}{n-1}\\sum{z_xz_y}=\\frac{1}{n-1}\\sum{\\frac{x_i-\\bar{x}}{s_x}\\frac{y_i-\\bar{y}}{s_y}}\n\\\\[30pt]\n\\LARGE\nr^2=1-\\frac{\\sum{\\text{residuals}^2}}{\\sum{(y_i-\\bar{y})^2}}\n\\\\[20pt]\n\n\n\n\n\nTerms",
+            "title": "Chapter 3 - Describing Relationships"
+        },
+        {
+            "location": "/c3/#topcis",
+            "text": "Scatterplots and Correlation  Scatterplots  display the relation between two quantitative variables measured on the same individuals  x is the  expalatory variable  while y is the  response variable  When describing scatterplots, mention the  direction ,  form ,  strength , and  outliers  Direction: If there is a clear direction, it either has a  positive association  or a  negative association  Form: Are the points in a straight pattern or do they curve?  Strength: how close the points lie in a straight line    The  correlation coefficient r  measures the strength and direction between two variables      Least-Squares Regression  A  regression line  describes how y changes with respect to x. This line can be used to predict the value of y given an x value  Extrapolation  is when x values outside the range of the data is used. This should be avoided since it can provide inaccurate results  Least-squares regression lines  are the most common method of fitting a line to a scatterplot  This line minimizes the sum of the residuals squared    Residuals  are the difference between the observed and predicted values of y ( y-\\hat{y} y-\\hat{y} )  A  residual plot  can be used to indicate if a linear model is appropriate if there is no pattern in the graph    The  standard deviation of residuals s  measures the typical size of the prediction errors  The  coefficient of determination  r^2 r^2  is the fraction of the variation in y that is accounted for by the line",
+            "title": "Topcis"
+        },
+        {
+            "location": "/c3/#formulas",
+            "text": "\\LARGE\n\\hat{y}=a+bx\n\\\\[20pt]\n\\LARGE\na=\\bar{y}-b\\bar{x}\n\\\\[20pt]\n\\LARGE\nb=r\\frac{s_y}{s_x}\n\\\\[20pt]\n\\LARGE\n\\text{residual}=y-\\hat{y}\n\\\\[20pt]\n\\LARGE\ns=\\sqrt{\\frac{\\sum{\\text{residuals}^2}}{n-2}}=\\sqrt{\\frac{\\sum{(y_i-\\hat{y})^2}}{n-2}}\n\\\\[20pt]\n\\LARGE\nr=\\frac{1}{n-1}\\sum{z_xz_y}=\\frac{1}{n-1}\\sum{\\frac{x_i-\\bar{x}}{s_x}\\frac{y_i-\\bar{y}}{s_y}}\n\\\\[30pt]\n\\LARGE\nr^2=1-\\frac{\\sum{\\text{residuals}^2}}{\\sum{(y_i-\\bar{y})^2}}\n\\\\[20pt]  \n\\LARGE\n\\hat{y}=a+bx\n\\\\[20pt]\n\\LARGE\na=\\bar{y}-b\\bar{x}\n\\\\[20pt]\n\\LARGE\nb=r\\frac{s_y}{s_x}\n\\\\[20pt]\n\\LARGE\n\\text{residual}=y-\\hat{y}\n\\\\[20pt]\n\\LARGE\ns=\\sqrt{\\frac{\\sum{\\text{residuals}^2}}{n-2}}=\\sqrt{\\frac{\\sum{(y_i-\\hat{y})^2}}{n-2}}\n\\\\[20pt]\n\\LARGE\nr=\\frac{1}{n-1}\\sum{z_xz_y}=\\frac{1}{n-1}\\sum{\\frac{x_i-\\bar{x}}{s_x}\\frac{y_i-\\bar{y}}{s_y}}\n\\\\[30pt]\n\\LARGE\nr^2=1-\\frac{\\sum{\\text{residuals}^2}}{\\sum{(y_i-\\bar{y})^2}}\n\\\\[20pt]",
+            "title": "Formulas"
+        },
+        {
+            "location": "/c3/#terms",
+            "text": "",
+            "title": "Terms"
+        },
+        {
+            "location": "/c4/",
+            "text": "Topcis\n\n\nFormulas\n\n\n$$\n\\LARGE\n\n\n\\[20pt]\n$$\n\n\nTerms",
+            "title": "Chapter 4 - Designing Studies"
+        },
+        {
+            "location": "/c4/#topcis",
+            "text": "",
+            "title": "Topcis"
+        },
+        {
+            "location": "/c4/#formulas",
+            "text": "$$\n\\LARGE  \\[20pt]\n$$",
+            "title": "Formulas"
+        },
+        {
+            "location": "/c4/#terms",
+            "text": "",
+            "title": "Terms"
+        },
+        {
+            "location": "/c5/",
+            "text": "Topcis\n\n\nFormulas\n\n\n$$\n\\LARGE\n\n\n\\[20pt]\n$$\n\n\nTerms",
+            "title": "Chapter 5 - Probability"
+        },
+        {
+            "location": "/c5/#topcis",
+            "text": "",
+            "title": "Topcis"
+        },
+        {
+            "location": "/c5/#formulas",
+            "text": "$$\n\\LARGE  \\[20pt]\n$$",
+            "title": "Formulas"
+        },
+        {
+            "location": "/c5/#terms",
+            "text": "",
+            "title": "Terms"
+        },
+        {
+            "location": "/c6/",
+            "text": "Topcis\n\n\nFormulas\n\n\n$$\n\\LARGE\n\n\n\\[20pt]\n$$\n\n\nTerms",
+            "title": "Chapter 6 - Random Variables"
+        },
+        {
+            "location": "/c6/#topcis",
+            "text": "",
+            "title": "Topcis"
+        },
+        {
+            "location": "/c6/#formulas",
+            "text": "$$\n\\LARGE  \\[20pt]\n$$",
+            "title": "Formulas"
+        },
+        {
+            "location": "/c6/#terms",
+            "text": "",
+            "title": "Terms"
+        },
+        {
+            "location": "/c7/",
+            "text": "Topcis\n\n\nFormulas\n\n\n$$\n\\LARGE\n\n\n\\[20pt]\n$$\n\n\nTerms",
+            "title": "Chapter 7 - Sampling Distributions"
+        },
+        {
+            "location": "/c7/#topcis",
+            "text": "",
+            "title": "Topcis"
+        },
+        {
+            "location": "/c7/#formulas",
+            "text": "$$\n\\LARGE  \\[20pt]\n$$",
+            "title": "Formulas"
+        },
+        {
+            "location": "/c7/#terms",
+            "text": "",
+            "title": "Terms"
+        }
+    ]
+}

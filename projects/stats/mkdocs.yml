@@ -1,0 +1,17 @@
+site_name: 'Statistics Review'
+pages:
+  - Home: index.md
+  - Chapter 1 - Exploring Data: c1.md
+  - Chapter 2 - Modeling Distributions of Data: c2.md
+  - Chapter 3 - Describing Relationships: c3.md
+  - Chapter 4 - Designing Studies: c4.md
+  - Chapter 5 - Probability: c5.md
+  - Chapter 6 - Random Variables: c6.md
+  - Chapter 7 - Sampling Distributions: c7.md
+theme:
+  name: 'rtd-dropdown'
+markdown_extensions:
+  - pymdownx.arithmatex
+extra_javascript:
+  - mathjax-config.js
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML

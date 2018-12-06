@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Newman Sites</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $("a").on('click', function(event) {
+		    if (this.hash !== "") {
+		      event.preventDefault();
+		      var hash = this.hash;
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light py-4">
+	    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="nav-item">
+	        		<button type="button" class="btn btn-outline-dark">Contact</button>
+	        	</li>
+	            <li class="nav-item active">
+	                <a class="nav-link" href="#about">About</a>
+	            </li>
+	            <li class="nav-item">
+	                <a class="nav-link" href="#projects">Projects</a>
+	            </li>
+	            <li class="nav-item">
+	            	<a href="projects/docs/site/index.html" class="nav-link">Docs</a>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="mx-auto order-0">
+	        <a class="navbar-brand mx-auto" href="#"><h3>Nicolas Newman</h3></a>
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+	            <span class="navbar-toggler-icon"></span>
+	        </button>
+	    </div>
+	    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+	        <ul class="navbar-nav ml-auto">
+	            <li class="nav-item"><a class="navbar-brand" href="https://github.com/NicolasNewman"><i class="nav-fab fab fa-github"></i></a></li>
+				<li class="nav-item"><a class="navbar-brand" href="#"><i class="nav-fab fab fa-instagram"></i></a></li>
+				<li class="nav-item"><a class="navbar-brand" href="https://steamcommunity.com/id/QuantumPie"><i class="nav-fab fab fa-steam"></i></a></li>
+	        </ul>
+	    </div>
+	</nav>
+	
+	<div class="bg"></div>
+	<div class="jumbotron jumbotron-fluid">
+		<div class="bg"></div>
+		<div class="container-fluid text-center">
+			<h1 class="display-4">Welcome!</h1>
+			<p class="lead">This site contains various projects I have worked on</p>
+		</div>
+	</div>
+
+	<div class="container text-center" id="about">
+		<div class="row">
+			<div class="col-lg-4 order-2 order-lg-1">
+				<img class="img-fluid" src="img/corgi.jpg">
+				<a class="credit" style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@brianna_santellan?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Brianna Santellan"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Brianna Santellan</span></a>
+			</div>
+			<div class="col-lg-8 order-1 order-lg-1">
+				<h1>About</h1>
+				<hr>
+				<p>Hello! I'm a self taught programmer who is currently a senior in high school. When I'm not programming or learning new things in the fields of math and science, I often spend my time playing video games. I started programming at the end of my 
+				8th grade year with Java. Before I started learning Python, I worked on simple GUI programs using Swing (and later JFX) as well as programming a robot for my FRC team. Once I learned Python, I resorted to only using Java if I needed a GUI or it was for robotics. Currently, I'm working on learning front-end web development followed by back-end. Hence why I am making this site</p>
+				<hr>
+			</div>
+		</div>
+	</div>
+
+	<div class="container text-center">
+		<h1>What I Use</h1>
+		<div class="row code-info">
+			<div class="col-lg-4">
+				<!-- <i class="fab-code fab fa-html5"></i> -->
+				<img class="img-fluid img-code" src="img/html.png">
+				<h4>HTML</h4>
+				<p>When it comes to creating a websites, HTML is the one and only king for its layout. With a system that relies on opening and closing tags, I can quickly put down the foundaitons of a site</p>
+			</div>
+			<div class="col-lg-4">
+				<img src="img/css.png" class="img-fluid img-code">
+				<h4>CSS</h4>
+				<p>Without this, every site would look the same and boring. By using selectors, I can target elements and start adding selectors to give life to a website</p>
+			</div>
+			<div class="col-lg-4">
+				<img src="img/js.jpg" class="img-fluid img-code">
+				<h4>JavaScript</h4>
+				<p>Not to be confused with Java, JavaScript is what powers front-end interactivity with users. Using syntax similar to C++, code can be written to tell buttons what to do, when to trigger an animation, and so much more</p>
+			</div>
+		</div>
+		<div class="row code-info">
+			<div class="col-lg-6">
+				<!-- <i class="fab-code fab fa-java"></i> -->
+				<img class="img-fluid img-code" src="img/java.png">
+				<h4>Java</h4>
+				<p>While not the best language when it comes to writting quick scripts, I still use Java to efficiently create software and games using JFX. On top of that, WPILIB has the largest amount of support for their Java version</p>
+			</div>
+			<div class="col-lg-6">
+				<!-- <i class="fab-code fab fa-python"></i> -->
+				<img class="img-fluid img-code" src="img/python.png">
+				<h4>Python</h4>
+				<p>When it comes to needing to write a quick script or a task that runs during startup, Python is my goto language. Not only is it easier to start writting code, the built in package manager, PIP, allows for easy import of libraries</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container" id="projects">
+		<h1 class="text-center">My Projects</h1>
+		<hr>
+		<h2 class="text-center project-heading">Websites</h2>
+		<!-- Smith Photography -->
+		<div class="card" onclick="location.href='projects/smith_photography/index.html';">
+			<img class="card-img-top" src="img/project_smith.PNG"></img>
+			<div class="card-body">
+				<h5 class="card-title">Smith Photography</h5>
+				<p class="card-text">After learning the basics of Bootstrap, I set out to attempt to create a photo gallery. Despite being my first site, I considered it to be a success. The site features a carousel which displays various images. Following 
+					that is a bio, the photo gallery, and then pricing information. The images used in the gallery all came from <a href="https://www.unsplash.com">Unisplash</a>.</p>
+			</div>
+		</div>
+		<!-- DOM v. jQuery -->
+		<div class="card" onclick="location.href='projects/dom_vs_jquery/index.html';">
+			<img class="card-img-top" src="img/project_vs.PNG"></img>
+			<div class="card-body">
+				<h5 class="card-title">DOM v. jQuery</h5>
+				<p class="card-text">Once I began learning JavaScript, I quickly realized there were two ways of connecting it to CSS and HTML. JavaScripts built-in API, DOM, was seen as incomplete when it was first created. jQuery was created in reponse and allowed for neater and more efficient code. Since it is important to know both methods, I created this page to outline some how to accomplish the same task using one API over the other. The theme for this project was inspired by <a href="http://youmightnotneedjquery.com/">youmightnotneedjquery.com</a></p>
+			</div>
+		</div>
+		<h2 class="text-center project-heading">Software</h2>
+		<!-- Minesweeper -->
+		<div class="card" onclick="location.href='https://github.com/NicolasNewman/Minesweeper';">
+			<div class="project-img"><img class="card-img-top" src="img/project_minesweeper.png"></img></div>
+			<div class="card-body">
+				<h5 class="card-title">Minesweeper</h5>
+				<p class="card-text">Being one of my favorite childhood games, it only made sense to try and recreate it. The game is made using JFX and includes features such as a custom board size, leaderboard, cheats, and persistent data. The program can even be installed on any computer, even if it doesn't have the JRE installed</p>
+			</div>
+		</div>
+		<!-- Battleship -->
+		<div class="card" onclick="location.href='https://github.com/NicolasNewman/Battleship.git';">
+			<div class="project-img"><img class="card-img-top" src="img/project_battleship.png"></img></div>
+			<div class="card-body">
+				<h5 class="card-title">Battleship</h5>
+				<p class="card-text">I created this game for an assignment for my AP CSA class. However, I took it a step furthur by making the game multiplayer. You and a friend can play each other halfway across the globe!</p>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

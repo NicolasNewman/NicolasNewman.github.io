@@ -132,6 +132,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -165,6 +166,17 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#terms" title="Chapter 3 - Describing Relationships">Terms</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#review" title="Chapter 3 - Describing Relationships">Review</a>
   </li>
 
     
@@ -388,6 +400,74 @@ r^2=1-\frac{\sum{\text{residuals}^2}}{\sum{(y_i-\bar{y})^2}}
 </div>
 <h1 id="terms">Terms</h1>
 <p><iframe src="https://quizlet.com/346093227/flashcards/embed" height="700" width="100%" style="border:0"></iframe></p>
+<h1 id="review">Review</h1>
+<ol>
+<li>What is an approximate correlation coefficient for the following scatterplot? <img alt="image" src="../res/c3/q1.jpg" /><ul>
+<li>A) 0.3</li>
+<li>B) -0.3</li>
+<li>C) 0.85</li>
+<li>D) -0.85</li>
+<li><select id="q1">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>What can be determined from the following residual plot? <img alt="image" src="../res/c3/q2.png" /><ul>
+<li>A) A linear model is appropriate</li>
+<li>B) A linear model isn't appropriate</li>
+<li>C) Nothing</li>
+<li>D) None of the above</li>
+<li><select id="q2">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>A scientist wants to determine if the number of pirates in the world effects the global temperature. What is the relation between the number of pirates/global temperature<ul>
+<li>A) response/explanatory</li>
+<li>B) explanatory/response</li>
+<li>C) independent/dependent</li>
+<li>D) dependent/independent</li>
+<li><select id="q3">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>TBD</li>
+<li>TBD</li>
+</ol>
+<script>
+function grade() {
+    let q1 = document.querySelector("#q1"); 
+    let q2 = document.querySelector("#q2"); 
+    let q3 = document.querySelector("#q3");
+    let qList = [q1, q2, q3];
+    // Smart a**
+    let aList = ['D','B','B'];
+    for(let i = 0; i < 3; i++) {
+        let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
+        if (isCorrect) {
+            qList[i].style.color = "lawngreen";
+        } else {
+            console.log(qList[i].options[qList[i].selectedIndex].style);
+            qList[i].style.color = "red";
+        }
+    }
+}
+</script>
+
+<p><input type="submit" value="Submit" onclick="grade()"></p>
               
             </div>
           </div>

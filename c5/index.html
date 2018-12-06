@@ -178,6 +178,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -211,6 +212,17 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#terms" title="Chapter 5 - Probability">Terms</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#review" title="Chapter 5 - Probability">Review</a>
   </li>
 
     
@@ -392,6 +404,74 @@ P(A \cap B) = P(A) \cdot P(B | A) \text{ or } P(B) \cdot P(A | B)
 </div>
 <h1 id="terms">Terms</h1>
 <p><iframe src="https://quizlet.com/347104046/flashcards/embed" height="700" width="100%" style="border:0"></iframe></p>
+<h1 id="review">Review</h1>
+<ol>
+<li>A family has had their sixth son and are wondering why they haven't had a daughter since the probability is .5. What should you tell them?<ul>
+<li>A) Your just unlucky</li>
+<li>B) Probability only describes what happens in the long run</li>
+<li>C) Correlation doesn't prove causation</li>
+<li>D) Something is wrong since their second child should have been a girl</li>
+<li><select id="q1">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>An event is mutually exclusive. What must be known?<ul>
+<li>A) They are independent</li>
+<li>B) <span><span class="MathJax_Preview">P(A \cap B)&gt;0</span><script type="math/tex">P(A \cap B)>0</script></span></li>
+<li>C) <span><span class="MathJax_Preview">P(A \cap B)=0</span><script type="math/tex">P(A \cap B)=0</script></span></li>
+<li>D) <span><span class="MathJax_Preview">P(A \cup B) \ne P(A) + P(B)</span><script type="math/tex">P(A \cup B) \ne P(A) + P(B)</script></span></li>
+<li><select id="q2">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>A simulation was carried out to determine if we are in the Matrix. To determine this, a pen will be dropped from three feet in the air. If it floats, the probability that we are in the matrix increases. After repeating this process five times, the probability that we are in the matrix was 0. What step of designing a simulation was flawed.<ul>
+<li>A) State</li>
+<li>B) Plan</li>
+<li>C) Do</li>
+<li>D) Conclude</li>
+<li><select id="q3">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>TBD</li>
+<li>TBD</li>
+</ol>
+<script>
+function grade() {
+    let q1 = document.querySelector("#q1"); 
+    let q2 = document.querySelector("#q2"); 
+    let q3 = document.querySelector("#q3");
+    let qList = [q1, q2, q3];
+    // Smart a**
+    let aList = ['B','C','C'];
+    for(let i = 0; i < 3; i++) {
+        let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
+        if (isCorrect) {
+            qList[i].style.color = "lawngreen";
+        } else {
+            console.log(qList[i].options[qList[i].selectedIndex].style);
+            qList[i].style.color = "red";
+        }
+    }
+}
+</script>
+
+<p><input type="submit" value="Submit" onclick="grade()"></p>
               
             </div>
           </div>

@@ -201,6 +201,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -264,6 +265,17 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#terms" title="Chapter 6 - Random Variables">Terms</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#review" title="Chapter 6 - Random Variables">Review</a>
   </li>
 
     
@@ -455,6 +467,74 @@ P(Y=k)=(1-p)^{k-1}p
 </div>
 <h1 id="terms">Terms</h1>
 <p><iframe src="https://quizlet.com/347157301/flashcards/embed" height="700" width="100%" style="border:0"></iframe></p>
+<h1 id="review">Review</h1>
+<ol>
+<li>You want to find the expected value of flipping a coin 20 times. Which formula should you use?<ul>
+<li>A) <span><span class="MathJax_Preview">\mu_x=\sum{x_i \cdot p_i}</span><script type="math/tex">\mu_x=\sum{x_i \cdot p_i}</script></span></li>
+<li>B) <span><span class="MathJax_Preview">\mu_x=np</span><script type="math/tex">\mu_x=np</script></span></li>
+<li>C) <span><span class="MathJax_Preview">\mu_x=\frac{1}{p}</span><script type="math/tex">\mu_x=\frac{1}{p}</script></span></li>
+<li>D) <span><span class="MathJax_Preview">\mu_x=\frac{\sum{s}}{n}</span><script type="math/tex">\mu_x=\frac{\sum{s}}{n}</script></span></li>
+<li><select id="q1">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>You want to find the probability of success for the nth attempt. What type of distribution is this?<ul>
+<li>A) Probability distribution</li>
+<li>B) Binomial distribution</li>
+<li>C) Geometric distribution</li>
+<li>D) Guassian distribution</li>
+<li><select id="q2">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>Let X equal the number of rebels Darth Vader kills each month and Y equal the number of Stormtroopers Luke kills each month. If <span><span class="MathJax_Preview">T=X-Y</span><script type="math/tex">T=X-Y</script></span>, how do you find <span><span class="MathJax_Preview">\sigma_T</span><script type="math/tex">\sigma_T</script></span><ul>
+<li>A) <span><span class="MathJax_Preview">\sigma_t=\sigma_x + \sigma_y</span><script type="math/tex">\sigma_t=\sigma_x + \sigma_y</script></span></li>
+<li>B) <span><span class="MathJax_Preview">\sigma_t=\sigma_x - \sigma_y</span><script type="math/tex">\sigma_t=\sigma_x - \sigma_y</script></span></li>
+<li>C) <span><span class="MathJax_Preview">\sigma_t^2=\sigma_x^2 + \sigma_y^2</span><script type="math/tex">\sigma_t^2=\sigma_x^2 + \sigma_y^2</script></span></li>
+<li>D) <span><span class="MathJax_Preview">\sigma_t^2=\sigma_x^2 - \sigma_y^2</span><script type="math/tex">\sigma_t^2=\sigma_x^2 - \sigma_y^2</script></span></li>
+<li><select id="q3">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>TBD</li>
+<li>TBD</li>
+</ol>
+<script>
+function grade() {
+    let q1 = document.querySelector("#q1"); 
+    let q2 = document.querySelector("#q2"); 
+    let q3 = document.querySelector("#q3");
+    let qList = [q1, q2, q3];
+    // Smart a**
+    let aList = ['B','C','C'];
+    for(let i = 0; i < 3; i++) {
+        let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
+        if (isCorrect) {
+            qList[i].style.color = "lawngreen";
+        } else {
+            console.log(qList[i].options[qList[i].selectedIndex].style);
+            qList[i].style.color = "red";
+        }
+    }
+}
+</script>
+
+<p><input type="submit" value="Submit" onclick="grade()"></p>
               
             </div>
           </div>

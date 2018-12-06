@@ -155,6 +155,7 @@
   
   
   
+  
   <ul class="current subnav">
     
       
@@ -188,6 +189,17 @@
 
   <li class="toctree-l2 toc-item">
     <a href="#terms" title="Chapter 4 - Designing Studies">Terms</a>
+  </li>
+
+    
+      
+
+  
+  
+
+
+  <li class="toctree-l2 toc-item">
+    <a href="#review" title="Chapter 4 - Designing Studies">Review</a>
   </li>
 
     
@@ -365,6 +377,74 @@
 <p><strong>randInt(min, max, trials)</strong> generates random integers in the range [min, max]</p>
 <h1 id="terms">Terms</h1>
 <p><iframe src="https://quizlet.com/346202165/flashcards/embed" height="700" width="100%" style="border:0"></iframe></p>
+<h1 id="review">Review</h1>
+<ol>
+<li>A polling team wants to gather data on peoples voting habits in different counties within St. Louis. To save time, what sampling method should be used?<ul>
+<li>A) Simple random sample</li>
+<li>B) Convenience sample</li>
+<li>C) Stratified random sample</li>
+<li>D) Cluster sample</li>
+<li><select id="q1">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>An experiment is designed to determine if a new medication prevents migranes. A sample of 25 subjects was randomly selected from a population of 50. The experiment was double blind and there were no confounding variables. What principle of experiment design wasn't followed?<ul>
+<li>A) Comparison</li>
+<li>B) Random assignment</li>
+<li>C) Control</li>
+<li>D) Replication</li>
+<li><select id="q2">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>A survey was sent to a household, but the families five year old managed to find it and put in false responses. What form of bias could this create?<ul>
+<li>A) Undercoverage</li>
+<li>B) Response bias</li>
+<li>C) Nonresponse</li>
+<li>D) Wording of a question</li>
+<li><select id="q3">
+    <option style="display:none"></option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+</select></li>
+</ul>
+</li>
+<li>TBD</li>
+<li>TBD</li>
+</ol>
+<script>
+function grade() {
+    let q1 = document.querySelector("#q1"); 
+    let q2 = document.querySelector("#q2"); 
+    let q3 = document.querySelector("#q3");
+    let qList = [q1, q2, q3];
+    // Smart a**
+    let aList = ['C','D','B'];
+    for(let i = 0; i < 3; i++) {
+        let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
+        if (isCorrect) {
+            qList[i].style.color = "lawngreen";
+        } else {
+            console.log(qList[i].options[qList[i].selectedIndex].style);
+            qList[i].style.color = "red";
+        }
+    }
+}
+</script>
+
+<p><input type="submit" value="Submit" onclick="grade()"></p>
               
             </div>
           </div>

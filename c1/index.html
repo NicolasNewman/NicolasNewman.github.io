@@ -428,26 +428,59 @@ IQR = Q_3 - Q_1
 </select></li>
 </ul>
 </li>
-<li>TBD</li>
-<li>TBD</li>
+<li>Given the following set of data, find <span><span class="MathJax_Preview">S_{age}</span><script type="math/tex">S_{age}</script></span> (round to the nearest hundreth)<ul>
+<li>
+<table>
+<thead>
+<tr>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12, 23, 52, 92, 7, 41, 78, 39, 63, 19</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><input type="text" id="q4"></li>
+</ul>
+</li>
+<li>What is the marginal distribution of soda? (enter as a un-reduced fraction)
+<img alt="two-way table" src="../res/c1/two-way-table.png" /><ul>
+<li><input type="text" id="q5"></li>
+</ul>
+</li>
 </ol>
 <script>
 function grade() {
     let q1 = document.querySelector("#q1"); 
     let q2 = document.querySelector("#q2"); 
     let q3 = document.querySelector("#q3");
+    let q4 = document.querySelector("#q4");
+    let q5 = document.querySelector("#q5");
     let qList = [q1, q2, q3];
+    let frqList = [q4, q5];
     // Smart a**
     let aList = ['B','C','A'];
-    for(let i = 0; i < 3; i++) {
+    let frqaList = ["28.59", "200/400"]
+    for(let i = 0; i < qList.length; i++) {
         let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
         if (isCorrect) {
             qList[i].style.color = "lawngreen";
         } else {
-            console.log(qList[i].options[qList[i].selectedIndex].style);
             qList[i].style.color = "red";
         }
     }
+    for(let i = 0; i < frqList.length; i++) {
+        console.log(frqList);
+        let isCorrect = frqList[i].value === frqaList[i];
+        if (isCorrect) {
+            frqList[i].style.color = "lawngreen";
+        } else {
+            frqList[i].style.color = "red";
+        }
+    }    
 }
 </script>
 

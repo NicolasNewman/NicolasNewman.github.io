@@ -441,8 +441,11 @@ y=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
 </select></li>
 </ul>
 </li>
-<li>TBD</li>
-<li>TBD</li>
+<li>An approximately normal distribution has a mean of 23.8 and a standard deviation of 4.2. What is the probability that the value is within [22, 24]? (round to the nearest thousandth)<ul>
+<li><input type="text" id="q4"></li>
+</ul>
+</li>
+<li>A group of students are having a competition to see who can get the highest score in the game, "Send Me to Heaven" in which you toss your phone as high up in the air as possible. The scores are approximately normal with a mean of 17ft and a standard deviation of 12. What percentile is a score of 23ft? (enter as a decimal rounded to the nearest hundreth)</li>
 </ol>
 <script>
 function grade() {
@@ -450,8 +453,11 @@ function grade() {
     let q2 = document.querySelector("#q2"); 
     let q3 = document.querySelector("#q3");
     let qList = [q1, q2, q3];
+    let frqList = [q4, q5];
     // Smart a**
     let aList = ['C','D','B'];
+    let frqaList = ["0.185", "0.03"]
+
     for(let i = 0; i < 3; i++) {
         let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
         if (isCorrect) {
@@ -461,6 +467,15 @@ function grade() {
             qList[i].style.color = "red";
         }
     }
+    for(let i = 0; i < frqList.length; i++) {
+        console.log(frqList);
+        let isCorrect = frqList[i].value === frqaList[i];
+        if (isCorrect) {
+            frqList[i].style.color = "lawngreen";
+        } else {
+            frqList[i].style.color = "red";
+        }
+    }    
 }
 </script>
 

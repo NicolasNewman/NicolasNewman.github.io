@@ -511,17 +511,28 @@ P(Y=k)=(1-p)^{k-1}p
 </select></li>
 </ul>
 </li>
-<li>TBD</li>
-<li>TBD</li>
+<li>You won a carnival game on your 3rd attempt but are accused of cheating since it takes most people 20 tries. If the probability of winning is 1/20, what is the probability of winning on your 3rd attempt? (enter as a decimal rounded to the nearest hundreth)<ul>
+<li><input type="text" id="q4"></li>
+</ul>
+</li>
+<li>Amazon's autonomous robots have a 2% chance of misidentifying a human for a box. If the robot scans 50 things, what is the expected number of humans misidentified?<ul>
+<li><input type="text" id="q5"></li>
+</ul>
+</li>
 </ol>
 <script>
 function grade() {
     let q1 = document.querySelector("#q1"); 
     let q2 = document.querySelector("#q2"); 
     let q3 = document.querySelector("#q3");
-    let qList = [q1, q2, q3];
+    let q4 = document.querySelector("#q4");
+    let q5 = document.querySelector("#q5");
+    let qList = [q1, q2, q3, q4, q5];
+    let frqList = [q4, q5];
+
     // Smart a**
     let aList = ['B','C','C'];
+    let frqaList = ["0.14", "1"];
     for(let i = 0; i < 3; i++) {
         let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
         if (isCorrect) {
@@ -531,6 +542,14 @@ function grade() {
             qList[i].style.color = "red";
         }
     }
+    for(let i = 0; i < frqList.length; i++) {
+        let isCorrect = frqList[i].value === frqaList[i];
+        if (isCorrect) {
+            frqList[i].style.color = "lawngreen";
+        } else {
+            frqList[i].style.color = "red";
+        }
+    }    
 }
 </script>
 

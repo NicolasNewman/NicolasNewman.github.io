@@ -444,18 +444,64 @@ r^2=1-\frac{\sum{\text{residuals}^2}}{\sum{(y_i-\bar{y})^2}}
 </select></li>
 </ul>
 </li>
-<li>TBD</li>
-<li>TBD</li>
+<li>Given the following data, calculate the least-squared regression line (write as y=#.##x+#.##, with the final decimal rounded to the nearest hundreth)<ul>
+<li>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>7</td>
+</tr>
+<tr>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>5</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><input type="text" id="q4"></li>
+</ul>
+</li>
+<li>Using the model created in question 4, find the standard deviation of residuals (enter as a decimal rounded to the nearest hundreth)<ul>
+<li><input type="text" id="q5">  </li>
+</ul>
+</li>
 </ol>
 <script>
 function grade() {
     let q1 = document.querySelector("#q1"); 
     let q2 = document.querySelector("#q2"); 
     let q3 = document.querySelector("#q3");
+    let q4 = document.querySelector("#q4");
+    let q5 = document.querySelector("#q5");
     let qList = [q1, q2, q3];
+    let frqList = [q4, q5];
     // Smart a**
     let aList = ['D','B','B'];
-    for(let i = 0; i < 3; i++) {
+    let frqaList = ["y=0.74x+3.60", "1.07"];
+    for(let i = 0; i < qList.length; i++) {
         let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
         if (isCorrect) {
             qList[i].style.color = "lawngreen";
@@ -464,6 +510,15 @@ function grade() {
             qList[i].style.color = "red";
         }
     }
+    for(let i = 0; i < frqList.length; i++) {
+        let isCorrect = frqList[i].value === frqaList[i];
+        if (isCorrect) {
+            frqList[i].style.color = "lawngreen";
+        } else {
+            frqList[i].style.color = "red";
+        }
+    }
+
 }
 </script>
 

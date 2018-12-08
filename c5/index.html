@@ -448,17 +448,29 @@ P(A \cap B) = P(A) \cdot P(B | A) \text{ or } P(B) \cdot P(A | B)
 </select></li>
 </ul>
 </li>
-<li>TBD</li>
-<li>TBD</li>
+<li>You are playing a video game and want to know the probability of an item dropping by the 20th attempt if it has a 5% chance to drop. (enter as a decimal rounded to the nearest hundreth)<ul>
+<li><input type="text" id="q4"></li>
+</ul>
+</li>
+<li>In order for the Millennium Falcon to successfully engage warp speed, at least 2 of the 3 engines needs to work. If the probability of an engine failing is 1/5, what is the probability that you successfully engage warp speed? (enter as a decimal rounded to the nearest hundreth) <ul>
+<li><input type="text" id="q5"></li>
+</ul>
+</li>
 </ol>
 <script>
 function grade() {
     let q1 = document.querySelector("#q1"); 
     let q2 = document.querySelector("#q2"); 
     let q3 = document.querySelector("#q3");
+    let q4 = document.querySelector("#q4");
+    let q5 = document.querySelector("#q5");
+
     let qList = [q1, q2, q3];
+    let frqList = [q4, q5];
+
     // Smart a**
     let aList = ['B','C','C'];
+    let frqaList = ["0.64", "0.9"]
     for(let i = 0; i < 3; i++) {
         let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
         if (isCorrect) {
@@ -466,6 +478,14 @@ function grade() {
         } else {
             console.log(qList[i].options[qList[i].selectedIndex].style);
             qList[i].style.color = "red";
+        }
+    }
+    for(let i = 0; i < frqList.length; i++) {
+        let isCorrect = frqList[i].value === frqaList[i];
+        if (isCorrect) {
+            frqList[i].style.color = "lawngreen";
+        } else {
+            frqList[i].style.color = "red";
         }
     }
 }

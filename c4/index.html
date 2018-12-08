@@ -421,17 +421,21 @@
 </select></li>
 </ul>
 </li>
-<li>TBD</li>
-<li>TBD</li>
+<li>In order to successfully destory the Death Star and save the galaxy, you must avoid the turrets in order to reach the surface (60% chance of success), navigate your ship through the narrow corridors inside (40% chance of success), and then fire a torpedo at the stations core (80% chance of success). Design a simulation on your calculate to estimate the probability of successfuly destroying the Death Star.</li>
+<li>The forcast for the following day states that there is a 60% chance of rain. If it rains, there is a 20% chance of the temperature being low enough to snow. Weather or not it rains or snows, there is also a 15% chance of a volcano erupting. If it only rains, your crops will grow. If there is snow and/or the volcano erupts, your crops will not grow. Design a simulation to determine the probability that your crops will grow.</li>
 </ol>
 <script>
 function grade() {
     let q1 = document.querySelector("#q1"); 
     let q2 = document.querySelector("#q2"); 
     let q3 = document.querySelector("#q3");
+    let q4 = document.querySelector("#q4");
+    let q5 = document.querySelector("#q5");
     let qList = [q1, q2, q3];
+    let frqList = [q4, q5];
     // Smart a**
     let aList = ['C','D','B'];
+    let frqaList = ["0.185", "0.03"];
     for(let i = 0; i < 3; i++) {
         let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
         if (isCorrect) {
@@ -441,6 +445,14 @@ function grade() {
             qList[i].style.color = "red";
         }
     }
+    for(let i = 0; i < frqList.length; i++) {
+        let isCorrect = frqList[i].value === frqaList[i];
+        if (isCorrect) {
+            frqList[i].style.color = "lawngreen";
+        } else {
+            frqList[i].style.color = "red";
+        }
+    }    
 }
 </script>
 

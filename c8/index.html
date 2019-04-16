@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Topcis - Statistics Review</title>
+  <title>Chapter 8 - Estimating with Confidence - Statistics Review</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Topcis";
+    var mkdocs_page_name = "Chapter 8 - Estimating with Confidence";
     var mkdocs_page_input_path = "c8.md";
     var mkdocs_page_url = null;
   </script>
@@ -105,6 +105,53 @@
     <a class="" href="../c7/">Chapter 7 - Sampling Distributions</a>
   </li>
     
+      
+
+
+  
+    
+    <li class="navtree toctree-l1 page current">
+      <a class="current" href="./">
+        Chapter 8 - Estimating with Confidence
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l1 current with-children">
+    <a href="#topcis">
+      Topcis
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l1">
+    <a href="#formulas">
+      Formulas
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l1">
+    <a href="#terms">
+      Terms
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+
+  
+    
   </ul>
       </div>
       &nbsp;
@@ -127,7 +174,7 @@
     
       
     
-    <li>Topcis</li>
+    <li>Chapter 8 - Estimating with Confidence</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -138,16 +185,95 @@
             <div class="section">
               
                 <h1 id="topcis">Topcis</h1>
+<ol>
+<li>Confidence Intervals: The Basics<ul>
+<li>To estimate an unknown population parameter, choose a statistic that provides a resonable guess. That statistic is the <strong>point estimator</strong> for the parameter and it's specific value gives a <strong>point estimate</strong>.</li>
+<li>A <strong>C% confidence interval</strong> uses sample data to estimate an unknown population parameter with an indication of how precise the estimate is and of how confident we are that the result is correct.<ul>
+<li>Calculated via <span><span class="MathJax_Preview">\textrm{point estimate} \pm ME</span><script type="math/tex">\textrm{point estimate} \pm ME</script></span></li>
+<li>Otherwise written as <span><span class="MathJax_Preview">\textrm{statistic} \pm (\textrm{CV})(\textrm{SD of statistic})</span><script type="math/tex">\textrm{statistic} \pm (\textrm{CV})(\textrm{SD of statistic})</script></span></li>
+</ul>
+</li>
+<li>To interpret a C% confidence interval, say, "We are C% confident that the interval from _____ to _____ captures the [parameter in context].</li>
+<li>The <strong>margin of error</strong> of a condifence interval gets smaller as<ul>
+<li>The confidence level C decreases</li>
+<li>The sample size n increases</li>
+</ul>
+</li>
+<li>The margin of error for a confidence interval includes only chance variation (not other sources like nonresponse and undercoverage).</li>
+</ul>
+</li>
+<li>Estimating a Population Proportion<ul>
+<li>The <strong>conditions</strong> for constructing a confidence interval about a population proportion are:<ul>
+<li><strong>Random:</strong> The data were produced by a well-designed random sample or randomized experiment<ul>
+<li><strong>10%:</strong> When sampling without replacement, we check that the population is at least 10 times as large as the sample</li>
+</ul>
+</li>
+<li><strong>Large Counts</strong>: The sample must be large enough that <span><span class="MathJax_Preview">n\hat{p} \geq 10</span><script type="math/tex">n\hat{p} \geq 10</script></span> and <span><span class="MathJax_Preview">n(1-\hat{p}) \geq 10</span><script type="math/tex">n(1-\hat{p}) \geq 10</script></span>, otherwise the distribution cannot be assumed to be normal</li>
+</ul>
+</li>
+<li>Confidence intervals for a population proportion p are based on the sampling distribution of the sample proportion <span><span class="MathJax_Preview">\hat{p}</span><script type="math/tex">\hat{p}</script></span>. If the conditions are met, the sampling distribution of <span><span class="MathJax_Preview">\hat{p}</span><script type="math/tex">\hat{p}</script></span> is approximately Normal with mean p and SD <span><span class="MathJax_Preview">\sqrt{p(1-p)/n}</span><script type="math/tex">\sqrt{p(1-p)/n}</script></span></li>
+<li>The sample size needed to obtain a confidence interval with approximate margin of error (ME) for a population involves solving for n in the inequality <span><span class="MathJax_Preview">z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \leq \textrm{ME}</span><script type="math/tex">z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \leq \textrm{ME}</script></span><ul>
+<li>\hat{p} will be the guessed value for the sample proportion (if unknown, 0.5 should be choosen)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Estimating a Population Mean<ul>
+<li>Confidence intervals for the mean <span><span class="MathJax_Preview">\mu</span><script type="math/tex">\mu</script></span> of a Normal population are based on the sample mean <span><span class="MathJax_Preview">\bar{x}</span><script type="math/tex">\bar{x}</script></span> of an SRS. If we know <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>, we can use a z crtical value. Otherwise, which is often the case, we need to use a t critical value<ul>
+<li>This changes the formula <span><span class="MathJax_Preview">SE_\bar{x}=\frac{\sigma}{\sqrt{n}}</span><script type="math/tex">SE_\bar{x}=\frac{\sigma}{\sqrt{n}}</script></span> to <span><span class="MathJax_Preview">SE_\bar{x}=\frac{s_x}{\sqrt{n}}</span><script type="math/tex">SE_\bar{x}=\frac{s_x}{\sqrt{n}}</script></span> </li>
+<li><strong>degrees of freedom (df)</strong> is found by <span><span class="MathJax_Preview">\textrm{df}=1-n</span><script type="math/tex">\textrm{df}=1-n</script></span></li>
+</ul>
+</li>
+<li>The conditions for constructing a confidence interval about a population mean are:<ul>
+<li><strong>Random:</strong> The data came from a well-designed random sample or experiment<ul>
+<li><strong>10%:</strong> When sampling without replacement, check that the population is at least 10 times as large as the sample.</li>
+</ul>
+</li>
+<li><strong>Normal / Large Sample:</strong> If the population distribution isn't normal, you must make sure <span><span class="MathJax_Preview">n \geq 30</span><script type="math/tex">n \geq 30</script></span>. If the sample size is less than 30, check a graph to look for departures from Normality (strong skewness and outliers).</li>
+</ul>
+</li>
+<li>The t relys on knowing n (to calculate df), we cannot easily determine a sample size. If possible, look for a similar study with a known <span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> and then solve for n using <span><span class="MathJax_Preview">z^{*}\frac{\sigma}{\sqrt{n}} \leq \textrm{ME}</span><script type="math/tex">z^{*}\frac{\sigma}{\sqrt{n}} \leq \textrm{ME}</script></span></li>
+</ul>
+</li>
+</ol>
 <h1 id="formulas">Formulas</h1>
-<p>$$
-\LARGE</p>
-<p>\[20pt]
-$$</p>
+<div>
+<div class="MathJax_Preview">
+\LARGE
+\textrm{statistic} \pm (\textrm{CV})(\textrm{SD of statistic})
+\\[20pt]
+\LARGE
+\hat{p} \pm z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+\\[20pt]
+\LARGE
+\bar{x} \pm t^{*}\frac{s_x}{\sqrt{n}}
+\\[20pt]
+</div>
+<script type="math/tex; mode=display">
+\LARGE
+\textrm{statistic} \pm (\textrm{CV})(\textrm{SD of statistic})
+\\[20pt]
+\LARGE
+\hat{p} \pm z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+\\[20pt]
+\LARGE
+\bar{x} \pm t^{*}\frac{s_x}{\sqrt{n}}
+\\[20pt]
+</script>
+</div>
 <h1 id="terms">Terms</h1>
+<p><iframe src="https://quizlet.com/392243202/match/embed?i=fti76&x=1jj1" height="700" width="100%" style="border:0"></iframe></p>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../c7/" class="btn btn-neutral" title="Chapter 7 - Sampling Distributions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -170,6 +296,8 @@ $$</p>
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
+      
+        <span><a href="../c7/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>

@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Chapter 1 - Exploring Data - Statistics Review</title>
+  <title>Topcis - Statistics Review</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Chapter 1 - Exploring Data";
-    var mkdocs_page_input_path = "c1.md";
+    var mkdocs_page_name = "Topcis";
+    var mkdocs_page_input_path = "c1-old.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -59,60 +59,9 @@
       
 
 
-  
-    
-    <li class="navtree toctree-l1 page current">
-      <a class="current" href="./">
-        Chapter 1 - Exploring Data
-      </a>
-    </li>
-    
-      
-
-  <li class="toctree-l1 current with-children">
-    <a href="#topcis">
-      Topcis
-      <span class="toctree-expand"></span>
-    </a>
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../c1/">Chapter 1 - Exploring Data</a>
   </li>
-
-
-
-      
-
-  <li class="toctree-l1">
-    <a href="#formulas">
-      Formulas
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-      
-
-  <li class="toctree-l1">
-    <a href="#terms">
-      Terms
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-      
-
-  <li class="toctree-l1">
-    <a href="#review">
-      Review
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-
-  
     
       
 
@@ -178,7 +127,7 @@
     
       
     
-    <li>Chapter 1 - Exploring Data</li>
+    <li>Topcis</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -195,17 +144,28 @@
 <li>Each individual contains <strong>variables</strong> that describe them (height, gender, eye color)</li>
 <li>Variables are <strong>categorical</strong> if it has a label (gender, hair color, age range)</li>
 <li>Variables are <strong>quantitative</strong> if it has a numerical value (weight, age, height)</li>
+<li><img alt="img" src="../res/c1/variable.jpg" /></li>
 </ul>
 </li>
 <li>Analyzing Categorical Data<ul>
 <li>A distribution of a categorical variable can tell you the <strong>frequency</strong> (100/500 people have brown hair) or the <strong>relative frequency</strong> (20% of people have brown hair)</li>
 <li><strong>Pie charts</strong> and <strong>bar graphs</strong> can display the distribution of a categorical variable.</li>
 <li>A <strong>two way table</strong> organizes data about two categorical variables for the same individuals.<ul>
-<li>The <strong>marginal distribution</strong> is one of the categorical variables over the total number of individuals. It looks at a single variable</li>
-<li>The <strong>conditional distribution</strong> compares the value of one variable to the value of another</li>
+<li>The <strong>marginal distribution</strong> is one of the categorical variables over the total number of individuals. It looks at a single variable<ul>
+<li><span><span class="MathJax_Preview">\Large\frac{200\text{ Soda}}{400\text{ Total}}</span><script type="math/tex">\Large\frac{200\text{ Soda}}{400\text{ Total}}</script></span>, <span><span class="MathJax_Preview">\Large\frac{158\text{ Hot Dog}}{400\text{ Total}}</span><script type="math/tex">\Large\frac{158\text{ Hot Dog}}{400\text{ Total}}</script></span></li>
 </ul>
 </li>
-<li>A <strong>segmented bar graph</strong> or a <strong>side by side bar graph</strong> can be used to display conditional distributions</li>
+<li>The <strong>conditional distribution</strong> compares the value of one variable to the value of another<ul>
+<li><span><span class="MathJax_Preview">\Large\frac{62\text{ Water &amp; Hot Dog}}{140\text{ Total Water}}</span><script type="math/tex">\Large\frac{62\text{ Water & Hot Dog}}{140\text{ Total Water}}</script></span></li>
+</ul>
+</li>
+<li><img alt="img" src="../res/c1/two-way-table.png" /></li>
+</ul>
+</li>
+<li>A <strong>segmented bar graph</strong> or a <strong>side by side bar graph</strong> can be used to display conditional distributions<ul>
+<li><img alt="img" src="../res/c1/segment-bar-graph.PNG" /></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>Displaying Quantitative Data with Graphs<ul>
@@ -255,120 +215,10 @@ IQR = Q_3 - Q_1
 </div>
 <h1 id="terms">Terms</h1>
 <p><iframe src="https://quizlet.com/310824648/flashcards/embed" height="700" width="100%" style="border:0"></iframe></p>
-<h1 id="review">Review</h1>
-<ol>
-<li>If a distribution is skewed, which measure of center should be used?<ul>
-<li>A) Mean</li>
-<li>B) Median</li>
-<li>C) Standard deviation</li>
-<li>D) IQR</li>
-<li><select id="q1">
-    <option style="display:none"></option>
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-</select></li>
-</ul>
-</li>
-<li>A variable measures the income of over 10,000 individual. Which chart should be used to display the data?<ul>
-<li>A) Bar graph</li>
-<li>B) Pie chart</li>
-<li>C) Histogram</li>
-<li>D) Stemplot    </li>
-<li><select id="q2">
-    <option style="display:none"></option>
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-</select></li>
-</ul>
-</li>
-<li>Bill Gates wants to find the outliers of unusually large donations received in a charity event. Unfortunetly, he has a concussion and can't remember how. Which formula should he use?<ul>
-<li>A) <span><span class="MathJax_Preview">Q_1-1.5 \cdot IQR</span><script type="math/tex">Q_1-1.5 \cdot IQR</script></span></li>
-<li>B) <span><span class="MathJax_Preview">Q_1+1.5 \cdot IQR</span><script type="math/tex">Q_1+1.5 \cdot IQR</script></span></li>
-<li>C) <span><span class="MathJax_Preview">Q_3-1.5 \cdot IQR</span><script type="math/tex">Q_3-1.5 \cdot IQR</script></span></li>
-<li>D) <span><span class="MathJax_Preview">Q_3+1.5 \cdot IQR</span><script type="math/tex">Q_3+1.5 \cdot IQR</script></span>   </li>
-<li><select id="q3">
-    <option style="display:none"></option>
-    <option value="A">A</option>
-    <option value="B">B</option>
-    <option value="C">C</option>
-    <option value="D">D</option>
-</select></li>
-</ul>
-</li>
-<li>Given the following set of data, find <span><span class="MathJax_Preview">S_{age}</span><script type="math/tex">S_{age}</script></span> (round to the nearest hundreth)<ul>
-<li>
-<table>
-<thead>
-<tr>
-<th>Age</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>12, 23, 52, 92, 7, 41, 78, 39, 63, 19</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li><input type="text" id="q4"></li>
-</ul>
-</li>
-<li>What is the marginal distribution of soda? (enter as a un-reduced fraction)
-<img alt="two-way table" src="../res/c1/two-way-table.png" /><ul>
-<li><input type="text" id="q5"></li>
-</ul>
-</li>
-</ol>
-<script>
-function grade() {
-    let q1 = document.querySelector("#q1"); 
-    let q2 = document.querySelector("#q2"); 
-    let q3 = document.querySelector("#q3");
-    let q4 = document.querySelector("#q4");
-    let q5 = document.querySelector("#q5");
-    let qList = [q1, q2, q3];
-    let frqList = [q4, q5];
-    // Smart a**
-    let aList = ['B','C','A'];
-    let frqaList = ["28.59", "200/400"]
-    for(let i = 0; i < qList.length; i++) {
-        let isCorrect = qList[i].options[qList[i].selectedIndex].value === aList[i];
-        if (isCorrect) {
-            qList[i].style.color = "lawngreen";
-        } else {
-            qList[i].style.color = "red";
-        }
-    }
-    for(let i = 0; i < frqList.length; i++) {
-        console.log(frqList);
-        let isCorrect = frqList[i].value === frqaList[i];
-        if (isCorrect) {
-            frqList[i].style.color = "lawngreen";
-        } else {
-            frqList[i].style.color = "red";
-        }
-    }    
-}
-</script>
-
-<p><input type="submit" value="Submit" onclick="grade()"></p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../c2/" class="btn btn-neutral float-right" title="Chapter 2 - Modeling Distributions of Data">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -392,10 +242,6 @@ function grade() {
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../c2/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Chapter 11 - Inference for Distributions of Categorical Data - Statistics Review</title>
+  <title>Chapter 12 - More about Regression - Statistics Review</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Chapter 11 - Inference for Distributions of Categorical Data";
-    var mkdocs_page_input_path = "c11.md";
+    var mkdocs_page_name = "Chapter 12 - More about Regression";
+    var mkdocs_page_input_path = "c12.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -129,11 +129,18 @@
       
 
 
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../c11/">Chapter 11 - Inference for Distributions of Categorical Data</a>
+  </li>
+    
+      
+
+
   
     
     <li class="navtree toctree-l1 page current">
       <a class="current" href="./">
-        Chapter 11 - Inference for Distributions of Categorical Data
+        Chapter 12 - More about Regression
       </a>
     </li>
     
@@ -173,13 +180,6 @@
 
   
     
-      
-
-
-  <li class="navtree toctree-l1 inactive">
-    <a class="" href="../c12/">Chapter 12 - More about Regression</a>
-  </li>
-    
   </ul>
       </div>
       &nbsp;
@@ -202,7 +202,7 @@
     
       
     
-    <li>Chapter 11 - Inference for Distributions of Categorical Data</li>
+    <li>Chapter 12 - More about Regression</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -214,34 +214,28 @@
               
                 <h1 id="topcis">Topcis</h1>
 <ol>
-<li>Chi-Square Tests for Goodness of Fit<ul>
-<li>A <strong>chi-square test for goodness of fit</strong> tests <span><span class="MathJax_Preview">H_0</span><script type="math/tex">H_0</script></span> that a categorical variable has a specified distribution in the population of intrest</li>
-<li>The test compares the <strong>observed count</strong> in each category with what we would expect if <span><span class="MathJax_Preview">H_0</span><script type="math/tex">H_0</script></span> was true (<strong>expected count</strong>). The expected counts are found by <span><span class="MathJax_Preview">np</span><script type="math/tex">np</script></span></li>
-<li>The <strong>chi-square statistic</strong> is found by <span><span class="MathJax_Preview">\sum \frac{(\textrm{observed}-\textrm{expected})^2}{\textrm{expected}}</span><script type="math/tex">\sum \frac{(\textrm{observed}-\textrm{expected})^2}{\textrm{expected}}</script></span></li>
-<li>The conditions for as follows:<ul>
-<li>Random: The data comes from a random sample or experiment<ul>
-<li>10%: If you are sampling without replacement, check that <span><span class="MathJax_Preview">10N \ge n</span><script type="math/tex">10N \ge n</script></span></li>
+<li>Inference for Linear Regression<ul>
+<li>The <strong>sample regression line</strong> can be used to estimate or test a claim about the <strong>population (true) regression line</strong></li>
+<li>The conditions are:<ul>
+<li><strong>Linear</strong>: The actual relationship between x and y is linear</li>
+<li><strong>Independent</strong>: Individual observations are independent. If sampling without replacement, check the 10% condition</li>
+<li><strong>Normal</strong>: For any fixed value of x, the response y varies according to a normal distribution</li>
+<li><strong>Equal SD</strong>: The sd of y is the same for all values of x</li>
+<li><strong>Random</strong>: The data comes from a random sample or experiment</li>
 </ul>
 </li>
-<li>Large Counts: Expected couns are all at least 5</li>
+<li>The slope b and intercept a of a sample regression line estimate the slope <span><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span> and intercept <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> of the population regression line</li>
+<li>Confidence intervals and significance tests for the slope <span><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span> are based on a t distribution with <span><span class="MathJax_Preview">df=n-2</span><script type="math/tex">df=n-2</script></span></li>
+<li>The t-interval for the slope <span><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span> has a standard error of the slope <span><span class="MathJax_Preview">\frac{s}{s_x \sqrt{n-1}}</span><script type="math/tex">\frac{s}{s_x \sqrt{n-1}}</script></span></li>
+<li>The test statistic for a t-test for the slope is <span><span class="MathJax_Preview">\frac{b-\beta_0}{\textrm{SE}_b}</span><script type="math/tex">\frac{b-\beta_0}{\textrm{SE}_b}</script></span><ul>
+<li><span><span class="MathJax_Preview">H_0</span><script type="math/tex">H_0</script></span> is generally <span><span class="MathJax_Preview">\beta=0</span><script type="math/tex">\beta=0</script></span></li>
 </ul>
 </li>
-<li>The sampling distribution of the statistic <span><span class="MathJax_Preview">X^2</span><script type="math/tex">X^2</script></span> can be modeled by a <strong>chi-square distribution</strong><ul>
-<li>Large values of <span><span class="MathJax_Preview">X^2</span><script type="math/tex">X^2</script></span> are in favor of <span><span class="MathJax_Preview">H_a</span><script type="math/tex">H_a</script></span>. </li>
-<li>The P-value is the area to the right of <span><span class="MathJax_Preview">X^2</span><script type="math/tex">X^2</script></span> </li>
-<li><span><span class="MathJax_Preview">df = \textrm{number of categories} - 1</span><script type="math/tex">df = \textrm{number of categories} - 1</script></span></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Inference for Two-Way Tables<ul>
-<li>A <strong>chi-square test for homogeneity</strong> tests to see if there is a difference between the same categorical variables for two different populations. A <strong>chi-square test for independence</strong> tests to see if there is an association between two categorical variable for the same population.<ul>
-<li>Each test is performed the same with the only difference being how you state <span><span class="MathJax_Preview">H_0</span><script type="math/tex">H_0</script></span> and <span><span class="MathJax_Preview">H_a</span><script type="math/tex">H_a</script></span></li>
-<li>The conditions are the same as test for goodness of fit</li>
-</ul>
-</li>
-<li>The expected count equals <span><span class="MathJax_Preview">\frac{\textrm{row total} \cdot \textrm{column total}}{\textrm{table total}}</span><script type="math/tex">\frac{\textrm{row total} \cdot \textrm{column total}}{\textrm{table total}}</script></span></li>
-<li>The degrees of freedom equals <span><span class="MathJax_Preview">df=(\textrm{number of rows} - 1)(\textrm{number of columns} - 1)</span><script type="math/tex">df=(\textrm{number of rows} - 1)(\textrm{number of columns} - 1)</script></span></li>
+<li>Transforming to Achieve Linearity<ul>
+<li>When you suspect that the relationship between two variables follows a <strong>power model</strong> of the form <span><span class="MathJax_Preview">y=ax^p</span><script type="math/tex">y=ax^p</script></span>, you can either raise x to the power p or take the pth root of y.</li>
+<li><strong>logs</strong> can also be used to straighten a curved pattern by taking the log of one or both sides.</li>
 </ul>
 </li>
 </ol>
@@ -249,23 +243,23 @@
 <div>
 <div class="MathJax_Preview">
 \LARGE
-X^2=\sum \frac{(\textrm{observed}-\textrm{expected})^2}{\textrm{expected}}
-\\[20pt]
+s = \sqrt{\frac{\sum (y_i-\hat{y}_i)^2}{n-2}}
+\\[30pt]
 \LARGE
-\textrm{expected count (two way table)} = \frac{\textrm{row total} \cdot \textrm{column total}}{\textrm{table total}}
+\textrm{SE}_b = \frac{s}{s_x \sqrt{n-1}}
 \\[20pt]
 </div>
 <script type="math/tex; mode=display">
 \LARGE
-X^2=\sum \frac{(\textrm{observed}-\textrm{expected})^2}{\textrm{expected}}
-\\[20pt]
+s = \sqrt{\frac{\sum (y_i-\hat{y}_i)^2}{n-2}}
+\\[30pt]
 \LARGE
-\textrm{expected count (two way table)} = \frac{\textrm{row total} \cdot \textrm{column total}}{\textrm{table total}}
+\textrm{SE}_b = \frac{s}{s_x \sqrt{n-1}}
 \\[20pt]
 </script>
 </div>
 <h1 id="terms">Terms</h1>
-<p><iframe src="https://quizlet.com/393709958/flashcards/embed?i=fti76&x=1jj1" height="700" width="100%" style="border:0"></iframe></p>
+<p><iframe src="" height="700" width="100%" style="border:0"></iframe></p>
               
             </div>
           </div>
@@ -273,10 +267,8 @@ X^2=\sum \frac{(\textrm{observed}-\textrm{expected})^2}{\textrm{expected}}
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../c12/" class="btn btn-neutral float-right" title="Chapter 12 - More about Regression">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../c10/" class="btn btn-neutral" title="Chapter 10 - Comparing Two Populations or Groups"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../c11/" class="btn btn-neutral" title="Chapter 11 - Inference for Distributions of Categorical Data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -302,10 +294,8 @@ X^2=\sum \frac{(\textrm{observed}-\textrm{expected})^2}{\textrm{expected}}
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../c10/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../c11/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../c12/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
